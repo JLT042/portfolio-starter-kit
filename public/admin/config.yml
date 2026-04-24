@@ -2,12 +2,12 @@ backend:
   name: github
   repo: JLT042/portfolio-starter-kit
   branch: main
-  base_url: https://jlt-cms-bridge.vercel.app # <-- Diese Zeile ist entscheidend
+  base_url: https://jlt-cms-bridge.vercel.app
 
 media_folder: "public/images"
 public_folder: "/images"
 
-# Hier aktivieren wir die Mehrsprachigkeit (i18n) im CMS!
+# Aktiviert Mehrsprachigkeit
 i18n:
   structure: single_file
   locales: [de, en, es]
@@ -15,12 +15,21 @@ i18n:
 
 collections:
   - name: "pages"
-    label: "Seiten & Texte"
-    folder: "content/pages"
+    label: "Seiten Inhalte"
+    folder: "public/content/pages" # Wir speichern es als JSON im public Ordner
+    extension: "json"
+    format: "json"
     create: true
-    i18n: true # Aktiviert die Sprach-Tabs (DE/EN/ES) für diese Seite
-    fields:
-      - { label: "Seiten Name", name: "title", widget: "string" }
-      - { label: "Hero Headline", name: "hero_headline", widget: "string", i18n: true }
-      - { label: "Hero Subtext", name: "hero_sub", widget: "text", i18n: true }
-      - { label: "Button Text", name: "nav_cta", widget: "string", i18n: true }
+    i18n: true
+    files:
+      - label: "Startseite"
+        name: "home"
+        file: "public/content/pages/home.json"
+        i18n: true
+        fields:
+          - { label: "Hero Headline", name: "hero_headline", widget: "string", i18n: true }
+          - { label: "Hero Subtext", name: "hero_sub", widget: "text", i18n: true }
+          - { label: "Nav Projekt Link", name: "nav_projects", widget: "string", i18n: true }
+          - { label: "Nav Service Link", name: "nav_services", widget: "string", i18n: true }
+          - { label: "Nav Kontakt Link", name: "nav_contact", widget: "string", i18n: true }
+          - { label: "Button Text", name: "nav_cta", widget: "string", i18n: true }
