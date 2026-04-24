@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: JLT042/portfolio-starter-kit # <-- UNBEDINGT ANPASSEN!
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+# Hier aktivieren wir die Mehrsprachigkeit (i18n) im CMS!
+i18n:
+  structure: single_file
+  locales: [de, en, es]
+  default_locale: de
+
+collections:
+  - name: "pages"
+    label: "Seiten & Texte"
+    folder: "content/pages"
+    create: true
+    i18n: true # Aktiviert die Sprach-Tabs (DE/EN/ES) für diese Seite
+    fields:
+      - { label: "Seiten Name", name: "title", widget: "string" }
+      - { label: "Hero Headline", name: "hero_headline", widget: "string", i18n: true }
+      - { label: "Hero Subtext", name: "hero_sub", widget: "text", i18n: true }
+      - { label: "Button Text", name: "nav_cta", widget: "string", i18n: true }
