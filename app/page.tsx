@@ -6,8 +6,8 @@ export default function PortfolioPage() {
   const [lang, setLang] = useState('de');
 
   return (
-    <main className="page bg-[#0d0d12] text-white selection:bg-amber-400 selection:text-black">
-      {/* DEIN ORIGINAL CSS */}
+    <main className="page bg-[#0d0d12] text-white selection:bg-[#95BF47] selection:text-black">
+      {/* DEIN ORIGINAL CSS MIT SHOPIFY-GRÜN (BRAND-COLOR) */}
       <style dangerouslySetInnerHTML={{ __html: `
         :root {
           --color-space: oklch(9% 0.008 260);
@@ -16,13 +16,13 @@ export default function PortfolioPage() {
           --color-slate: oklch(19% 0.014 260);
           --color-border: oklch(24% 0.016 260);
           --color-border-subtle: oklch(95% 0.006 260 / 0.06);
-          --color-border-amber: oklch(75% 0.165 75 / 0.30);
+          --color-border-brand: oklch(75% 0.165 140 / 0.30);
           --color-white: oklch(95% 0.006 260);
           --color-gray-300: oklch(68% 0.010 260);
           --color-gray-400: oklch(52% 0.010 260);
-          --color-amber-300: oklch(82% 0.140 78);
-          --color-amber-400: oklch(75% 0.165 75);
-          --color-amber-500: oklch(68% 0.165 75);
+          --color-brand-300: oklch(82% 0.140 140);
+          --color-brand-400: oklch(75% 0.165 140);
+          --color-brand-500: oklch(68% 0.165 140);
           --color-indigo-300: oklch(68% 0.165 265);
           --color-indigo-400: oklch(58% 0.200 265);
           --color-success: oklch(65% 0.190 145);
@@ -44,49 +44,49 @@ export default function PortfolioPage() {
         
         .orb-field{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
         .orb{position:absolute;border-radius:50%;filter:blur(90px)}
-        .orb-amber{width:55vw;height:55vw;max-width:680px;max-height:680px;background:oklch(75% 0.165 75/1);top:-15%;left:-10%;opacity:.11;animation:orbFloat 14s ease-in-out infinite}
+        .orb-brand{width:55vw;height:55vw;max-width:680px;max-height:680px;background:oklch(75% 0.165 140/1);top:-15%;left:-10%;opacity:.11;animation:orbFloat 14s ease-in-out infinite}
         .orb-indigo{width:50vw;height:50vw;max-width:600px;max-height:600px;background:oklch(58% 0.200 265/1);bottom:-20%;right:-8%;opacity:.10;animation:orbFloatAlt 18s ease-in-out infinite}
-        .orb-amber-sm{width:25vw;height:25vw;max-width:280px;max-height:280px;background:oklch(82% 0.140 78/1);top:55%;left:55%;opacity:.06;animation:orbFloat 22s ease-in-out infinite reverse}
+        .orb-brand-sm{width:25vw;height:25vw;max-width:280px;max-height:280px;background:oklch(82% 0.140 140/1);top:55%;left:55%;opacity:.06;animation:orbFloat 22s ease-in-out infinite reverse}
         
         nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(var(--space-base),4vw,var(--space-lg));background:oklch(9% 0.008 260/.88);backdrop-filter:blur(16px) saturate(1.5);border-bottom:1px solid oklch(95% 0.006 260/.07)}
         .nav-logo{font-family:var(--font-heading);font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-white);text-decoration:none}
-        .nav-logo span{color:var(--color-amber-400)}
+        .nav-logo span{color:var(--color-brand-400)}
         .nav-links{display:flex;align-items:center;gap:var(--space-xl);list-style:none}
         .nav-links a{font-family:var(--font-body);font-size:.8125rem;font-weight:500;letter-spacing:.04em;color:var(--color-gray-300);text-decoration:none;transition:color 180ms var(--ease-out-quart)}
         .nav-links a:hover{color:var(--color-white)}
         .nav-right{display:flex;align-items:center;gap:var(--space-base)}
-        .nav-cta{font-family:var(--font-body);font-size:.8125rem;font-weight:500;color:var(--color-space);background:var(--color-amber-400);border:none;padding:8px 18px;border-radius:var(--radius-md);text-decoration:none;transition:background-color 180ms,box-shadow 180ms,transform 100ms}
-        .nav-cta:hover{background:var(--color-amber-500);box-shadow:0 0 20px oklch(75% 0.165 75/.22);transform:translateY(-1px)}
+        .nav-cta{font-family:var(--font-body);font-size:.8125rem;font-weight:500;color:var(--color-space);background:var(--color-brand-400);border:none;padding:8px 18px;border-radius:var(--radius-md);text-decoration:none;transition:background-color 180ms,box-shadow 180ms,transform 100ms}
+        .nav-cta:hover{background:var(--color-brand-500);box-shadow:0 0 20px oklch(75% 0.165 140/.22);transform:translateY(-1px)}
         .lang-switcher{display:flex;align-items:center;gap:2px;background:var(--color-graphite);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:3px}
         .lang-btn{font-family:var(--font-mono);font-size:.625rem;font-weight:600;letter-spacing:.05em;color:var(--color-gray-400);background:transparent;border:none;padding:4px 7px;border-radius:4px;cursor:pointer;line-height:1}
-        .lang-btn.active{color:var(--color-space);background:var(--color-amber-400)}
+        .lang-btn.active{color:var(--color-space);background:var(--color-brand-400)}
 
         .hero{min-height:100dvh;padding:60px clamp(var(--space-base),6vw,var(--space-3xl)) 0;display:flex;flex-direction:column;justify-content:center}
         .hero-inner{max-width:1280px;margin:0 auto;width:100%;padding:var(--space-3xl) 0 var(--space-2xl);display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"text video" "strip strip" "ctas ctas" "tags tags";gap:var(--space-xl) var(--space-2xl);align-items:start}
         .hero-text{grid-area:text;display:flex;flex-direction:column;gap:var(--space-lg)}
-        .hero-status{display:inline-flex;align-items:center;gap:var(--space-sm);padding:5px 12px;border-radius:var(--radius-full);border:1px solid var(--color-border-amber);background:oklch(75% 0.165 75/.06);width:fit-content;animation:fadeUp .5s var(--ease-out-expo) .15s both}
+        .hero-status{display:inline-flex;align-items:center;gap:var(--space-sm);padding:5px 12px;border-radius:var(--radius-full);border:1px solid var(--color-border-brand);background:oklch(75% 0.165 140/.06);width:fit-content;animation:fadeUp .5s var(--ease-out-expo) .15s both}
         .hero-status-dot{width:6px;height:6px;border-radius:50%;background:var(--color-success);box-shadow:0 0 6px oklch(65% 0.190 145/.6);animation:pulse 2.5s ease-in-out infinite}
-        .hero-status-text{font-family:var(--font-mono);font-size:.6875rem;color:var(--color-amber-300);text-transform:uppercase}
+        .hero-status-text{font-family:var(--font-mono);font-size:.6875rem;color:var(--color-brand-300);text-transform:uppercase}
         .hero-headline{font-family:var(--font-heading);font-size:clamp(3rem,5vw + .5rem,4.5rem);font-weight:700;line-height:1.05;color:var(--color-white);animation:fadeUp .6s var(--ease-out-expo) .25s both}
-        .hero-headline em{font-style:normal;color:var(--color-amber-400)}
+        .hero-headline em{font-style:normal;color:var(--color-brand-400)}
         .hero-sub{font-family:var(--font-body);font-size:clamp(.9375rem,1.2vw + .3rem,1.1rem);line-height:1.65;color:var(--color-gray-300);max-width:46ch;animation:fadeUp .6s var(--ease-out-expo) .35s both}
         .hero-evidence{grid-area:strip;display:flex;flex-wrap:wrap;gap:var(--space-base) var(--space-xl);align-items:center;padding:var(--space-lg) 0;border-top:1px solid var(--color-border-subtle);border-bottom:1px solid var(--color-border-subtle);animation:fadeUp .6s var(--ease-out-expo) .45s both}
         .evidence-item{display:flex;align-items:baseline;gap:var(--space-sm)}
-        .evidence-value{font-family:var(--font-mono);font-size:1.375rem;font-weight:600;color:var(--color-amber-400);line-height:1}
+        .evidence-value{font-family:var(--font-mono);font-size:1.375rem;font-weight:600;color:var(--color-brand-400);line-height:1}
         .evidence-label{font-family:var(--font-body);font-size:.8125rem;color:var(--color-gray-300)}
         .evidence-sep{width:1px;height:24px;background:var(--color-border)}
         .hero-ctas{grid-area:ctas;display:flex;flex-wrap:wrap;gap:var(--space-base);align-items:center;animation:fadeUp .6s var(--ease-out-expo) .55s both}
-        .btn-primary{display:inline-flex;align-items:center;gap:var(--space-sm);padding:13px var(--space-xl);background:var(--color-amber-400);color:var(--color-space);border-radius:var(--radius-md);font-family:var(--font-body);font-size:.9375rem;font-weight:500;text-decoration:none;transition:all 180ms}
-        .btn-primary:hover{background:var(--color-amber-500);box-shadow:0 0 24px oklch(75% 0.165 75/.25);transform:translateY(-1px)}
+        .btn-primary{display:inline-flex;align-items:center;gap:var(--space-sm);padding:13px var(--space-xl);background:var(--color-brand-400);color:var(--color-space);border-radius:var(--radius-md);font-family:var(--font-body);font-size:.9375rem;font-weight:500;text-decoration:none;transition:all 180ms}
+        .btn-primary:hover{background:var(--color-brand-500);box-shadow:0 0 24px oklch(75% 0.165 140/.25);transform:translateY(-1px)}
         .btn-ghost{display:inline-flex;align-items:center;gap:var(--space-sm);padding:13px var(--space-xl);background:transparent;color:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-body);font-size:.9375rem;text-decoration:none;transition:all 180ms}
-        .btn-ghost:hover{border-color:var(--color-border-amber);background:oklch(75% 0.165 75/.06)}
+        .btn-ghost:hover{border-color:var(--color-border-brand);background:oklch(75% 0.165 140/.06)}
         .hero-tags{grid-area:tags;display:flex;flex-wrap:wrap;gap:var(--space-sm);align-items:center;animation:fadeUp .5s var(--ease-out-expo) .65s both}
         .skill-tag{padding:4px 10px;border-radius:var(--radius-sm);border:1px solid var(--color-border);background:oklch(95% 0.006 260/.04);font-family:var(--font-body);font-size:.75rem;color:var(--color-gray-300)}
         .skill-tag.tech{border-color:oklch(58% 0.200 265/.30);color:var(--color-indigo-300);background:oklch(58% 0.200 265/.06)}
         
         .video-col{grid-area:video;display:flex;flex-direction:column;gap:var(--space-base);padding-top:.5rem;animation:fadeUp .7s var(--ease-out-expo) .30s both}
         .video-card{position:relative;border-radius:var(--radius-xl);border:1px solid var(--color-border);background:var(--color-graphite);overflow:hidden;cursor:pointer;aspect-ratio:16/10;transition:all 220ms}
-        .video-card:hover{border-color:var(--color-border-amber);box-shadow:0 0 40px oklch(75% 0.165 75/.14),0 12px 48px oklch(9% 0.008 260/.60);transform:translateY(-3px)}
+        .video-card:hover{border-color:var(--color-border-brand);box-shadow:0 0 40px oklch(75% 0.165 140/.14),0 12px 48px oklch(9% 0.008 260/.60);transform:translateY(-3px)}
         .video-chrome{position:absolute;top:0;left:0;right:0;height:36px;z-index:2;background:var(--color-slate);border-bottom:1px solid var(--color-border);display:flex;align-items:center;padding:0 var(--space-base);gap:var(--space-base)}
         .chrome-dots{display:flex;gap:6px}
         .chrome-dots span{width:10px;height:10px;border-radius:50%}
@@ -97,13 +97,13 @@ export default function PortfolioPage() {
         .video-inner{position:absolute;top:36px;left:0;right:0;bottom:0;overflow:hidden}
         .dash-header{padding:var(--space-sm) var(--space-base);border-bottom:1px solid var(--color-border);display:flex;align-items:center;gap:var(--space-base);background:var(--color-navy)}
         .dash-tab{font-family:var(--font-body);font-size:.6875rem;padding:4px 10px;border-radius:var(--radius-sm);color:var(--color-gray-400)}
-        .dash-tab.active{color:var(--color-amber-400);background:oklch(75% 0.165 75/.10)}
+        .dash-tab.active{color:var(--color-brand-400);background:oklch(75% 0.165 140/.10)}
         .dash-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--color-border);border-bottom:1px solid var(--color-border)}
         .dash-metric{padding:var(--space-sm) var(--space-base);background:var(--color-graphite);display:flex;flex-direction:column;gap:2px}
         .dash-metric-label{font-family:var(--font-body);font-size:.5625rem;color:var(--color-gray-400);text-transform:uppercase}
         .dash-metric-value{font-family:var(--font-mono);font-size:.9375rem;font-weight:600;color:var(--color-white)}
         .dash-metric-value.positive{color:var(--color-success)}
-        .dash-metric-value.amber{color:var(--color-amber-400)}
+        .dash-metric-value.brand-color{color:var(--color-brand-400)}
         .dash-chart{padding:var(--space-base);height:100%;display:flex;flex-direction:column;gap:var(--space-sm)}
         .chart-bars{flex:1;display:flex;align-items:flex-end;gap:4px;overflow:hidden}
         .bar-wrap{flex:1;display:flex;flex-direction:column;gap:3px}
@@ -112,25 +112,25 @@ export default function PortfolioPage() {
         
         .cases-section{padding:var(--space-4xl) clamp(var(--space-base),6vw,var(--space-3xl));background:var(--color-space)}
         .cases-inner{max-width:1280px;margin:0 auto}
-        .section-eyebrow{font-family:var(--font-mono);font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--color-amber-400)}
+        .section-eyebrow{font-family:var(--font-mono);font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--color-brand-400)}
         .section-headline{font-family:var(--font-heading);font-size:clamp(2rem,4vw + .5rem,3rem);font-weight:700;color:var(--color-white)}
         .case-card{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;padding:var(--space-3xl) 0;border-top:1px solid var(--color-border-subtle)}
         .case-card:nth-child(even){direction:rtl}
         .case-card:nth-child(even) > *{direction:ltr}
-        .case-number{font-family:var(--font-mono);font-size:.6875rem;color:var(--color-amber-400);text-transform:uppercase}
+        .case-number{font-family:var(--font-mono);font-size:.6875rem;color:var(--color-brand-400);text-transform:uppercase}
         .case-title{font-family:var(--font-heading);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;color:var(--color-white);margin-top:0.5rem;margin-bottom:1rem}
         .case-tags{display:flex;flex-wrap:wrap;gap:var(--space-xs) var(--space-sm);margin-bottom:1rem}
         .case-tag{padding:3px 10px;border-radius:var(--radius-sm);border:1px solid var(--color-border);font-family:var(--font-body);font-size:.75rem;color:var(--color-gray-300);background:oklch(95% 0.006 260/.04)}
-        .case-tag.highlight{border-color:var(--color-border-amber);color:var(--color-amber-300);background:oklch(75% 0.165 75/.07)}
+        .case-tag.highlight{border-color:var(--color-border-brand);color:var(--color-brand-300);background:oklch(75% 0.165 140/.07)}
         .case-tag.tech{border-color:oklch(58% 0.200 265/.30);color:var(--color-indigo-300);background:oklch(58% 0.200 265/.06)}
         .case-desc{font-family:var(--font-body);font-size:.9375rem;line-height:1.7;color:var(--color-gray-300);max-width:48ch;margin-bottom:2rem}
         .case-result{display:inline-flex;align-items:center;gap:var(--space-lg);flex-wrap:wrap;margin-bottom:2rem}
         .result-kpi{display:flex;flex-direction:column;gap:2px}
-        .result-value{font-family:var(--font-mono);font-size:1.5rem;font-weight:600;color:var(--color-amber-400)}
+        .result-value{font-family:var(--font-mono);font-size:1.5rem;font-weight:600;color:var(--color-brand-400)}
         .result-label{font-family:var(--font-body);font-size:.75rem;color:var(--color-gray-400)}
         .result-divider{width:1px;height:32px;background:var(--color-border)}
         .case-visual{border-radius:var(--radius-xl);border:1px solid var(--color-border);background:var(--color-graphite);overflow:hidden;aspect-ratio:4/3;position:relative;transition:all 220ms}
-        .case-card:hover .case-visual{border-color:var(--color-border-amber);box-shadow:0 0 40px oklch(75% 0.165 75/.10),0 16px 48px oklch(9% 0.008 260/.50)}
+        .case-card:hover .case-visual{border-color:var(--color-border-brand);box-shadow:0 0 40px oklch(75% 0.165 140/.10),0 16px 48px oklch(9% 0.008 260/.50)}
         
         .mock-chrome{height:32px;background:var(--color-slate);border-bottom:1px solid var(--color-border);display:flex;align-items:center;padding:0 var(--space-base);gap:var(--space-sm)}
         .mock-dots{display:flex;gap:5px}
@@ -143,8 +143,8 @@ export default function PortfolioPage() {
         .services-strip{border-top:1px solid var(--color-border-subtle);padding:var(--space-3xl) clamp(var(--space-base),6vw,var(--space-3xl));background:var(--color-navy)}
         .services-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-xl)}
         .service-card{padding:var(--space-xl);border-radius:var(--radius-lg);border:1px solid var(--color-border);background:var(--color-graphite);transition:all 200ms}
-        .service-card:hover{border-color:var(--color-border-amber);box-shadow:0 0 20px oklch(75% 0.165 75/.12);transform:translateY(-2px)}
-        .service-number{font-family:var(--font-mono);font-size:.6875rem;color:var(--color-amber-400);margin-bottom:var(--space-lg);display:block}
+        .service-card:hover{border-color:var(--color-border-brand);box-shadow:0 0 20px oklch(75% 0.165 140/.12);transform:translateY(-2px)}
+        .service-number{font-family:var(--font-mono);font-size:.6875rem;color:var(--color-brand-400);margin-bottom:var(--space-lg);display:block}
         .service-title{font-family:var(--font-heading);font-size:1.375rem;font-weight:700;color:var(--color-white);margin-bottom:var(--space-sm)}
         .service-desc{font-family:var(--font-body);font-size:.875rem;line-height:1.65;color:var(--color-gray-300)}
         
@@ -163,9 +163,9 @@ export default function PortfolioPage() {
 
       {/* BACKGROUND ORBS */}
       <div className="orb-field" aria-hidden="true">
-        <div className="orb orb-amber"></div>
+        <div className="orb orb-brand"></div>
         <div className="orb orb-indigo"></div>
-        <div className="orb orb-amber-sm"></div>
+        <div className="orb orb-brand-sm"></div>
       </div>
 
       {/* NAV */}
@@ -209,7 +209,7 @@ export default function PortfolioPage() {
                   <span className="dash-tab">Keywords</span>
                 </div>
                 <div className="dash-metrics">
-                  <div className="dash-metric"><span className="dash-metric-label">ROAS</span><span className="dash-metric-value amber">13,2×</span></div>
+                  <div className="dash-metric"><span className="dash-metric-label">ROAS</span><span className="dash-metric-value brand-color">13,2×</span></div>
                   <div className="dash-metric"><span className="dash-metric-label">CPA</span><span className="dash-metric-value positive">€8,94</span></div>
                   <div className="dash-metric"><span className="dash-metric-label">Conv.-Rate</span><span className="dash-metric-value positive">4,8%</span></div>
                   <div className="dash-metric"><span className="dash-metric-label">Budget</span><span className="dash-metric-value">€28,4K</span></div>
@@ -223,8 +223,8 @@ export default function PortfolioPage() {
                     <div className="bar-wrap"><div className="bar" style={{height:'42%', background:'oklch(58% 0.200 265/.5)'}}></div><div className="bar-date">7</div></div>
                     <div className="bar-wrap"><div className="bar" style={{height:'52%', background:'oklch(62% 0.195 300/.6)'}}></div><div className="bar-date">11</div></div>
                     <div className="bar-wrap"><div className="bar" style={{height:'64%', background:'oklch(68% 0.185 100/.6)'}}></div><div className="bar-date">17</div></div>
-                    <div className="bar-wrap"><div className="bar" style={{height:'80%', background:'oklch(75% 0.165 75/.7)'}}></div><div className="bar-date">23</div></div>
-                    <div className="bar-wrap"><div className="bar" style={{height:'94%', background:'oklch(75% 0.165 75/1)'}}></div><div className="bar-date">29</div></div>
+                    <div className="bar-wrap"><div className="bar" style={{height:'80%', background:'oklch(75% 0.165 140/.7)'}}></div><div className="bar-date">23</div></div>
+                    <div className="bar-wrap"><div className="bar" style={{height:'94%', background:'oklch(75% 0.165 140/1)'}}></div><div className="bar-date">29</div></div>
                   </div>
                 </div>
               </div>
@@ -283,10 +283,10 @@ export default function PortfolioPage() {
                     <span>Kampagne</span><span>Budget</span><span>ROAS</span><span>CPA</span>
                   </div>
                   <div className="grid grid-cols-4 gap-1 text-[11px] font-mono">
-                    <span className="text-white">PMax — Jacken</span><span className="text-amber-400">€9.200</span><span className="text-amber-400">15,1×</span><span className="text-green-500">€7,40</span>
+                    <span className="text-white">PMax — Jacken</span><span className="text-[#95BF47]">€9.200</span><span className="text-[#95BF47]">15,1×</span><span className="text-green-500">€7,40</span>
                   </div>
                   <div className="grid grid-cols-4 gap-1 text-[11px] font-mono">
-                    <span className="text-white">Shopping — Hoodies</span><span className="text-amber-400">€7.800</span><span className="text-amber-400">12,4×</span><span className="text-green-500">€9,10</span>
+                    <span className="text-white">Shopping — Hoodies</span><span className="text-[#95BF47]">€7.800</span><span className="text-[#95BF47]">12,4×</span><span className="text-green-500">€9,10</span>
                   </div>
                 </div>
               </div>
