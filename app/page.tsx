@@ -80,7 +80,7 @@ export default function PortfolioPage() {
       ct_m1: "Hamburg / Remote",
       ct_m2: "DACH-Fokus",
  
-      footer: "© 2026 Jose L. Treff — TubeBridge GmbH",
+      footer: "© 2026 Jose L. Treff — JLT Marketing Services",
     },
     en: {
       nav_projects: "Projects",
@@ -148,7 +148,7 @@ export default function PortfolioPage() {
       ct_m1: "Hamburg / Remote",
       ct_m2: "DACH focus",
  
-      footer: "© 2026 Jose L. Treff — TubeBridge GmbH",
+      footer: "© 2026 Jose L. Treff — JTL Marketing Services",
     },
     es: {
       nav_projects: "Proyectos",
@@ -216,7 +216,7 @@ export default function PortfolioPage() {
       ct_m1: "Hamburgo / Remoto",
       ct_m2: "Enfoque DACH",
  
-      footer: "© 2026 Jose L. Treff — TubeBridge GmbH",
+      footer: "© 2026 Jose L. Treff — JTL Marketing Services",
     },
   } as const;
  
@@ -529,7 +529,7 @@ export default function PortfolioPage() {
               <button key={l} className={`jlt-lang-btn${lang === l ? ' active' : ''}`} onClick={() => setLang(l)}>{l.toUpperCase()}</button>
             ))}
           </div>
-          <a href="mailto:jose@tubebridge.de" className="jlt-cta">{t('nav_cta')}</a>
+          <a href="mailto:jtl.marketingservices@gmail.com" className="jlt-cta">{t('nav_cta')}</a>
         </div>
       </nav>
  
@@ -609,7 +609,7 @@ export default function PortfolioPage() {
           {/* CTAs */}
           <div className="jlt-hero-ctas">
             <a href="#projekte" className="btn-primary">{t('hero_cta1')} <ArrowRight /></a>
-            <a href="mailto:jose@tubebridge.de" className="btn-ghost">jose@tubebridge.de</a>
+            <a href="mailto:jtl.marketingservices@gmail.com" className="btn-ghost">jtl.marketingservices@gmail.com</a>
           </div>
  
           {/* SKILL TAGS */}
@@ -653,7 +653,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">€30K</span><span className="res-label">{t('c1_k3')}</span></div>
               </div>
-              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div className="mock-stmt">
@@ -706,7 +706,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">{t('c2_k3v')}</span><span className="res-label">{t('c2_k3')}</span></div>
               </div>
-              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jtl.marketingservices@gmail.come" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div style={{display:'flex',flexDirection:'column',height:'100%'}}>
@@ -747,7 +747,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">{t('c3_k2v')}</span><span className="res-label">{t('c3_k2')}</span></div>
               </div>
-              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" style={{position:'relative'}} aria-hidden="true">
               <div style={{height:'100%',display:'flex',flexDirection:'column'}}>
@@ -796,7 +796,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">App MVP</span><span className="res-label">{t('c4_k2')}</span></div>
               </div>
-              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div style={{display:'flex',flexDirection:'column',height:'100%'}}>
@@ -851,7 +851,7 @@ export default function PortfolioPage() {
           <h2 className="ct-headline">{t('ct_headline')}</h2>
           <p className="ct-sub">{t('ct_sub')}</p>
           <div className="ct-ctas">
-            <a href="mailto:jose@tubebridge.de" className="btn-primary">jose@tubebridge.de <ArrowRight /></a>
+            <a href="mailto:jtl.marketingservices@gmail.com" className="btn-primary">jtl.marketingservices@gmail.com <ArrowRight /></a>
             <a href="https://linkedin.com/in/jose-l-treff-033224251" target="_blank" rel="noopener" className="btn-ghost">LinkedIn</a>
           </div>
           <div className="ct-meta">
@@ -868,7 +868,7 @@ export default function PortfolioPage() {
           <a href="/" className="footer-logo">JL<span>.</span>T</a>
           <span className="footer-copy">{t('footer')}</span>
           <div className="footer-links">
-            <a href="mailto:jose@tubebridge.de">E-Mail</a>
+            <a href="mailto:jtl.marketingservices@gmail.com">E-Mail</a>
             <a href="https://linkedin.com/in/jose-l-treff-033224251" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
