@@ -508,6 +508,11 @@ export default function PortfolioPage() {
           .kpi-row { grid-template-columns:repeat(2,1fr); }
           .jlt-footer-inner { flex-direction:column;align-items:flex-start; }
         }
+         @keyframes jltFloat {
+          0%   { transform: translate(-50%, -50%) translateY(0px); }
+          50%  { transform: translate(-50%, -50%) translateY(-10px); }
+          100% { transform: translate(-50%, -50%) translateY(0px); }
+        }
         @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important;transition-duration:.01ms!important; } }
       `}} />
  
@@ -547,53 +552,95 @@ export default function PortfolioPage() {
             <p className="jlt-sub">{t('hero_sub')}</p>
           </div>
  
-          {/* RIGHT: Dashboard preview */}
-          <div className="jlt-video-col">
-            <div className="jlt-video-card" role="button" tabIndex={0} aria-label="Campaign walkthrough">
-              <div className="vc-chrome" aria-hidden="true">
-                <div className="vc-dots">
-                  <span style={{ background: 'oklch(60% 0.20 25/.7)' }} />
-                  <span style={{ background: 'oklch(72% 0.18 75/.7)' }} />
-                  <span style={{ background: 'oklch(65% 0.19 145/.7)' }} />
+          // ─────────────────────────────────────────────────────────────
+// ERSETZE NUR DIESEN BLOCK in deiner page.tsx
+// Von: {/* RIGHT: Dashboard preview */} <div className="jlt-video-col">
+// Bis: </div>  (das schließende Tag nach vc-meta, Zeile ~596)
+// ─────────────────────────────────────────────────────────────
+
+// SCHRITT 1: Diese CSS-Keyframe-Regel in deinen bestehenden <style> Block einfügen
+// (irgendwo am Ende, vor dem letzten `)}} />` )
+/*
+  @keyframes jltFloat {
+    0%   { transform: translateY(0px) scale(1); }
+    50%  { transform: translateY(-10px) scale(1.04); }
+    100% { transform: translateY(0px) scale(1); }
+  }
+  .platform-badge:hover {
+    transform: translateY(-4px) scale(1.08) !important;
+    transition: transform 0.2s ease !important;
+  }
+*/
+
+// SCHRITT 2: Ersetze den gesamten {/* RIGHT: Dashboard preview */} Block damit:
+
+          {/* RIGHT: Floating Platform Icons */}
+          <div className="jlt-video-col" style={{ position: 'relative', minHeight: '380px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+
+            {/* Ambient Glow */}
+            <div style={{
+              position: 'absolute', top: '50%', left: '50%',
+              width: '300px', height: '300px',
+              background: 'radial-gradient(circle, oklch(75% 0.165 140 / 0.07) 0%, transparent 65%)',
+              transform: 'translate(-50%, -50%)',
+              pointerEvents: 'none',
+            }} />
+
+            {/* Platform Badges — absolut positioniert */}
+            {[
+              { label: 'Shopify',    abbr: 'SH', color: '#96BF48', bg: 'oklch(10% 0.04 140)', x: '50%',  y: '10%',  delay: '0s',    size: 64 },
+              { label: 'Google Ads', abbr: 'GA', color: '#4285F4', bg: 'oklch(9%  0.04 260)', x: '82%',  y: '28%',  delay: '0.8s',  size: 56 },
+              { label: 'Meta',       abbr: 'M',  color: '#0081FB', bg: 'oklch(9%  0.04 240)', x: '88%',  y: '62%',  delay: '1.6s',  size: 52 },
+              { label: 'TikTok',     abbr: 'TT', color: '#00F2EA', bg: 'oklch(9%  0.06 195)', x: '55%',  y: '82%',  delay: '2.2s',  size: 52 },
+              { label: 'GA4',        abbr: 'G4', color: '#E37400', bg: 'oklch(9%  0.05 50)',  x: '18%',  y: '65%',  delay: '1.2s',  size: 52 },
+              { label: 'LinkedIn',   abbr: 'LI', color: '#0A66C2', bg: 'oklch(9%  0.04 240)', x: '14%',  y: '30%',  delay: '0.4s',  size: 52 },
+              { label: 'HubSpot',    abbr: 'HS', color: '#FF7A59', bg: 'oklch(10% 0.04 25)',  x: '30%',  y: '12%',  delay: '3.0s',  size: 44 },
+              { label: 'Sistrix',    abbr: 'SI', color: '#F4D03F', bg: 'oklch(10% 0.04 80)',  x: '70%',  y: '14%',  delay: '2.6s',  size: 44 },
+            ].map((p) => (
+              <div
+                key={p.label}
+                className="platform-badge"
+                title={p.label}
+                style={{
+                  position: 'absolute',
+                  left: p.x, top: p.y,
+                  transform: 'translate(-50%, -50%)',
+                  animation: `jltFloat 4s ease-in-out ${p.delay} infinite`,
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px',
+                  cursor: 'default', userSelect: 'none',
+                }}
+              >
+                <div style={{
+                  width: `${p.size}px`, height: `${p.size}px`,
+                  borderRadius: '14px',
+                  background: p.bg,
+                  border: `1.5px solid ${p.color}35`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  boxShadow: `0 0 20px ${p.color}20, 0 6px 20px rgba(0,0,0,0.6)`,
+                }}>
+                  <span style={{
+                    fontFamily: 'var(--font-mono, monospace)',
+                    fontWeight: 700,
+                    fontSize: `${p.size * 0.22}px`,
+                    color: p.color,
+                    letterSpacing: '-0.02em',
+                  }}>
+                    {p.abbr}
+                  </span>
                 </div>
-                <div className="vc-url">ads.google.com — Statement Clothing GmbH</div>
+                <span style={{
+                  fontSize: '8px', color: 'rgba(255,255,255,0.3)',
+                  letterSpacing: '0.06em', textTransform: 'uppercase',
+                  fontFamily: 'var(--font-body, sans-serif)',
+                  whiteSpace: 'nowrap',
+                }}>
+                  {p.label}
+                </span>
               </div>
-              <div className="vc-inner" aria-hidden="true">
-                <div className="vc-header">
-                  <span className="vc-tab active">Kampagnen</span>
-                  <span className="vc-tab">Anzeigengruppen</span>
-                  <span className="vc-tab">Keywords</span>
-                </div>
-                <div className="vc-metrics">
-                  <div className="vc-metric"><span className="vc-metric-label">ROAS</span><span className="vc-metric-val a">13,2×</span></div>
-                  <div className="vc-metric"><span className="vc-metric-label">CPA</span><span className="vc-metric-val g">€8,94</span></div>
-                  <div className="vc-metric"><span className="vc-metric-label">Conv.-Rate</span><span className="vc-metric-val g">4,8%</span></div>
-                  <div className="vc-metric"><span className="vc-metric-label">Budget</span><span className="vc-metric-val">€28,4K</span></div>
-                </div>
-                <div className="vc-chart">
-                  <span className="vc-chart-hdr">Conversions — letzte 30 Tage</span>
-                  <div className="bars" aria-hidden="true">
-                    {[28,34,30,42,38,52,58,48,64,72,68,80,76,88,94].map((h, i) => (
-                      <div key={i} className="bar-w">
-                        <div className="bar" style={{ height: `${h}%`, background: h < 45 ? 'oklch(58% 0.200 265/.5)' : h < 65 ? 'oklch(62% 0.195 300/.6)' : h < 78 ? 'oklch(68% 0.185 100/.6)' : `oklch(75% 0.165 140/${h/100 + 0.1})` }} />
-                        <div className="bar-d">{i * 2 + 1}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <button className="play-btn" aria-label="Play video">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-              </button>
-            </div>
-            <div className="vc-meta">
-              <p className="vc-caption">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" /></svg>
-                {t('hero_video_caption')}
-              </p>
-              <span className="vc-duration">2:04</span>
-            </div>
+            ))}
+
           </div>
+
  
           {/* EVIDENCE STRIP */}
           <div className="jlt-hero-evidence" role="list">
