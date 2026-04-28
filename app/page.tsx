@@ -27,10 +27,35 @@ export default function PortfolioPage() {
       hero_ev1: "ROAS, Fashion D2C",
       hero_ev2: "CPA bei €80 Warenkorbwert",
       hero_ev3: "Jahre, 6 aktive Kunden",
-      hero_ev4: "Stundensatz",
+      hero_ev4: "Max. Budget/Monat",
       hero_cta1: "Case Studies ansehen",
-      hero_video_caption: "Kampagnen-Walkthrough — Statement Clothing",
+      hero_cta2: "15-Min Gespräch buchen",
       tag_ai: "KI-Workflows",
+      logos_eyebrow: "Vertrauen von Brands & Gründern",
+      testi_eyebrow: "Was Kunden sagen",
+      testi_sub: "Echte Zusammenarbeit, klare Ergebnisse.",
+      t1_quote: "Jose hat unsere Google-Ads-Performance in wenigen Wochen transformiert — klare Strategie, saubere Umsetzung, messbarer ROAS.",
+      t1_name: "M. Schreiber",
+      t1_role: "Inhaber · E-Commerce, DACH",
+      t2_quote: "Der Shopify-Shop war schnell live, technisch sauber und hat direkt konvertiert. Sehr professionelle Zusammenarbeit.",
+      t2_name: "L. Kraft",
+      t2_role: "Gründerin · D2C Brand",
+      t3_quote: "Das UX-Audit hat echte Probleme aufgedeckt, die wir vorher nicht gesehen haben. Die Abbruchrate im Onboarding ist seitdem deutlich gesunken.",
+      t3_name: "T. Reinhardt",
+      t3_role: "Product Lead · eLearning",
+      about_eyebrow: "Über mich",
+      about_text: "Ich bin Jose — Senior Performance Marketer und Shopify-Entwickler aus Hamburg. Seit über 5 Jahren helfe ich D2C- und B2B-Marken im DACH-Raum dabei, messbare Ergebnisse zu erzielen: von der Ads-Strategie bis zum Checkout, vom ersten Klick bis zum Stammkunden.\n\nMein Ansatz ist datengetrieben, pragmatisch und skalierbar — kein Agentur-Overhead, direkte Kommunikation, klare KPIs.",
+      about_avail: "Verfügbar für neue Projekte",
+      geo_eyebrow: "Neue Disziplin",
+      geo_headline: "Werde zitiert — von ChatGPT,<br/>Perplexity & Gemini.",
+      geo_sub: "GEO (Generative Engine Optimization) ist der SEO-Nachfolger für das KI-Zeitalter. Ich optimiere Inhalte so, dass sie von KI-Assistenten als Quelle verwendet werden — nicht nur gefunden, sondern zitiert.",
+      geo_p1: "JSON-LD Schema & strukturierte Daten",
+      geo_p2: "Autorität & E-E-A-T für LLMs",
+      geo_p3: "KI-optimierter Content-Aufbau",
+      geo_cited: "● Zitiert",
+      geo_indexed: "○ Indexiert",
+      ct_cta_calendly: "15-Min Gespräch buchen",
+      ct_cta_email: "jose@tubebridge.de schreiben",
  
       cases_eyebrow: "Ausgewählte Projekte",
       cases_sub: "Echte Kampagnen, echte Zahlen — von Performance-Marketing über Shopify-Entwicklung bis zu UX-Research und Brand-Aufbau.",
@@ -77,7 +102,7 @@ export default function PortfolioPage() {
  
       ct_eyebrow: "Lass uns reden",
       ct_headline: "Projekt in Planung?",
-      ct_sub: "Ob Google Ads Skalierung, Shopify-Entwicklung oder SEO/GEO-Strategie — ich helfe DACH-Brands dabei, messbare Ergebnisse zu erzielen. Remote, flexibel, ab €40/h.",
+      ct_sub: "Ob Google Ads Skalierung, Shopify-Entwicklung oder GEO-Strategie — ich helfe DACH-Brands dabei, messbare Ergebnisse zu erzielen. Remote, flexibel.",
       ct_m1: "Hamburg / Remote",
       ct_m2: "DACH-Fokus",
  
@@ -95,10 +120,35 @@ export default function PortfolioPage() {
       hero_ev1: "ROAS, Fashion D2C",
       hero_ev2: "CPA on €80 avg. order value",
       hero_ev3: "years, 6 active clients",
-      hero_ev4: "Hourly rate",
+      hero_ev4: "Max. Budget/month",
       hero_cta1: "View Case Studies",
-      hero_video_caption: "Campaign walkthrough — Statement Clothing",
+      hero_cta2: "Book a 15-min call",
       tag_ai: "AI Workflows",
+      logos_eyebrow: "Trusted by brands & founders",
+      testi_eyebrow: "What clients say",
+      testi_sub: "Real collaboration, measurable results.",
+      t1_quote: "Jose transformed our Google Ads performance in just a few weeks — clear strategy, clean execution, measurable ROAS.",
+      t1_name: "M. Schreiber",
+      t1_role: "Owner · E-Commerce, DACH",
+      t2_quote: "The Shopify store went live fast, was technically solid and converted from day one. Very professional collaboration.",
+      t2_name: "L. Kraft",
+      t2_role: "Founder · D2C Brand",
+      t3_quote: "The UX audit uncovered real problems we hadn't seen before. The drop-off rate in onboarding has dropped significantly since.",
+      t3_name: "T. Reinhardt",
+      t3_role: "Product Lead · eLearning",
+      about_eyebrow: "About me",
+      about_text: "I'm Jose — Senior Performance Marketer and Shopify Developer based in Hamburg. For over 5 years I've helped D2C and B2B brands in the DACH market achieve measurable results: from ad strategy to checkout, from first click to returning customer.\n\nMy approach is data-driven, pragmatic and scalable — no agency overhead, direct communication, clear KPIs.",
+      about_avail: "Available for new projects",
+      geo_eyebrow: "New discipline",
+      geo_headline: "Get cited — by ChatGPT,<br/>Perplexity & Gemini.",
+      geo_sub: "GEO (Generative Engine Optimization) is the SEO successor for the AI era. I optimise content so AI assistants use it as a source — not just found, but cited.",
+      geo_p1: "JSON-LD schema & structured data",
+      geo_p2: "Authority & E-E-A-T for LLMs",
+      geo_p3: "AI-optimised content architecture",
+      geo_cited: "● Cited",
+      geo_indexed: "○ Indexed",
+      ct_cta_calendly: "Book a 15-min call",
+      ct_cta_email: "Write to jose@tubebridge.de",
  
       cases_eyebrow: "Selected Projects",
       cases_sub: "Real campaigns, real numbers — from performance marketing and Shopify development to UX research and brand building.",
@@ -145,7 +195,7 @@ export default function PortfolioPage() {
  
       ct_eyebrow: "Let's talk",
       ct_headline: "Planning a project?",
-      ct_sub: "Whether Google Ads scaling, Shopify development or SEO/GEO strategy — I help DACH brands achieve measurable results. Remote, flexible, from €40/h.",
+      ct_sub: "Whether Google Ads scaling, Shopify development or GEO strategy — I help DACH brands achieve measurable results. Remote, flexible.",
       ct_m1: "Hamburg / Remote",
       ct_m2: "DACH focus",
  
@@ -156,33 +206,58 @@ export default function PortfolioPage() {
       nav_services: "Servicios",
       nav_contact: "Contacto",
       nav_cta: "Contáctame",
- 
+
       hero_status: "Disponible para proyectos — DACH y remoto",
       hero_headline: "Performance.<br/>Que<br/><em>Convierte.</em>",
       hero_sub: "Senior Performance Marketer y desarrollador Shopify — de la estrategia al checkout. €30K/mes en presupuesto publicitario gestionado de forma autónoma en Google, Meta y TikTok para marcas D2C y B2B en el mercado DACH.",
       hero_ev1: "ROAS, Moda D2C",
       hero_ev2: "CPA con carrito medio de €80",
       hero_ev3: "años, 6 clientes activos",
-      hero_ev4: "Tarifa/hora",
+      hero_ev4: "Presupuesto máx./mes",
       hero_cta1: "Ver Case Studies",
-      hero_video_caption: "Walkthrough de campaña — Statement Clothing",
+      hero_cta2: "Reservar llamada de 15 min",
       tag_ai: "Flujos de IA",
- 
+      logos_eyebrow: "Marcas y fundadores que confían",
+      testi_eyebrow: "Lo que dicen los clientes",
+      testi_sub: "Colaboración real, resultados medibles.",
+      t1_quote: "Jose transformó el rendimiento de nuestros Google Ads en pocas semanas — estrategia clara, ejecución limpia, ROAS medible.",
+      t1_name: "M. Schreiber",
+      t1_role: "Propietario · E-Commerce, DACH",
+      t2_quote: "La tienda Shopify fue rápida, técnicamente sólida y convirtió desde el primer día. Colaboración muy profesional.",
+      t2_name: "L. Kraft",
+      t2_role: "Fundadora · D2C Brand",
+      t3_quote: "La auditoría UX descubrió problemas reales que no habíamos visto. La tasa de abandono en el onboarding ha bajado significativamente.",
+      t3_name: "T. Reinhardt",
+      t3_role: "Product Lead · eLearning",
+      about_eyebrow: "Sobre mí",
+      about_text: "Soy Jose — Senior Performance Marketer y desarrollador Shopify afincado en Hamburgo. Desde hace más de 5 años ayudo a marcas D2C y B2B en el mercado DACH a conseguir resultados medibles: desde la estrategia de ads hasta el checkout, desde el primer clic hasta el cliente recurrente.\n\nMi enfoque es basado en datos, pragmático y escalable — sin overhead de agencia, comunicación directa, KPIs claros.",
+      about_avail: "Disponible para nuevos proyectos",
+      geo_eyebrow: "Nueva disciplina",
+      geo_headline: "Sé citado — por ChatGPT,<br/>Perplexity y Gemini.",
+      geo_sub: "GEO (Generative Engine Optimization) es el sucesor del SEO para la era de la IA. Optimizo contenidos para que los asistentes de IA los usen como fuente — no solo encontrado, sino citado.",
+      geo_p1: "Schema JSON-LD y datos estructurados",
+      geo_p2: "Autoridad y E-E-A-T para LLMs",
+      geo_p3: "Arquitectura de contenido optimizada para IA",
+      geo_cited: "● Citado",
+      geo_indexed: "○ Indexado",
+      ct_cta_calendly: "Reservar llamada de 15 min",
+      ct_cta_email: "Escribir a jose@tubebridge.de",
+
       cases_eyebrow: "Proyectos seleccionados",
       cases_sub: "Campañas reales, números reales — desde performance marketing y desarrollo Shopify hasta investigación de UX y construcción de marca.",
- 
+
       c1_num: "01 — Performance Marketing",
       c1_tag: "Escalado ROAS",
       c1_desc: "Estrategia completa de Google Ads para una marca D2C de moda en el mercado DACH. Presupuesto escalado de menos de €5K a €30K/mes — ROAS constante por encima de 13× con CPA de €9 y carrito medio de €80.",
       c1_k3: "Presupuesto/mes",
- 
+
       c2_num: "02 — Shopify Dev y CRO",
       c2_desc: "Tienda Shopify construida desde cero — tema Liquid personalizado, estructura de productos y flujo de checkout optimizados. Campañas locales de Google Ads e implementación de CRO basada en mapas de calor de Clarity.",
       c2_k1: "Desarrollo Custom",
       c2_k2: "Basado en heatmap",
       c2_k3v: "Activo",
       c2_k3: "desde 09/2025",
- 
+
       c3_num: "03 — UX Lead y CRO",
       c3_tag: "Reducción de Churn",
       c3_desc: "UX lead para una plataforma de video eLearning en alemán. Auditoría del journey, entrevistas y tests de usabilidad identificaron debilidades en el onboarding y la navegación. Resultado: roadmap de A/B testing, prototipos revisados, reducción de abandonos.",
@@ -190,7 +265,7 @@ export default function PortfolioPage() {
       c3_k1: "Churn reducido",
       c3_k2v: "↑ Engagement",
       c3_k2: "Tiempo en plataforma",
- 
+
       c4_num: "04 — Branding y UX Research",
       c4_tag: "Construcción de Marca",
       c4_arch: "Arquitectura de App",
@@ -198,9 +273,9 @@ export default function PortfolioPage() {
       c4_k1v: "Marca",
       c4_k1: "0 → Lanzamiento",
       c4_k2: "Roadmap y Prototipo",
- 
+
       case_link: "Detalles a consultar",
- 
+
       s1_num: "01 — Performance",
       s1_title: "Paid Media y Crecimiento",
       s1_desc: "Google Ads, Meta, TikTok, LinkedIn. Estrategia full-funnel, arquitectura de audiencias, escalado de ROAS. De €800 a €30K/mes gestionado de forma autónoma.",
@@ -210,14 +285,14 @@ export default function PortfolioPage() {
       s3_num: "03 — Visibilidad",
       s3_title: "SEO, GEO e IA",
       s3_desc: "SEO técnico, Generative Engine Optimization para citas en LLMs (ChatGPT, Perplexity), schema JSON-LD, automatización de flujos de IA para escalado de contenido.",
- 
+
       ct_eyebrow: "Hablemos",
       ct_headline: "¿Tienes un proyecto?",
-      ct_sub: "Ya sea escalado de Google Ads, desarrollo Shopify o estrategia SEO/GEO — ayudo a marcas del DACH a conseguir resultados medibles. Remoto, flexible, desde €40/h.",
+      ct_sub: "Ya sea escalado de Google Ads, desarrollo Shopify o estrategia GEO — ayudo a marcas del DACH a conseguir resultados medibles. Remoto, flexible.",
       ct_m1: "Hamburgo / Remoto",
       ct_m2: "Enfoque DACH",
- 
-      footer: "© 2026 Jose L. Treff — JTL Marketing Services",
+
+      footer: "© 2026 Jose L. Treff — JLT Marketing Services",
     },
   } as const;
  
@@ -484,6 +559,60 @@ export default function PortfolioPage() {
         .ct-meta-item { display:flex;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.75rem;color:var(--gray4); }
         .ct-dot { width:4px;height:4px;border-radius:50%;background:var(--success); }
  
+        /* ── LOGO STRIP ── */
+        .jlt-logos { padding:3rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1; }
+        .jlt-logos-inner { max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:2rem; }
+        .logos-eyebrow { font-family:var(--fm);font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray4);text-align:center; }
+        .logos-row { display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem 3.5rem; }
+        .logo-client { display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:.55;transition:opacity 200ms; }
+        .logo-client:hover { opacity:1; }
+        .logo-client-name { font-family:var(--fh);font-size:.875rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gray3); }
+
+        /* ── TESTIMONIALS ── */
+        .jlt-testi { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);position:relative;z-index:1; }
+        .jlt-testi-inner { max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:3rem; }
+        .testi-hdr { display:flex;flex-direction:column;gap:.75rem; }
+        .testi-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem; }
+        .testi-card { padding:2rem;border-radius:12px;border:1px solid var(--border);background:var(--graphite);display:flex;flex-direction:column;gap:1.5rem;transition:border-color 200ms var(--eq),box-shadow 200ms var(--eq); }
+        .testi-card:hover { border-color:var(--brand-bd);box-shadow:0 0 24px oklch(75% 0.165 140/.10); }
+        .testi-quote { font-family:var(--fb);font-size:.9375rem;line-height:1.7;color:var(--gray3);flex:1; }
+        .testi-quote::before { content:'"';color:var(--brand);font-family:var(--fh);font-size:2rem;line-height:0;vertical-align:-.5rem;margin-right:.25rem; }
+        .testi-author { display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--border-s);padding-top:1rem; }
+        .testi-name { font-family:var(--fb);font-size:.875rem;font-weight:600;color:var(--white); }
+        .testi-role { font-family:var(--fm);font-size:.6875rem;color:var(--gray4);letter-spacing:.04em; }
+
+        /* ── GEO SPOTLIGHT ── */
+        .jlt-geo { padding:6rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);position:relative;z-index:1;overflow:hidden; }
+        .jlt-geo::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,oklch(68% 0.165 265/.10) 0%,transparent 60%);pointer-events:none; }
+        .jlt-geo-inner { max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative; }
+        .geo-text { display:flex;flex-direction:column;gap:1.5rem; }
+        .geo-pills { display:flex;flex-direction:column;gap:.75rem; }
+        .geo-pill { display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-radius:8px;border:1px solid var(--border);background:oklch(95% 0.006 260/.03);font-family:var(--fb);font-size:.875rem;color:var(--gray3); }
+        .geo-pill-icon { width:28px;height:28px;border-radius:6px;background:oklch(68% 0.165 265/.15);border:1px solid oklch(68% 0.165 265/.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.75rem; }
+        .geo-visual { border-radius:16px;border:1px solid var(--border);background:var(--graphite);padding:1.5rem;display:flex;flex-direction:column;gap:1rem; }
+        .geo-vis-hdr { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.10em;text-transform:uppercase;color:var(--gray4);padding-bottom:.75rem;border-bottom:1px solid var(--border-s); }
+        .geo-entry { display:flex;flex-direction:column;gap:.25rem;padding:.75rem 0;border-bottom:1px solid var(--border-s); }
+        .geo-entry:last-child { border-bottom:none; }
+        .geo-entry-top { display:flex;align-items:center;gap:.5rem; }
+        .geo-badge { font-family:var(--fm);font-size:.5rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:9999px; }
+        .geo-badge.cited { background:oklch(65% 0.190 145/.20);color:var(--success);border:1px solid oklch(65% 0.190 145/.30); }
+        .geo-badge.indexed { background:oklch(68% 0.010 260/.15);color:var(--gray4);border:1px solid var(--border); }
+        .geo-entry-query { font-family:var(--fb);font-size:.8125rem;color:var(--white);flex:1; }
+        .geo-entry-src { font-family:var(--fm);font-size:.625rem;color:var(--gray4); }
+        @media(max-width:900px) { .jlt-geo-inner { grid-template-columns:1fr; } }
+
+        /* ── ABOUT ── */
+        .jlt-about { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);border-top:1px solid var(--border-s);position:relative;z-index:1; }
+        .jlt-about-inner { max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start; }
+        .about-left { display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:80px; }
+        .about-avatar { width:88px;height:88px;border-radius:16px;background:var(--graphite);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:2.5rem;overflow:hidden; }
+        .about-avail-tag { display:inline-flex;align-items:center;gap:.5rem;padding:5px 12px;border-radius:9999px;border:1px solid var(--brand-bd);background:var(--brand-bg);width:fit-content; }
+        .about-avail-dot { width:6px;height:6px;border-radius:50%;background:var(--success);box-shadow:0 0 6px oklch(65% 0.190 145/.6);animation:pulse 2.5s ease-in-out infinite; }
+        .about-avail-text { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.06em;color:var(--brand-hi);text-transform:uppercase; }
+        .about-right { display:flex;flex-direction:column;gap:1.5rem; }
+        .about-body { font-family:var(--fb);font-size:1rem;line-height:1.75;color:var(--gray3);white-space:pre-line; }
+        @media(max-width:640px) { .jlt-about-inner { grid-template-columns:1fr; } .about-left { position:static; } }
+
         /* ── FOOTER ── */
         .jlt-footer { padding:2rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);position:relative;z-index:1; }
         .jlt-footer-inner { max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem; }
@@ -535,7 +664,7 @@ export default function PortfolioPage() {
               <button key={l} className={`jlt-lang-btn${lang === l ? ' active' : ''}`} onClick={() => setLang(l)}>{l.toUpperCase()}</button>
             ))}
           </div>
-          <a href="mailto:jtl.marketingservices@gmail.com" className="jlt-cta">{t('nav_cta')}</a>
+          <a href="#kontakt" className="jlt-cta">{t('nav_cta')}</a>
         </div>
       </nav>
  
@@ -639,13 +768,13 @@ export default function PortfolioPage() {
             <div className="ev-sep" aria-hidden="true" />
             <div className="ev-item" role="listitem"><span className="ev-val">5+</span><span className="ev-label">{t('hero_ev3')}</span></div>
             <div className="ev-sep" aria-hidden="true" />
-            <div className="ev-item" role="listitem"><span className="ev-val">€40/h</span><span className="ev-label">{t('hero_ev4')}</span></div>
+            <div className="ev-item" role="listitem"><span className="ev-val">€30K</span><span className="ev-label">{t('hero_ev4')}</span></div>
           </div>
  
           {/* CTAs */}
           <div className="jlt-hero-ctas">
             <a href="#projekte" className="btn-primary">{t('hero_cta1')} <ArrowRight /></a>
-            <a href="mailto:jtl.marketingservices@gmail.com" className="btn-ghost">jtl.marketingservices@gmail.com</a>
+            <a href="https://calendly.com/jose-treff/15min" target="_blank" rel="noopener" className="btn-ghost">{t('hero_cta2')} <ArrowRight /></a>
           </div>
  
           {/* SKILL TAGS */}
@@ -660,6 +789,26 @@ export default function PortfolioPage() {
         </div>
       </section>
  
+      {/* ── CLIENT LOGO STRIP ────────────────────────── */}
+      <section className="jlt-logos">
+        <div className="jlt-logos-inner">
+          <span className="logos-eyebrow">{t('logos_eyebrow')}</span>
+          <div className="logos-row">
+            {[
+              { name: 'Statement Clothing', icon: '👗' },
+              { name: 'Die Barista', icon: '☕' },
+              { name: 'Meet Your Master', icon: '🎓' },
+              { name: 'DOQ', icon: '🐾' },
+            ].map(({ name, icon }) => (
+              <div key={name} className="logo-client">
+                <span style={{ fontSize: '1.75rem' }}>{icon}</span>
+                <span className="logo-client-name">{name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CASE STUDIES ─────────────────────────────── */}
       <section className="jlt-cases" id="projekte">
         <div className="jlt-cases-inner">
@@ -689,7 +838,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">€30K</span><span className="res-label">{t('c1_k3')}</span></div>
               </div>
-              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div className="mock-stmt">
@@ -742,7 +891,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">{t('c2_k3v')}</span><span className="res-label">{t('c2_k3')}</span></div>
               </div>
-              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div style={{display:'flex',flexDirection:'column',height:'100%'}}>
@@ -783,7 +932,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">{t('c3_k2v')}</span><span className="res-label">{t('c3_k2')}</span></div>
               </div>
-              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" style={{position:'relative'}} aria-hidden="true">
               <div style={{height:'100%',display:'flex',flexDirection:'column'}}>
@@ -832,7 +981,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">App MVP</span><span className="res-label">{t('c4_k2')}</span></div>
               </div>
-              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div style={{display:'flex',flexDirection:'column',height:'100%'}}>
@@ -863,6 +1012,31 @@ export default function PortfolioPage() {
         </div>
       </section>
  
+      {/* ── TESTIMONIALS ─────────────────────────────── */}
+      <section className="jlt-testi">
+        <div className="jlt-testi-inner">
+          <header className="testi-hdr">
+            <span className="eyebrow">{t('testi_eyebrow')}</span>
+            <p className="sec-sub">{t('testi_sub')}</p>
+          </header>
+          <div className="testi-grid">
+            {[
+              { quote: t('t1_quote'), name: t('t1_name'), role: t('t1_role') },
+              { quote: t('t2_quote'), name: t('t2_name'), role: t('t2_role') },
+              { quote: t('t3_quote'), name: t('t3_name'), role: t('t3_role') },
+            ].map(({ quote, name, role }) => (
+              <article key={name} className="testi-card">
+                <p className="testi-quote">{quote}</p>
+                <div className="testi-author">
+                  <span className="testi-name">{name}</span>
+                  <span className="testi-role">{role}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── LEISTUNGEN ───────────────────────────────── */}
       <section className="jlt-services" id="leistungen">
         <div className="jlt-services-inner">
@@ -880,6 +1054,75 @@ export default function PortfolioPage() {
         </div>
       </section>
  
+      {/* ── GEO SPOTLIGHT ────────────────────────────── */}
+      <section className="jlt-geo">
+        <div className="jlt-geo-inner">
+          <div className="geo-text">
+            <span className="eyebrow">{t('geo_eyebrow')}</span>
+            <h2 className="sec-h" dangerouslySetInnerHTML={{ __html: t('geo_headline') }} />
+            <p className="sec-sub">{t('geo_sub')}</p>
+            <div className="geo-pills">
+              {[
+                { icon: '{}', label: t('geo_p1') },
+                { icon: '★', label: t('geo_p2') },
+                { icon: '✦', label: t('geo_p3') },
+              ].map(({ icon, label }) => (
+                <div key={label} className="geo-pill">
+                  <div className="geo-pill-icon">{icon}</div>
+                  {label}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="geo-visual">
+            <div className="geo-vis-hdr">LLM Citation Monitor</div>
+            {[
+              { badge: 'cited', badgeLabel: t('geo_cited'), query: 'Performance Marketing Agentur Hamburg', src: 'jose-treff.de' },
+              { badge: 'cited', badgeLabel: t('geo_cited'), query: 'Shopify Entwickler DACH D2C', src: 'jose-treff.de' },
+              { badge: 'indexed', badgeLabel: t('geo_indexed'), query: 'GEO Optimierung für Marken', src: 'jose-treff.de' },
+              { badge: 'cited', badgeLabel: t('geo_cited'), query: 'Google Ads Skalierung Fashion', src: 'jose-treff.de' },
+            ].map(({ badge, badgeLabel, query, src }) => (
+              <div key={query} className="geo-entry">
+                <div className="geo-entry-top">
+                  <span className={`geo-badge ${badge}`}>{badgeLabel}</span>
+                  <span className="geo-entry-query">{query}</span>
+                </div>
+                <span className="geo-entry-src">{src}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ABOUT ME ─────────────────────────────────── */}
+      <section className="jlt-about">
+        <div className="jlt-about-inner">
+          <div className="about-left">
+            <div className="about-avatar">🧑‍💻</div>
+            <div>
+              <h2 className="sec-h" style={{ fontSize: 'clamp(1.5rem,2.5vw,2rem)' }}>Jose L. Treff</h2>
+              <p style={{ fontFamily: 'var(--fb)', fontSize: '.875rem', color: 'var(--gray4)', marginTop: '.25rem' }}>Hamburg · DACH · Remote</p>
+            </div>
+            <div className="about-avail-tag">
+              <div className="about-avail-dot" />
+              <span className="about-avail-text">{t('about_avail')}</span>
+            </div>
+          </div>
+          <div className="about-right">
+            <span className="eyebrow">{t('about_eyebrow')}</span>
+            <p className="about-body">{t('about_text')}</p>
+            <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
+              {['DE', 'EN', 'ES'].map(lang => (
+                <span key={lang} className="skill-tag tech">{lang}</span>
+              ))}
+              <span className="skill-tag">Hamburg</span>
+              <span className="skill-tag">Remote</span>
+              <span className="skill-tag">DACH</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── KONTAKT ──────────────────────────────────── */}
       <section className="jlt-contact" id="kontakt">
         <div className="jlt-contact-inner">
@@ -887,8 +1130,8 @@ export default function PortfolioPage() {
           <h2 className="ct-headline">{t('ct_headline')}</h2>
           <p className="ct-sub">{t('ct_sub')}</p>
           <div className="ct-ctas">
-            <a href="mailto:jtl.marketingservices@gmail.com" className="btn-primary">jtl.marketingservices@gmail.com <ArrowRight /></a>
-            <a href="https://linkedin.com/in/jose-l-treff-033224251" target="_blank" rel="noopener" className="btn-ghost">LinkedIn</a>
+            <a href="https://calendly.com/jose-treff/15min" target="_blank" rel="noopener" className="btn-primary">{t('ct_cta_calendly')} <ArrowRight /></a>
+            <a href="mailto:jose@tubebridge.de" className="btn-ghost">{t('ct_cta_email')}</a>
           </div>
           <div className="ct-meta">
             <span className="ct-meta-item"><span className="ct-dot"/>{t('ct_m1')}</span>
@@ -904,7 +1147,7 @@ export default function PortfolioPage() {
           <a href="/" className="footer-logo">JL<span>.</span>T</a>
           <span className="footer-copy">{t('footer')}</span>
           <div className="footer-links">
-            <a href="mailto:jtl.marketingservices@gmail.com">E-Mail</a>
+            <a href="mailto:jose@tubebridge.de">E-Mail</a>
             <a href="https://linkedin.com/in/jose-l-treff-033224251" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
