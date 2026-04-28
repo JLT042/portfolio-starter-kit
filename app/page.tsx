@@ -305,12 +305,15 @@ export default function PortfolioPage() {
         .ct-meta-item { display:flex;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.75rem;color:var(--gray4); }
         .ct-dot { width:4px;height:4px;border-radius:50%;background:var(--success); }
  
-        /* ── LOGO STRIP ── */
-        .jlt-logos { padding:4rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1; }
-        .jlt-logos-inner { max-width:960px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:3.5rem; }
-        .logos-eyebrow { font-family:var(--fb);font-size:1rem;font-weight:500;color:var(--gray3);text-align:center;line-height:1.5; }
-        .logos-row { display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem 4rem; }
-        .logo-img { width:auto;filter:brightness(0) invert(1);opacity:.55;transition:opacity 220ms; }
+        /* ── LOGO MARQUEE ── */
+        @keyframes logoScroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+        .jlt-logos { padding:3.5rem 0;background:var(--navy);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1;overflow:hidden; }
+        .logos-eyebrow-wrap { padding:0 clamp(1rem,6vw,4rem);margin-bottom:2.5rem;text-align:center; }
+        .logos-eyebrow { font-family:var(--fb);font-size:1rem;font-weight:500;color:var(--gray3); }
+        .logos-marquee { overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent);mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent); }
+        .logos-track { display:flex;align-items:center;gap:5rem;width:max-content;animation:logoScroll 24s linear infinite; }
+        .logos-track:hover { animation-play-state:paused; }
+        .logo-img { width:auto;filter:brightness(0) invert(1);opacity:.5;transition:opacity 220ms;flex-shrink:0; }
         .logo-img:hover { opacity:1; }
 
         /* ── TESTIMONIALS ── */
@@ -534,16 +537,25 @@ export default function PortfolioPage() {
         </div>
       </section>
  
-      {/* ── PLATFORM LOGO STRIP ──────────────────────── */}
-      <section className="jlt-logos">
-        <div className="jlt-logos-inner">
+      {/* ── PLATFORM LOGO MARQUEE ────────────────────── */}
+      <section className="jlt-logos" aria-label={t('logos_eyebrow')}>
+        <div className="logos-eyebrow-wrap">
           <p className="logos-eyebrow">{t('logos_eyebrow')}</p>
-          <div className="logos-row">
-            <img className="logo-img" src="/images/logos/shopify.png"    alt="Shopify"              style={{ height: 28 }} />
-            <img className="logo-img" src="/images/logos/google-ads.png" alt="Google Ads"           style={{ height: 24 }} />
-            <img className="logo-img" src="/images/logos/meta.png"       alt="Meta"                 style={{ height: 20 }} />
-            <img className="logo-img" src="/images/logos/tiktok.png"     alt="TikTok"               style={{ height: 20 }} />
-            <img className="logo-img" src="/images/logos/gtm.png"        alt="Google Tag Manager"   style={{ height: 24 }} />
+        </div>
+        <div className="logos-marquee">
+          <div className="logos-track">
+            {/* Set 1 — visible to screen readers */}
+            <img className="logo-img" src="/images/logos/shopify.png"    alt="Shopify"            style={{ height: 28 }} />
+            <img className="logo-img" src="/images/logos/google-ads.png" alt="Google Ads"         style={{ height: 24 }} />
+            <img className="logo-img" src="/images/logos/meta.png"       alt="Meta"               style={{ height: 20 }} />
+            <img className="logo-img" src="/images/logos/tiktok.png"     alt="TikTok"             style={{ height: 20 }} />
+            <img className="logo-img" src="/images/logos/gtm.png"        alt="Google Tag Manager" style={{ height: 24 }} />
+            {/* Set 2 — duplicate for seamless loop, hidden from screen readers */}
+            <img className="logo-img" src="/images/logos/shopify.png"    alt="" aria-hidden="true" style={{ height: 28 }} />
+            <img className="logo-img" src="/images/logos/google-ads.png" alt="" aria-hidden="true" style={{ height: 24 }} />
+            <img className="logo-img" src="/images/logos/meta.png"       alt="" aria-hidden="true" style={{ height: 20 }} />
+            <img className="logo-img" src="/images/logos/tiktok.png"     alt="" aria-hidden="true" style={{ height: 20 }} />
+            <img className="logo-img" src="/images/logos/gtm.png"        alt="" aria-hidden="true" style={{ height: 24 }} />
           </div>
         </div>
       </section>
