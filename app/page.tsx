@@ -99,7 +99,23 @@ export default function PortfolioPage() {
       s3_num: "03 — Sichtbarkeit",
       s3_title: "SEO, GEO & KI",
       s3_desc: "Technisches SEO, Generative Engine Optimization für LLM-Zitierungen (ChatGPT, Perplexity), JSON-LD-Schema, KI-Workflow-Automatisierung für Content-Skalierung.",
- 
+
+      svc_eyebrow: "Leistungen",
+      svc_headline: "Vom ersten Pixel zur nächsten Conversion.",
+      svc_sub: "Ein strukturierter Prozess — von der Website über Tracking und Traffic bis zur optimierten Conversion. Jede Phase baut auf der vorherigen auf.",
+      p1_title: "Web Design & Entwicklung",
+      p1_desc: "Shopify-Shops, WordPress-Websites und individuelle Webprojekte — technisch sauber, UX-optimiert und conversion-ready. Ob D2C-Shop oder Corporate-Site: ich baue Websites, die performen.",
+      p2_title: "Web Analytics & Tracking",
+      p2_desc: "Kein Fortschritt ohne Daten. Ich richte GA4, GTM und Microsoft Clarity auf — DSGVO-konform, sauber strukturiert und so konfiguriert, dass jede Maßnahme messbar wird. Monatliche Reportings zeigen, was wirklich zählt.",
+      p3_title: "SEO",
+      p3_desc: "Organische Sichtbarkeit durch technisches SEO, On-Page-Optimierung, gezielte Keyword-Recherche und strategischen Backlinkaufbau. Langfristige Rankings — kein kurzfristiges Gaming.",
+      p4_title: "Paid Media / SEA",
+      p4_desc: "Performance-Kampagnen auf Google, Meta und TikTok — von der Zielgruppen-Architektur bis zur täglichen Optimierung. Full-Funnel mit klaren KPIs, transparentem Budget und echten ROAS-Zahlen.",
+      p5_title: "CRO — Conversion Optimierung",
+      p5_desc: "Wenn Tracking läuft und Traffic da ist, optimiere ich den Funnel. Heatmap-Analyse, A/B-Tests und UX-Research decken auf, wo Besucher abspringen — und was sie zum Kauf bewegt.",
+      p6_title: "GEO & KI-Workflows",
+      p6_desc: "Die neue Disziplin: Inhalte so strukturieren, dass ChatGPT, Perplexity und Gemini dich als Quelle zitieren. JSON-LD, E-E-A-T-Optimierung und KI-Automatisierung — der nächste Schritt nach SEO.",
+
       ct_eyebrow: "Lass uns reden",
       ct_headline: "Projekt in Planung?",
       ct_sub: "Ob Google Ads Skalierung, Shopify-Entwicklung oder GEO-Strategie — ich helfe DACH-Brands dabei, messbare Ergebnisse zu erzielen. Remote, flexibel.",
@@ -192,7 +208,23 @@ export default function PortfolioPage() {
       s3_num: "03 — Visibility",
       s3_title: "SEO, GEO & AI",
       s3_desc: "Technical SEO, Generative Engine Optimization for LLM citations (ChatGPT, Perplexity), JSON-LD schema markup, AI workflow automation for content scaling.",
- 
+
+      svc_eyebrow: "Services",
+      svc_headline: "From the first pixel to the next conversion.",
+      svc_sub: "A structured process — from website to tracking, traffic and optimised conversions. Every phase builds on the previous one.",
+      p1_title: "Web Design & Development",
+      p1_desc: "Shopify stores, WordPress websites and custom web projects — technically clean, UX-optimised and conversion-ready. Whether D2C shop or corporate site: I build websites that perform.",
+      p2_title: "Web Analytics & Tracking",
+      p2_desc: "No progress without data. I set up GA4, GTM and Microsoft Clarity — GDPR-compliant, cleanly structured and configured so every measure is trackable. Monthly reports show what actually matters.",
+      p3_title: "SEO",
+      p3_desc: "Organic visibility through technical SEO, on-page optimisation, targeted keyword research and strategic link building. Long-term rankings — no short-term tricks.",
+      p4_title: "Paid Media / SEA",
+      p4_desc: "Performance campaigns on Google, Meta and TikTok — from audience architecture to daily optimisation. Full-funnel with clear KPIs, transparent budget management and real ROAS numbers.",
+      p5_title: "CRO — Conversion Optimisation",
+      p5_desc: "Once tracking is live and traffic is flowing, I optimise the funnel. Heatmap analysis, A/B testing and UX research reveal where visitors drop off — and what converts them.",
+      p6_title: "GEO & AI Workflows",
+      p6_desc: "The new discipline: structure content so that ChatGPT, Perplexity and Gemini cite you as a source. JSON-LD, E-E-A-T optimisation and AI automation — the next step beyond SEO.",
+
       ct_eyebrow: "Let's talk",
       ct_headline: "Planning a project?",
       ct_sub: "Whether Google Ads scaling, Shopify development or GEO strategy — I help DACH brands achieve measurable results. Remote, flexible.",
@@ -285,6 +317,22 @@ export default function PortfolioPage() {
       s3_num: "03 — Visibilidad",
       s3_title: "SEO, GEO e IA",
       s3_desc: "SEO técnico, Generative Engine Optimization para citas en LLMs (ChatGPT, Perplexity), schema JSON-LD, automatización de flujos de IA para escalado de contenido.",
+
+      svc_eyebrow: "Servicios",
+      svc_headline: "Del primer píxel a la próxima conversión.",
+      svc_sub: "Un proceso estructurado — desde la web hasta el tracking, el tráfico y las conversiones optimizadas. Cada fase construye sobre la anterior.",
+      p1_title: "Web Design y Desarrollo",
+      p1_desc: "Tiendas Shopify, webs WordPress y proyectos a medida — técnicamente sólidos, optimizados para UX y listos para convertir. Desde tiendas D2C hasta sites corporativos: webs que rinden.",
+      p2_title: "Analytics y Tracking",
+      p2_desc: "Sin datos no hay progreso. Configuro GA4, GTM y Microsoft Clarity — conforme al RGPD, bien estructurado y listo para medir cada acción. Reportings mensuales que muestran lo que realmente importa.",
+      p3_title: "SEO",
+      p3_desc: "Visibilidad orgánica a través de SEO técnico, optimización on-page, investigación de keywords y link building estratégico. Rankings a largo plazo — sin atajos.",
+      p4_title: "Paid Media / SEA",
+      p4_desc: "Campañas de performance en Google, Meta y TikTok — desde la arquitectura de audiencias hasta la optimización diaria. Full-funnel con KPIs claros, presupuesto transparente y ROAS reales.",
+      p5_title: "CRO — Optimización de Conversión",
+      p5_desc: "Cuando el tracking funciona y el tráfico llega, optimizo el funnel. Análisis de heatmaps, A/B testing e investigación UX revelan dónde abandonan los visitantes — y qué los convierte.",
+      p6_title: "GEO y Flujos de IA",
+      p6_desc: "La nueva disciplina: estructurar contenidos para que ChatGPT, Perplexity y Gemini te citen como fuente. JSON-LD, E-E-A-T y automatización con IA — el siguiente paso al SEO.",
 
       ct_eyebrow: "Hablemos",
       ct_headline: "¿Tienes un proyecto?",
@@ -424,6 +472,26 @@ export default function PortfolioPage() {
         .vc-caption { font-family:var(--fb);font-size:.8125rem;color:var(--gray3);display:flex;align-items:center;gap:.5rem; }
         .vc-duration { font-family:var(--fm);font-size:.75rem;color:var(--gray4);padding:3px 8px;border-radius:3px;background:var(--navy);border:1px solid var(--border); }
  
+        /* ── SERVICES FUNNEL ── */
+        .jlt-svf { padding:6rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);position:relative;z-index:1; }
+        .jlt-svf-inner { max-width:1280px;margin:0 auto; }
+        .svf-hdr { margin-bottom:3rem;display:flex;flex-direction:column;gap:1rem; }
+        .svf-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden; }
+        .svf-card { padding:2.5rem 2rem;display:flex;flex-direction:column;gap:1.25rem;background:var(--graphite);transition:background 180ms var(--eq); }
+        .svf-card:hover { background:var(--slate); }
+        .svf-card.geo { background:radial-gradient(ellipse 140% 160% at 90% 10%,oklch(68% 0.165 265/.14) 0%,var(--graphite) 55%); }
+        .svf-card.geo:hover { background:radial-gradient(ellipse 140% 160% at 90% 10%,oklch(68% 0.165 265/.22) 0%,var(--slate) 55%); }
+        .svf-num { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand); }
+        .svf-card.geo .svf-num { color:var(--indigo); }
+        .svf-title { font-family:var(--fh);font-size:1.25rem;font-weight:700;letter-spacing:-.015em;line-height:1.15;color:var(--white); }
+        .svf-desc { font-family:var(--fb);font-size:.875rem;line-height:1.7;color:var(--gray3);flex:1; }
+        .svf-tools { display:flex;flex-wrap:wrap;gap:.375rem;margin-top:auto; }
+        .svf-tool { padding:3px 9px;border-radius:3px;border:1px solid var(--border);background:oklch(95% 0.006 260/.04);font-family:var(--fm);font-size:.625rem;letter-spacing:.03em;color:var(--gray4); }
+        .svf-card.geo .svf-tool { border-color:oklch(68% 0.165 265/.28);color:var(--indigo);background:oklch(68% 0.165 265/.07); }
+        .svf-badge { display:inline-flex;align-items:center;gap:.375rem;padding:3px 9px;border-radius:9999px;border:1px solid oklch(68% 0.165 265/.35);background:oklch(68% 0.165 265/.10);font-family:var(--fm);font-size:.5625rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);width:fit-content; }
+        @media(max-width:900px) { .svf-grid { grid-template-columns:repeat(2,1fr); } }
+        @media(max-width:580px) { .svf-grid { grid-template-columns:1fr; } }
+
         /* ── CASES ── */
         .jlt-cases { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);position:relative;z-index:1; }
         .jlt-cases-inner { max-width:1280px;margin:0 auto; }
@@ -809,6 +877,77 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* ── LEISTUNGEN / SERVICES FUNNEL ────────────── */}
+      <section className="jlt-svf" id="leistungen">
+        <div className="jlt-svf-inner">
+          <header className="svf-hdr">
+            <span className="eyebrow">{t('svc_eyebrow')}</span>
+            <h2 className="sec-h">{t('svc_headline')}</h2>
+            <p className="sec-sub">{t('svc_sub')}</p>
+          </header>
+          <div className="svf-grid">
+
+            <div className="svf-card">
+              <span className="svf-num">01 — Foundation</span>
+              <h3 className="svf-title">{t('p1_title')}</h3>
+              <p className="svf-desc">{t('p1_desc')}</p>
+              <div className="svf-tools">
+                {['Shopify', 'WordPress', 'Custom Dev', 'UX Design'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
+              </div>
+            </div>
+
+            <div className="svf-card">
+              <span className="svf-num">02 — Measure</span>
+              <h3 className="svf-title">{t('p2_title')}</h3>
+              <p className="svf-desc">{t('p2_desc')}</p>
+              <div className="svf-tools">
+                {['GA4', 'Google Tag Manager', 'Microsoft Clarity', 'Reporting'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
+              </div>
+            </div>
+
+            <div className="svf-card">
+              <span className="svf-num">03 — Visibility</span>
+              <h3 className="svf-title">{t('p3_title')}</h3>
+              <p className="svf-desc">{t('p3_desc')}</p>
+              <div className="svf-tools">
+                {['On-Page SEO', 'Backlinks', 'Keyword Research', 'Technical SEO'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
+              </div>
+            </div>
+
+            <div className="svf-card">
+              <span className="svf-num">04 — Traffic</span>
+              <h3 className="svf-title">{t('p4_title')}</h3>
+              <p className="svf-desc">{t('p4_desc')}</p>
+              <div className="svf-tools">
+                {['Google Ads', 'Meta Ads', 'TikTok Ads', 'LinkedIn Ads'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
+              </div>
+            </div>
+
+            <div className="svf-card">
+              <span className="svf-num">05 — Optimise</span>
+              <h3 className="svf-title">{t('p5_title')}</h3>
+              <p className="svf-desc">{t('p5_desc')}</p>
+              <div className="svf-tools">
+                {['Heatmaps', 'A/B Testing', 'Funnel Analysis', 'UX Research'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
+              </div>
+            </div>
+
+            <div className="svf-card geo">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '.625rem' }}>
+                <span className="svf-num">06 — Next Level</span>
+                <span className="svf-badge">✦ Neu</span>
+              </div>
+              <h3 className="svf-title">{t('p6_title')}</h3>
+              <p className="svf-desc">{t('p6_desc')}</p>
+              <div className="svf-tools">
+                {['ChatGPT', 'Perplexity', 'JSON-LD', 'E-E-A-T', 'KI-Workflows'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── CASE STUDIES ─────────────────────────────── */}
       <section className="jlt-cases" id="projekte">
         <div className="jlt-cases-inner">
@@ -1037,22 +1176,6 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* ── LEISTUNGEN ───────────────────────────────── */}
-      <section className="jlt-services" id="leistungen">
-        <div className="jlt-services-inner">
-          {[
-            { num: t('s1_num'), title: t('s1_title'), desc: t('s1_desc') },
-            { num: t('s2_num'), title: t('s2_title'), desc: t('s2_desc') },
-            { num: t('s3_num'), title: t('s3_title'), desc: t('s3_desc') },
-          ].map(s => (
-            <article key={s.num} className="svc-card">
-              <span className="svc-num">{s.num}</span>
-              <h2 className="svc-title">{s.title}</h2>
-              <p className="svc-desc">{s.desc}</p>
-            </article>
-          ))}
-        </div>
-      </section>
  
       {/* ── GEO SPOTLIGHT ────────────────────────────── */}
       <section className="jlt-geo">
