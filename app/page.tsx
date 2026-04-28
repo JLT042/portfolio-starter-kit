@@ -1,6 +1,9 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import de from '@/content/de.json';
+import en from '@/content/en.json';
+import es from '@/content/es.json';
  
 // ─────────────────────────────────────────────────────────────
 // JOSE L. TREFF — Portfolio Page
@@ -11,341 +14,16 @@ export default function PortfolioPage() {
   const [lang, setLang] = useState<'de' | 'en' | 'es'>('de');
  
   /* ══════════════════════════════════════════════════
-     ÜBERSETZUNGEN — HIER TEXTE BEARBEITEN
-     Search for "de:", "en:" or "es:" to edit text.
+     ÜBERSETZUNGEN — Texte in content/de.json etc. bearbeiten
      ══════════════════════════════════════════════════ */
   const T = {
-    de: {
-      nav_projects: "Projekte",
-      nav_services: "Leistungen",
-      nav_contact: "Kontakt",
-      nav_cta: "Kontakt aufnehmen",
- 
-      hero_status: "Verfügbar für Projekte — DACH & remote",
-      hero_headline: "Performance.<br/>Die<br/><em>konvertiert.</em>",
-      hero_sub: "Senior Performance Marketer und Shopify-Entwickler — von der Strategie bis zum Checkout. €30K/Monat Ad-Budget eigenverantwortlich gesteuert über Google, Meta und TikTok für D2C- und B2B-Marken im DACH-Raum.",
-      hero_ev1: "ROAS, Fashion D2C",
-      hero_ev2: "CPA bei €80 Warenkorbwert",
-      hero_ev3: "Jahre, 6 aktive Kunden",
-      hero_ev4: "Max. Budget/Monat",
-      hero_cta1: "Case Studies ansehen",
-      hero_cta2: "15-Min Gespräch buchen",
-      tag_ai: "KI-Workflows",
-      logos_eyebrow: "Vertrauen von Brands & Gründern",
-      testi_eyebrow: "Was Kunden sagen",
-      testi_sub: "Echte Zusammenarbeit, klare Ergebnisse.",
-      t1_quote: "Jose hat unsere Google-Ads-Performance in wenigen Wochen transformiert — klare Strategie, saubere Umsetzung, messbarer ROAS.",
-      t1_name: "M. Schreiber",
-      t1_role: "Inhaber · E-Commerce, DACH",
-      t2_quote: "Der Shopify-Shop war schnell live, technisch sauber und hat direkt konvertiert. Sehr professionelle Zusammenarbeit.",
-      t2_name: "L. Kraft",
-      t2_role: "Gründerin · D2C Brand",
-      t3_quote: "Das UX-Audit hat echte Probleme aufgedeckt, die wir vorher nicht gesehen haben. Die Abbruchrate im Onboarding ist seitdem deutlich gesunken.",
-      t3_name: "T. Reinhardt",
-      t3_role: "Product Lead · eLearning",
-      about_eyebrow: "Über mich",
-      about_text: "Ich bin Jose — Senior Performance Marketer und Shopify-Entwickler aus Hamburg. Seit über 5 Jahren helfe ich D2C- und B2B-Marken im DACH-Raum dabei, messbare Ergebnisse zu erzielen: von der Ads-Strategie bis zum Checkout, vom ersten Klick bis zum Stammkunden.\n\nMein Ansatz ist datengetrieben, pragmatisch und skalierbar — kein Agentur-Overhead, direkte Kommunikation, klare KPIs.",
-      about_avail: "Verfügbar für neue Projekte",
-      geo_eyebrow: "Neue Disziplin",
-      geo_headline: "Werde zitiert — von ChatGPT,<br/>Perplexity & Gemini.",
-      geo_sub: "GEO (Generative Engine Optimization) ist der SEO-Nachfolger für das KI-Zeitalter. Ich optimiere Inhalte so, dass sie von KI-Assistenten als Quelle verwendet werden — nicht nur gefunden, sondern zitiert.",
-      geo_p1: "JSON-LD Schema & strukturierte Daten",
-      geo_p2: "Autorität & E-E-A-T für LLMs",
-      geo_p3: "KI-optimierter Content-Aufbau",
-      geo_cited: "● Zitiert",
-      geo_indexed: "○ Indexiert",
-      ct_cta_calendly: "15-Min Gespräch buchen",
-      ct_cta_email: "jose@tubebridge.de schreiben",
- 
-      cases_eyebrow: "Ausgewählte Projekte",
-      cases_sub: "Echte Kampagnen, echte Zahlen — von Performance-Marketing über Shopify-Entwicklung bis zu UX-Research und Brand-Aufbau.",
- 
-      c1_num: "01 — Performance Marketing",
-      c1_tag: "ROAS-Skalierung",
-      c1_desc: "Vollständige Google-Ads-Strategie für eine Fashion-D2C-Brand im DACH-Markt. Budget von unter €5K auf €30K/Monat skaliert — ROAS konstant über 13 bei einem CPA von €9 bei €80 Ø-Warenkorbwert.",
-      c1_k3: "Budget/Monat",
- 
-      c2_num: "02 — Shopify Dev & CRO",
-      c2_desc: "Shopify-Shop von Grund auf aufgebaut — Custom Liquid-Theme entwickelt, Produktstruktur und Checkout-Flow optimiert. Lokale Google-Ads-Kampagnen aufgesetzt und CRO-Maßnahmen auf Basis von Clarity-Heatmaps implementiert.",
-      c2_k1: "Custom Dev",
-      c2_k2: "Heatmap-basiert",
-      c2_k3v: "Aktiv",
-      c2_k3: "seit 09/2025",
- 
-      c3_num: "03 — UX Lead & CRO",
-      c3_tag: "Churn-Senkung",
-      c3_desc: "UX-Lead für eine deutschsprachige eLearning-Videoplattform. Journey-Audit, Tiefeninterviews und Usability-Tests identifizierten Schwachstellen in Onboarding und Navigation. Ergebnis: A/B-Test-Roadmap, überarbeitete Prototypen, reduzierte Kursabbrüche.",
-      c3_k1v: "↓ Abbrüche",
-      c3_k1: "Churn reduziert",
-      c3_k2v: "↑ Engagement",
-      c3_k2: "Verweildauer",
- 
-      c4_num: "04 — Branding & UX Research",
-      c4_tag: "Markenaufbau",
-      c4_arch: "App-Architektur",
-      c4_desc: "Markteinführung einer technologiegestützten Hundefuttermarke — vollständiger Markenaufbau, Nutzerinterviews, Value-Proposition-Tests und erste App-Flow-Prototypen. MVP-Roadmap und Backlog-Priorisierung für die Skalierungsphase.",
-      c4_k1v: "Brand",
-      c4_k1: "0 → Launch",
-      c4_k2: "Roadmap & Prototyp",
- 
-      case_link: "Details auf Anfrage",
- 
-      s1_num: "01 — Performance",
-      s1_title: "Paid Media & Wachstum",
-      s1_desc: "Google Ads, Meta, TikTok, LinkedIn. Full-Funnel-Strategie, Zielgruppen-Architektur, ROAS-Skalierung. Von €800 bis €30K/Monat eigenverantwortlich gesteuert.",
-      s2_num: "02 — Entwicklung",
-      s2_title: "Shopify & CRO",
-      s2_desc: "Custom Liquid- und Theme-Entwicklung, Conversion-Rate-Optimierung, UX-Verbesserungen auf Basis von Clarity-Heatmaps und A/B-Testdaten.",
-      s3_num: "03 — Sichtbarkeit",
-      s3_title: "SEO, GEO & KI",
-      s3_desc: "Technisches SEO, Generative Engine Optimization für LLM-Zitierungen (ChatGPT, Perplexity), JSON-LD-Schema, KI-Workflow-Automatisierung für Content-Skalierung.",
+    de: de as typeof de,
+    en: en as typeof de,
+    es: es as typeof de,
+  };
+  const t = (key: keyof typeof de): string => (T[lang][key] ?? de[key]) as string;
 
-      svc_eyebrow: "Leistungen",
-      svc_headline: "Vom ersten Pixel zur nächsten Conversion.",
-      svc_sub: "Ein strukturierter Prozess — von der Website über Tracking und Traffic bis zur optimierten Conversion. Jede Phase baut auf der vorherigen auf.",
-      p1_title: "Web Design & Entwicklung",
-      p1_desc: "Shopify-Shops, WordPress-Websites und individuelle Webprojekte — technisch sauber, UX-optimiert und conversion-ready. Ob D2C-Shop oder Corporate-Site: ich baue Websites, die performen.",
-      p2_title: "Web Analytics & Tracking",
-      p2_desc: "Kein Fortschritt ohne Daten. Ich richte GA4, GTM und Microsoft Clarity auf — DSGVO-konform, sauber strukturiert und so konfiguriert, dass jede Maßnahme messbar wird. Monatliche Reportings zeigen, was wirklich zählt.",
-      p3_title: "SEO",
-      p3_desc: "Organische Sichtbarkeit durch technisches SEO, On-Page-Optimierung, gezielte Keyword-Recherche und strategischen Backlinkaufbau. Langfristige Rankings — kein kurzfristiges Gaming.",
-      p4_title: "Paid Media / SEA",
-      p4_desc: "Performance-Kampagnen auf Google, Meta und TikTok — von der Zielgruppen-Architektur bis zur täglichen Optimierung. Full-Funnel mit klaren KPIs, transparentem Budget und echten ROAS-Zahlen.",
-      p5_title: "CRO — Conversion Optimierung",
-      p5_desc: "Wenn Tracking läuft und Traffic da ist, optimiere ich den Funnel. Heatmap-Analyse, A/B-Tests und UX-Research decken auf, wo Besucher abspringen — und was sie zum Kauf bewegt.",
-      p6_title: "GEO & KI-Workflows",
-      p6_desc: "Die neue Disziplin: Inhalte so strukturieren, dass ChatGPT, Perplexity und Gemini dich als Quelle zitieren. JSON-LD, E-E-A-T-Optimierung und KI-Automatisierung — der nächste Schritt nach SEO.",
 
-      ct_eyebrow: "Lass uns reden",
-      ct_headline: "Projekt in Planung?",
-      ct_sub: "Ob Google Ads Skalierung, Shopify-Entwicklung oder GEO-Strategie — ich helfe DACH-Brands dabei, messbare Ergebnisse zu erzielen. Remote, flexibel.",
-      ct_m1: "Hamburg / Remote",
-      ct_m2: "DACH-Fokus",
- 
-      footer: "© 2026 Jose L. Treff — JLT Marketing Services",
-    },
-    en: {
-      nav_projects: "Projects",
-      nav_services: "Services",
-      nav_contact: "Contact",
-      nav_cta: "Get in touch",
- 
-      hero_status: "Available for projects — DACH & remote",
-      hero_headline: "Performance.<br/>That<br/><em>Converts.</em>",
-      hero_sub: "Senior Performance Marketer and Shopify Developer — from strategy to checkout. €30K/month ad budget managed independently across Google, Meta and TikTok for D2C and B2B brands in the DACH market.",
-      hero_ev1: "ROAS, Fashion D2C",
-      hero_ev2: "CPA on €80 avg. order value",
-      hero_ev3: "years, 6 active clients",
-      hero_ev4: "Max. Budget/month",
-      hero_cta1: "View Case Studies",
-      hero_cta2: "Book a 15-min call",
-      tag_ai: "AI Workflows",
-      logos_eyebrow: "Trusted by brands & founders",
-      testi_eyebrow: "What clients say",
-      testi_sub: "Real collaboration, measurable results.",
-      t1_quote: "Jose transformed our Google Ads performance in just a few weeks — clear strategy, clean execution, measurable ROAS.",
-      t1_name: "M. Schreiber",
-      t1_role: "Owner · E-Commerce, DACH",
-      t2_quote: "The Shopify store went live fast, was technically solid and converted from day one. Very professional collaboration.",
-      t2_name: "L. Kraft",
-      t2_role: "Founder · D2C Brand",
-      t3_quote: "The UX audit uncovered real problems we hadn't seen before. The drop-off rate in onboarding has dropped significantly since.",
-      t3_name: "T. Reinhardt",
-      t3_role: "Product Lead · eLearning",
-      about_eyebrow: "About me",
-      about_text: "I'm Jose — Senior Performance Marketer and Shopify Developer based in Hamburg. For over 5 years I've helped D2C and B2B brands in the DACH market achieve measurable results: from ad strategy to checkout, from first click to returning customer.\n\nMy approach is data-driven, pragmatic and scalable — no agency overhead, direct communication, clear KPIs.",
-      about_avail: "Available for new projects",
-      geo_eyebrow: "New discipline",
-      geo_headline: "Get cited — by ChatGPT,<br/>Perplexity & Gemini.",
-      geo_sub: "GEO (Generative Engine Optimization) is the SEO successor for the AI era. I optimise content so AI assistants use it as a source — not just found, but cited.",
-      geo_p1: "JSON-LD schema & structured data",
-      geo_p2: "Authority & E-E-A-T for LLMs",
-      geo_p3: "AI-optimised content architecture",
-      geo_cited: "● Cited",
-      geo_indexed: "○ Indexed",
-      ct_cta_calendly: "Book a 15-min call",
-      ct_cta_email: "Write to jose@tubebridge.de",
- 
-      cases_eyebrow: "Selected Projects",
-      cases_sub: "Real campaigns, real numbers — from performance marketing and Shopify development to UX research and brand building.",
- 
-      c1_num: "01 — Performance Marketing",
-      c1_tag: "ROAS Scaling",
-      c1_desc: "Full Google Ads strategy for a fashion D2C brand in the DACH market. Budget scaled from under €5K to €30K/month — ROAS consistently above 13× with a CPA of €9 at an average cart value of €80.",
-      c1_k3: "Budget/month",
- 
-      c2_num: "02 — Shopify Dev & CRO",
-      c2_desc: "Shopify store built from scratch — custom Liquid theme developed, product structure and checkout flow optimized. Local Google Ads campaigns and CRO measures implemented based on Clarity heatmaps.",
-      c2_k1: "Custom Dev",
-      c2_k2: "Heatmap-based",
-      c2_k3v: "Active",
-      c2_k3: "since 09/2025",
- 
-      c3_num: "03 — UX Lead & CRO",
-      c3_tag: "Churn Reduction",
-      c3_desc: "UX lead for a German-language eLearning video platform. Journey audit, depth interviews and usability tests identified weaknesses in onboarding and navigation. Result: A/B test roadmap, revised prototypes, reduced course drop-offs.",
-      c3_k1v: "↓ Drop-offs",
-      c3_k1: "Churn reduced",
-      c3_k2v: "↑ Engagement",
-      c3_k2: "Time on platform",
- 
-      c4_num: "04 — Branding & UX Research",
-      c4_tag: "Brand Building",
-      c4_arch: "App Architecture",
-      c4_desc: "Market launch of a technology-driven dog food brand — complete brand build, user interviews, value proposition tests and first app flow prototypes. MVP roadmap and backlog prioritization for the scaling phase.",
-      c4_k1v: "Brand",
-      c4_k1: "0 → Launch",
-      c4_k2: "Roadmap & Prototype",
- 
-      case_link: "Details on request",
- 
-      s1_num: "01 — Performance",
-      s1_title: "Paid Media & Growth",
-      s1_desc: "Google Ads, Meta, TikTok, LinkedIn. Full-funnel strategy, audience architecture, ROAS scaling. From €800 to €30K/month managed independently.",
-      s2_num: "02 — Development",
-      s2_title: "Shopify & CRO",
-      s2_desc: "Custom Liquid and theme development, conversion rate optimization, UX improvements based on Clarity heatmaps and A/B test data.",
-      s3_num: "03 — Visibility",
-      s3_title: "SEO, GEO & AI",
-      s3_desc: "Technical SEO, Generative Engine Optimization for LLM citations (ChatGPT, Perplexity), JSON-LD schema markup, AI workflow automation for content scaling.",
-
-      svc_eyebrow: "Services",
-      svc_headline: "From the first pixel to the next conversion.",
-      svc_sub: "A structured process — from website to tracking, traffic and optimised conversions. Every phase builds on the previous one.",
-      p1_title: "Web Design & Development",
-      p1_desc: "Shopify stores, WordPress websites and custom web projects — technically clean, UX-optimised and conversion-ready. Whether D2C shop or corporate site: I build websites that perform.",
-      p2_title: "Web Analytics & Tracking",
-      p2_desc: "No progress without data. I set up GA4, GTM and Microsoft Clarity — GDPR-compliant, cleanly structured and configured so every measure is trackable. Monthly reports show what actually matters.",
-      p3_title: "SEO",
-      p3_desc: "Organic visibility through technical SEO, on-page optimisation, targeted keyword research and strategic link building. Long-term rankings — no short-term tricks.",
-      p4_title: "Paid Media / SEA",
-      p4_desc: "Performance campaigns on Google, Meta and TikTok — from audience architecture to daily optimisation. Full-funnel with clear KPIs, transparent budget management and real ROAS numbers.",
-      p5_title: "CRO — Conversion Optimisation",
-      p5_desc: "Once tracking is live and traffic is flowing, I optimise the funnel. Heatmap analysis, A/B testing and UX research reveal where visitors drop off — and what converts them.",
-      p6_title: "GEO & AI Workflows",
-      p6_desc: "The new discipline: structure content so that ChatGPT, Perplexity and Gemini cite you as a source. JSON-LD, E-E-A-T optimisation and AI automation — the next step beyond SEO.",
-
-      ct_eyebrow: "Let's talk",
-      ct_headline: "Planning a project?",
-      ct_sub: "Whether Google Ads scaling, Shopify development or GEO strategy — I help DACH brands achieve measurable results. Remote, flexible.",
-      ct_m1: "Hamburg / Remote",
-      ct_m2: "DACH focus",
- 
-      footer: "© 2026 Jose L. Treff — JTL Marketing Services",
-    },
-    es: {
-      nav_projects: "Proyectos",
-      nav_services: "Servicios",
-      nav_contact: "Contacto",
-      nav_cta: "Contáctame",
-
-      hero_status: "Disponible para proyectos — DACH y remoto",
-      hero_headline: "Performance.<br/>Que<br/><em>Convierte.</em>",
-      hero_sub: "Senior Performance Marketer y desarrollador Shopify — de la estrategia al checkout. €30K/mes en presupuesto publicitario gestionado de forma autónoma en Google, Meta y TikTok para marcas D2C y B2B en el mercado DACH.",
-      hero_ev1: "ROAS, Moda D2C",
-      hero_ev2: "CPA con carrito medio de €80",
-      hero_ev3: "años, 6 clientes activos",
-      hero_ev4: "Presupuesto máx./mes",
-      hero_cta1: "Ver Case Studies",
-      hero_cta2: "Reservar llamada de 15 min",
-      tag_ai: "Flujos de IA",
-      logos_eyebrow: "Marcas y fundadores que confían",
-      testi_eyebrow: "Lo que dicen los clientes",
-      testi_sub: "Colaboración real, resultados medibles.",
-      t1_quote: "Jose transformó el rendimiento de nuestros Google Ads en pocas semanas — estrategia clara, ejecución limpia, ROAS medible.",
-      t1_name: "M. Schreiber",
-      t1_role: "Propietario · E-Commerce, DACH",
-      t2_quote: "La tienda Shopify fue rápida, técnicamente sólida y convirtió desde el primer día. Colaboración muy profesional.",
-      t2_name: "L. Kraft",
-      t2_role: "Fundadora · D2C Brand",
-      t3_quote: "La auditoría UX descubrió problemas reales que no habíamos visto. La tasa de abandono en el onboarding ha bajado significativamente.",
-      t3_name: "T. Reinhardt",
-      t3_role: "Product Lead · eLearning",
-      about_eyebrow: "Sobre mí",
-      about_text: "Soy Jose — Senior Performance Marketer y desarrollador Shopify afincado en Hamburgo. Desde hace más de 5 años ayudo a marcas D2C y B2B en el mercado DACH a conseguir resultados medibles: desde la estrategia de ads hasta el checkout, desde el primer clic hasta el cliente recurrente.\n\nMi enfoque es basado en datos, pragmático y escalable — sin overhead de agencia, comunicación directa, KPIs claros.",
-      about_avail: "Disponible para nuevos proyectos",
-      geo_eyebrow: "Nueva disciplina",
-      geo_headline: "Sé citado — por ChatGPT,<br/>Perplexity y Gemini.",
-      geo_sub: "GEO (Generative Engine Optimization) es el sucesor del SEO para la era de la IA. Optimizo contenidos para que los asistentes de IA los usen como fuente — no solo encontrado, sino citado.",
-      geo_p1: "Schema JSON-LD y datos estructurados",
-      geo_p2: "Autoridad y E-E-A-T para LLMs",
-      geo_p3: "Arquitectura de contenido optimizada para IA",
-      geo_cited: "● Citado",
-      geo_indexed: "○ Indexado",
-      ct_cta_calendly: "Reservar llamada de 15 min",
-      ct_cta_email: "Escribir a jose@tubebridge.de",
-
-      cases_eyebrow: "Proyectos seleccionados",
-      cases_sub: "Campañas reales, números reales — desde performance marketing y desarrollo Shopify hasta investigación de UX y construcción de marca.",
-
-      c1_num: "01 — Performance Marketing",
-      c1_tag: "Escalado ROAS",
-      c1_desc: "Estrategia completa de Google Ads para una marca D2C de moda en el mercado DACH. Presupuesto escalado de menos de €5K a €30K/mes — ROAS constante por encima de 13× con CPA de €9 y carrito medio de €80.",
-      c1_k3: "Presupuesto/mes",
-
-      c2_num: "02 — Shopify Dev y CRO",
-      c2_desc: "Tienda Shopify construida desde cero — tema Liquid personalizado, estructura de productos y flujo de checkout optimizados. Campañas locales de Google Ads e implementación de CRO basada en mapas de calor de Clarity.",
-      c2_k1: "Desarrollo Custom",
-      c2_k2: "Basado en heatmap",
-      c2_k3v: "Activo",
-      c2_k3: "desde 09/2025",
-
-      c3_num: "03 — UX Lead y CRO",
-      c3_tag: "Reducción de Churn",
-      c3_desc: "UX lead para una plataforma de video eLearning en alemán. Auditoría del journey, entrevistas y tests de usabilidad identificaron debilidades en el onboarding y la navegación. Resultado: roadmap de A/B testing, prototipos revisados, reducción de abandonos.",
-      c3_k1v: "↓ Abandonos",
-      c3_k1: "Churn reducido",
-      c3_k2v: "↑ Engagement",
-      c3_k2: "Tiempo en plataforma",
-
-      c4_num: "04 — Branding y UX Research",
-      c4_tag: "Construcción de Marca",
-      c4_arch: "Arquitectura de App",
-      c4_desc: "Lanzamiento al mercado de una marca de comida para perros impulsada por tecnología — construcción completa de marca, entrevistas de usuario, tests de propuesta de valor y prototipos de flujo de app. Roadmap MVP para la fase de escala.",
-      c4_k1v: "Marca",
-      c4_k1: "0 → Lanzamiento",
-      c4_k2: "Roadmap y Prototipo",
-
-      case_link: "Detalles a consultar",
-
-      s1_num: "01 — Performance",
-      s1_title: "Paid Media y Crecimiento",
-      s1_desc: "Google Ads, Meta, TikTok, LinkedIn. Estrategia full-funnel, arquitectura de audiencias, escalado de ROAS. De €800 a €30K/mes gestionado de forma autónoma.",
-      s2_num: "02 — Desarrollo",
-      s2_title: "Shopify y CRO",
-      s2_desc: "Desarrollo custom de Liquid y themes, optimización de tasa de conversión, mejoras de UX basadas en heatmaps de Clarity y datos de A/B testing.",
-      s3_num: "03 — Visibilidad",
-      s3_title: "SEO, GEO e IA",
-      s3_desc: "SEO técnico, Generative Engine Optimization para citas en LLMs (ChatGPT, Perplexity), schema JSON-LD, automatización de flujos de IA para escalado de contenido.",
-
-      svc_eyebrow: "Servicios",
-      svc_headline: "Del primer píxel a la próxima conversión.",
-      svc_sub: "Un proceso estructurado — desde la web hasta el tracking, el tráfico y las conversiones optimizadas. Cada fase construye sobre la anterior.",
-      p1_title: "Web Design y Desarrollo",
-      p1_desc: "Tiendas Shopify, webs WordPress y proyectos a medida — técnicamente sólidos, optimizados para UX y listos para convertir. Desde tiendas D2C hasta sites corporativos: webs que rinden.",
-      p2_title: "Analytics y Tracking",
-      p2_desc: "Sin datos no hay progreso. Configuro GA4, GTM y Microsoft Clarity — conforme al RGPD, bien estructurado y listo para medir cada acción. Reportings mensuales que muestran lo que realmente importa.",
-      p3_title: "SEO",
-      p3_desc: "Visibilidad orgánica a través de SEO técnico, optimización on-page, investigación de keywords y link building estratégico. Rankings a largo plazo — sin atajos.",
-      p4_title: "Paid Media / SEA",
-      p4_desc: "Campañas de performance en Google, Meta y TikTok — desde la arquitectura de audiencias hasta la optimización diaria. Full-funnel con KPIs claros, presupuesto transparente y ROAS reales.",
-      p5_title: "CRO — Optimización de Conversión",
-      p5_desc: "Cuando el tracking funciona y el tráfico llega, optimizo el funnel. Análisis de heatmaps, A/B testing e investigación UX revelan dónde abandonan los visitantes — y qué los convierte.",
-      p6_title: "GEO y Flujos de IA",
-      p6_desc: "La nueva disciplina: estructurar contenidos para que ChatGPT, Perplexity y Gemini te citen como fuente. JSON-LD, E-E-A-T y automatización con IA — el siguiente paso al SEO.",
-
-      ct_eyebrow: "Hablemos",
-      ct_headline: "¿Tienes un proyecto?",
-      ct_sub: "Ya sea escalado de Google Ads, desarrollo Shopify o estrategia GEO — ayudo a marcas del DACH a conseguir resultados medibles. Remoto, flexible.",
-      ct_m1: "Hamburgo / Remoto",
-      ct_m2: "Enfoque DACH",
-
-      footer: "© 2026 Jose L. Treff — JLT Marketing Services",
-    },
-  } as const;
- 
-  const t = (key: keyof typeof T.de) => T[lang][key] ?? T.de[key];
- 
   // Arrow SVG reused across buttons
   const ArrowRight = () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -830,13 +508,13 @@ export default function PortfolioPage() {
  
           {/* EVIDENCE STRIP */}
           <div className="jlt-hero-evidence" role="list">
-            <div className="ev-item" role="listitem"><span className="ev-val">13×</span><span className="ev-label">{t('hero_ev1')}</span></div>
+            <div className="ev-item" role="listitem"><span className="ev-val">{t('hero_ev1_val')}</span><span className="ev-label">{t('hero_ev1')}</span></div>
             <div className="ev-sep" aria-hidden="true" />
-            <div className="ev-item" role="listitem"><span className="ev-val">€9</span><span className="ev-label">{t('hero_ev2')}</span></div>
+            <div className="ev-item" role="listitem"><span className="ev-val">{t('hero_ev2_val')}</span><span className="ev-label">{t('hero_ev2')}</span></div>
             <div className="ev-sep" aria-hidden="true" />
-            <div className="ev-item" role="listitem"><span className="ev-val">5+</span><span className="ev-label">{t('hero_ev3')}</span></div>
+            <div className="ev-item" role="listitem"><span className="ev-val">{t('hero_ev3_val')}</span><span className="ev-label">{t('hero_ev3')}</span></div>
             <div className="ev-sep" aria-hidden="true" />
-            <div className="ev-item" role="listitem"><span className="ev-val">€30K</span><span className="ev-label">{t('hero_ev4')}</span></div>
+            <div className="ev-item" role="listitem"><span className="ev-val">{t('hero_ev4_val')}</span><span className="ev-label">{t('hero_ev4')}</span></div>
           </div>
  
           {/* CTAs */}
