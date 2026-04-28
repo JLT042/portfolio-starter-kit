@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
  
 // ─────────────────────────────────────────────────────────────
 // JOSE L. TREFF — Portfolio Page
@@ -552,64 +553,72 @@ export default function PortfolioPage() {
             <p className="jlt-sub">{t('hero_sub')}</p>
           </div>
  
-          {/* RIGHT: Floating Platform Icons */}
-          <div className="jlt-video-col" style={{ position: 'relative', minHeight: '380px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {/* RIGHT: Image Collage */}
+          <motion.div
+            className="jlt-video-col"
+            style={{ position: 'relative', height: '440px' }}
+            initial="hidden"
+            animate="visible"
+            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } }}
+          >
+            {/* Decorative orbs */}
+            <motion.div
+              style={{ position: 'absolute', top: -16, left: '25%', width: 48, height: 48, borderRadius: '50%', background: 'oklch(75% 0.165 140 / 0.18)', pointerEvents: 'none' }}
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+            />
+            <motion.div
+              style={{ position: 'absolute', bottom: 16, right: '22%', width: 32, height: 32, borderRadius: 8, background: 'oklch(68% 0.165 265 / 0.18)', pointerEvents: 'none' }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+            />
+            <motion.div
+              style={{ position: 'absolute', top: '40%', left: '10%', width: 20, height: 20, borderRadius: '50%', background: 'oklch(75% 0.165 140 / 0.12)', pointerEvents: 'none' }}
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+            />
 
-            {/* Ambient Glow */}
-            <div style={{
-              position: 'absolute', top: '50%', left: '50%',
-              width: '300px', height: '300px',
-              background: 'radial-gradient(circle, oklch(75% 0.165 140 / 0.07) 0%, transparent 65%)',
-              transform: 'translate(-50%, -50%)',
-              pointerEvents: 'none',
-            }} />
+            {/* Shopify — large, top-center */}
+            <motion.div
+              style={{ position: 'absolute', left: '50%', top: 0, width: 200, height: 200, marginLeft: -100, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 20, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+            >
+              <img src="/images/logos/shopify.png" alt="Shopify" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </motion.div>
 
-            {[
-              { label: 'Shopify',    img: '/images/logos/shopify.png',    color: '#96BF48', bg: 'oklch(10% 0.04 140)', x: '50%', y: '10%', delay: '0s',   size: 64 },
-              { label: 'Google Ads', img: '/images/logos/google-ads.png', color: '#4285F4', bg: 'oklch(9% 0.04 260)',  x: '82%', y: '28%', delay: '0.8s', size: 56 },
-              { label: 'Meta',       img: '/images/logos/meta.png',       color: '#0081FB', bg: 'oklch(9% 0.04 240)',  x: '85%', y: '65%', delay: '1.6s', size: 52 },
-              { label: 'TikTok',     img: '/images/logos/tiktok.png',     color: '#00F2EA', bg: 'oklch(9% 0.06 195)',  x: '50%', y: '85%', delay: '2.2s', size: 52 },
-              { label: 'GTM / GA4',  img: '/images/logos/gtm.png',        color: '#E37400', bg: 'oklch(9% 0.05 50)',   x: '18%', y: '50%', delay: '1.2s', size: 52 },
-            ].map((p) => (
-              <div
-                key={p.label}
-                title={p.label}
-                style={{
-                  position: 'absolute',
-                  left: p.x, top: p.y,
-                  transform: 'translate(-50%, -50%)',
-                  animation: `jltFloat 4s ease-in-out ${p.delay} infinite`,
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px',
-                  cursor: 'default', userSelect: 'none',
-                }}
-              >
-                <div style={{
-                  width: `${p.size}px`, height: `${p.size}px`,
-                  borderRadius: '14px',
-                  background: p.bg,
-                  border: `1.5px solid ${p.color}35`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  boxShadow: `0 0 20px ${p.color}20, 0 6px 20px rgba(0,0,0,0.6)`,
-                  padding: '10px',
-                }}>
-                  <img
-                    src={p.img}
-                    alt={p.label}
-                    style={{ objectFit: 'contain', width: `${p.size * 0.65}px`, height: `${p.size * 0.65}px` }}
-                  />
-                </div>
-                <span style={{
-                  fontSize: '8px', color: 'rgba(255,255,255,0.3)',
-                  letterSpacing: '0.06em', textTransform: 'uppercase',
-                  fontFamily: 'var(--font-body, sans-serif)',
-                  whiteSpace: 'nowrap',
-                }}>
-                  {p.label}
-                </span>
-              </div>
-            ))}
+            {/* Google Ads — medium, right */}
+            <motion.div
+              style={{ position: 'absolute', right: 0, top: '26%', width: 160, height: 160, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 18, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+            >
+              <img src="/images/logos/google-ads.png" alt="Google Ads" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </motion.div>
 
-          </div>
+            {/* Meta — medium, left-center */}
+            <motion.div
+              style={{ position: 'absolute', left: 0, top: '42%', width: 148, height: 148, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+            >
+              <img src="/images/logos/meta.png" alt="Meta" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </motion.div>
+
+            {/* TikTok — small, bottom-right */}
+            <motion.div
+              style={{ position: 'absolute', right: 24, bottom: 0, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 14, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+            >
+              <img src="/images/logos/tiktok.png" alt="TikTok" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </motion.div>
+
+            {/* GTM / GA4 — small, bottom-center */}
+            <motion.div
+              style={{ position: 'absolute', left: '36%', bottom: 12, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 14, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+            >
+              <img src="/images/logos/gtm.png" alt="GTM / GA4" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </motion.div>
+
+          </motion.div>
 
  
           {/* EVIDENCE STRIP */}
