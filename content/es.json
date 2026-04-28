@@ -3,7 +3,6 @@
   "nav_services": "Servicios",
   "nav_contact": "Contacto",
   "nav_cta": "Contáctame",
-
   "hero_status": "Disponible para proyectos — DACH y remoto",
   "hero_headline": "Performance.<br/>Que<br/><em>Convierte.</em>",
   "hero_sub": "Senior Performance Marketer y desarrollador Shopify — de la estrategia al checkout. €30K/mes en presupuesto publicitario gestionado de forma autónoma en Google, Meta y TikTok para marcas D2C y B2B en el mercado DACH.",
@@ -18,9 +17,7 @@
   "hero_cta1": "Ver Case Studies",
   "hero_cta2": "Reservar llamada de 15 min",
   "tag_ai": "Flujos de IA",
-
-  "logos_eyebrow": "Marcas y fundadores que confían",
-
+  "logos_eyebrow": "Plataformas y canales con los que trabajo a diario",
   "testi_eyebrow": "Lo que dicen los clientes",
   "testi_sub": "Colaboración real, resultados medibles.",
   "t1_quote": "Jose transformó el rendimiento de nuestros Google Ads en pocas semanas — estrategia clara, ejecución limpia, ROAS medible.",
@@ -32,7 +29,6 @@
   "t3_quote": "La auditoría UX descubrió problemas reales que no habíamos visto. La tasa de abandono en el onboarding ha bajado significativamente.",
   "t3_name": "T. Reinhardt",
   "t3_role": "Product Lead · eLearning",
-
   "svc_eyebrow": "Servicios",
   "svc_headline": "Del primer píxel a la próxima conversión.",
   "svc_sub": "Un proceso estructurado — desde la web hasta el tracking, el tráfico y las conversiones optimizadas. Cada fase construye sobre la anterior.",
@@ -48,7 +44,6 @@
   "p5_desc": "Cuando el tracking funciona y el tráfico llega, optimizo el funnel. Análisis de heatmaps, A/B testing e investigación UX revelan dónde abandonan los visitantes — y qué los convierte.",
   "p6_title": "GEO y Flujos de IA",
   "p6_desc": "La nueva disciplina: estructurar contenidos para que ChatGPT, Perplexity y Gemini te citen como fuente. JSON-LD, E-E-A-T y automatización con IA — el siguiente paso al SEO.",
-
   "cases_eyebrow": "Proyectos seleccionados",
   "cases_sub": "Campañas reales, números reales — desde performance marketing y desarrollo Shopify hasta investigación de UX y construcción de marca.",
   "c1_num": "01 — Performance Marketing",
@@ -76,7 +71,6 @@
   "c4_k1": "0 → Lanzamiento",
   "c4_k2": "Roadmap y Prototipo",
   "case_link": "Detalles a consultar",
-
   "s1_num": "01 — Performance",
   "s1_title": "Paid Media y Crecimiento",
   "s1_desc": "Google Ads, Meta, TikTok, LinkedIn. Estrategia full-funnel, arquitectura de audiencias, escalado de ROAS. De €800 a €30K/mes gestionado de forma autónoma.",
@@ -86,11 +80,9 @@
   "s3_num": "03 — Visibilidad",
   "s3_title": "SEO, GEO e IA",
   "s3_desc": "SEO técnico, Generative Engine Optimization para citas en LLMs (ChatGPT, Perplexity), schema JSON-LD, automatización de flujos de IA para escalado de contenido.",
-
   "about_eyebrow": "Sobre mí",
   "about_text": "Soy Jose — Senior Performance Marketer y desarrollador Shopify afincado en Hamburgo. Desde hace más de 5 años ayudo a marcas D2C y B2B en el mercado DACH a conseguir resultados medibles: desde la estrategia de ads hasta el checkout, desde el primer clic hasta el cliente recurrente.\n\nMi enfoque es basado en datos, pragmático y escalable — sin overhead de agencia, comunicación directa, KPIs claros.",
   "about_avail": "Disponible para nuevos proyectos",
-
   "geo_eyebrow": "Nueva disciplina",
   "geo_headline": "Sé citado — por ChatGPT,<br/>Perplexity y Gemini.",
   "geo_sub": "GEO (Generative Engine Optimization) es el sucesor del SEO para la era de la IA. Optimizo contenidos para que los asistentes de IA los usen como fuente — no solo encontrado, sino citado.",
@@ -99,7 +91,6 @@
   "geo_p3": "Arquitectura de contenido optimizada para IA",
   "geo_cited": "● Citado",
   "geo_indexed": "○ Indexado",
-
   "ct_eyebrow": "Hablemos",
   "ct_headline": "¿Tienes un proyecto?",
   "ct_sub": "Ya sea escalado de Google Ads, desarrollo Shopify o estrategia GEO — ayudo a marcas del DACH a conseguir resultados medibles. Remoto, flexible.",
@@ -107,6 +98,5 @@
   "ct_m2": "Enfoque DACH",
   "ct_cta_calendly": "Reservar llamada de 15 min",
   "ct_cta_email": "Escribir a jose@tubebridge.de",
-
   "footer": "© 2026 Jose L. Treff — JLT Marketing Services"
 }

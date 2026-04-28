@@ -3,7 +3,6 @@
   "nav_services": "Leistungen",
   "nav_contact": "Kontakt",
   "nav_cta": "Kontakt aufnehmen",
-
   "hero_status": "Verfügbar für Projekte — DACH & remote",
   "hero_headline": "Performance.<br/>Die<br/><em>konvertiert.</em>",
   "hero_sub": "Senior Performance Marketer und Shopify-Entwickler — von der Strategie bis zum Checkout. €30K/Monat Ad-Budget eigenverantwortlich gesteuert über Google, Meta und TikTok für D2C- und B2B-Marken im DACH-Raum.",
@@ -18,9 +17,7 @@
   "hero_cta1": "Case Studies ansehen",
   "hero_cta2": "15-Min Gespräch buchen",
   "tag_ai": "KI-Workflows",
-
-  "logos_eyebrow": "Vertrauen von Brands & Gründern",
-
+  "logos_eyebrow": "Täglich genutzte Plattformen & Kanäle",
   "testi_eyebrow": "Was Kunden sagen",
   "testi_sub": "Echte Zusammenarbeit, klare Ergebnisse.",
   "t1_quote": "Jose hat unsere Google-Ads-Performance in wenigen Wochen transformiert — klare Strategie, saubere Umsetzung, messbarer ROAS.",
@@ -32,7 +29,6 @@
   "t3_quote": "Das UX-Audit hat echte Probleme aufgedeckt, die wir vorher nicht gesehen haben. Die Abbruchrate im Onboarding ist seitdem deutlich gesunken.",
   "t3_name": "T. Reinhardt",
   "t3_role": "Product Lead · eLearning",
-
   "svc_eyebrow": "Leistungen",
   "svc_headline": "Vom ersten Pixel zur nächsten Conversion.",
   "svc_sub": "Ein strukturierter Prozess — von der Website über Tracking und Traffic bis zur optimierten Conversion. Jede Phase baut auf der vorherigen auf.",
@@ -48,7 +44,6 @@
   "p5_desc": "Wenn Tracking läuft und Traffic da ist, optimiere ich den Funnel. Heatmap-Analyse, A/B-Tests und UX-Research decken auf, wo Besucher abspringen — und was sie zum Kauf bewegt.",
   "p6_title": "GEO & KI-Workflows",
   "p6_desc": "Die neue Disziplin: Inhalte so strukturieren, dass ChatGPT, Perplexity und Gemini dich als Quelle zitieren. JSON-LD, E-E-A-T-Optimierung und KI-Automatisierung — der nächste Schritt nach SEO.",
-
   "cases_eyebrow": "Ausgewählte Projekte",
   "cases_sub": "Echte Kampagnen, echte Zahlen — von Performance-Marketing über Shopify-Entwicklung bis zu UX-Research und Brand-Aufbau.",
   "c1_num": "01 — Performance Marketing",
@@ -76,7 +71,6 @@
   "c4_k1": "0 → Launch",
   "c4_k2": "Roadmap & Prototyp",
   "case_link": "Details auf Anfrage",
-
   "s1_num": "01 — Performance",
   "s1_title": "Paid Media & Wachstum",
   "s1_desc": "Google Ads, Meta, TikTok, LinkedIn. Full-Funnel-Strategie, Zielgruppen-Architektur, ROAS-Skalierung. Von €800 bis €30K/Monat eigenverantwortlich gesteuert.",
@@ -86,11 +80,9 @@
   "s3_num": "03 — Sichtbarkeit",
   "s3_title": "SEO, GEO & KI",
   "s3_desc": "Technisches SEO, Generative Engine Optimization für LLM-Zitierungen (ChatGPT, Perplexity), JSON-LD-Schema, KI-Workflow-Automatisierung für Content-Skalierung.",
-
   "about_eyebrow": "Über mich",
   "about_text": "Ich bin Jose — Senior Performance Marketer und Shopify-Entwickler aus Hamburg. Seit über 5 Jahren helfe ich D2C- und B2B-Marken im DACH-Raum dabei, messbare Ergebnisse zu erzielen: von der Ads-Strategie bis zum Checkout, vom ersten Klick bis zum Stammkunden.\n\nMein Ansatz ist datengetrieben, pragmatisch und skalierbar — kein Agentur-Overhead, direkte Kommunikation, klare KPIs.",
   "about_avail": "Verfügbar für neue Projekte",
-
   "geo_eyebrow": "Neue Disziplin",
   "geo_headline": "Werde zitiert — von ChatGPT,<br/>Perplexity & Gemini.",
   "geo_sub": "GEO (Generative Engine Optimization) ist der SEO-Nachfolger für das KI-Zeitalter. Ich optimiere Inhalte so, dass sie von KI-Assistenten als Quelle verwendet werden — nicht nur gefunden, sondern zitiert.",
@@ -99,7 +91,6 @@
   "geo_p3": "KI-optimierter Content-Aufbau",
   "geo_cited": "● Zitiert",
   "geo_indexed": "○ Indexiert",
-
   "ct_eyebrow": "Lass uns reden",
   "ct_headline": "Projekt in Planung?",
   "ct_sub": "Ob Google Ads Skalierung, Shopify-Entwicklung oder GEO-Strategie — ich helfe DACH-Brands dabei, messbare Ergebnisse zu erzielen. Remote, flexibel.",
@@ -107,6 +98,5 @@
   "ct_m2": "DACH-Fokus",
   "ct_cta_calendly": "15-Min Gespräch buchen",
   "ct_cta_email": "jose@tubebridge.de schreiben",
-
   "footer": "© 2026 Jose L. Treff — JLT Marketing Services"
 }

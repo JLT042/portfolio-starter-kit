@@ -3,7 +3,6 @@
   "nav_services": "Services",
   "nav_contact": "Contact",
   "nav_cta": "Get in touch",
-
   "hero_status": "Available for projects — DACH & remote",
   "hero_headline": "Performance.<br/>That<br/><em>Converts.</em>",
   "hero_sub": "Senior Performance Marketer and Shopify Developer — from strategy to checkout. €30K/month ad budget managed independently across Google, Meta and TikTok for D2C and B2B brands in the DACH market.",
@@ -18,9 +17,7 @@
   "hero_cta1": "View Case Studies",
   "hero_cta2": "Book a 15-min call",
   "tag_ai": "AI Workflows",
-
-  "logos_eyebrow": "Trusted by brands & founders",
-
+  "logos_eyebrow": "Platforms & channels I work with every day",
   "testi_eyebrow": "What clients say",
   "testi_sub": "Real collaboration, measurable results.",
   "t1_quote": "Jose transformed our Google Ads performance in just a few weeks — clear strategy, clean execution, measurable ROAS.",
@@ -32,7 +29,6 @@
   "t3_quote": "The UX audit uncovered real problems we hadn't seen before. The drop-off rate in onboarding has dropped significantly since.",
   "t3_name": "T. Reinhardt",
   "t3_role": "Product Lead · eLearning",
-
   "svc_eyebrow": "Services",
   "svc_headline": "From the first pixel to the next conversion.",
   "svc_sub": "A structured process — from website to tracking, traffic and optimised conversions. Every phase builds on the previous one.",
@@ -48,7 +44,6 @@
   "p5_desc": "Once tracking is live and traffic is flowing, I optimise the funnel. Heatmap analysis, A/B testing and UX research reveal where visitors drop off — and what converts them.",
   "p6_title": "GEO & AI Workflows",
   "p6_desc": "The new discipline: structure content so that ChatGPT, Perplexity and Gemini cite you as a source. JSON-LD, E-E-A-T optimisation and AI automation — the next step beyond SEO.",
-
   "cases_eyebrow": "Selected Projects",
   "cases_sub": "Real campaigns, real numbers — from performance marketing and Shopify development to UX research and brand building.",
   "c1_num": "01 — Performance Marketing",
@@ -76,7 +71,6 @@
   "c4_k1": "0 → Launch",
   "c4_k2": "Roadmap & Prototype",
   "case_link": "Details on request",
-
   "s1_num": "01 — Performance",
   "s1_title": "Paid Media & Growth",
   "s1_desc": "Google Ads, Meta, TikTok, LinkedIn. Full-funnel strategy, audience architecture, ROAS scaling. From €800 to €30K/month managed independently.",
@@ -86,11 +80,9 @@
   "s3_num": "03 — Visibility",
   "s3_title": "SEO, GEO & AI",
   "s3_desc": "Technical SEO, Generative Engine Optimization for LLM citations (ChatGPT, Perplexity), JSON-LD schema markup, AI workflow automation for content scaling.",
-
   "about_eyebrow": "About me",
   "about_text": "I'm Jose — Senior Performance Marketer and Shopify Developer based in Hamburg. For over 5 years I've helped D2C and B2B brands in the DACH market achieve measurable results: from ad strategy to checkout, from first click to returning customer.\n\nMy approach is data-driven, pragmatic and scalable — no agency overhead, direct communication, clear KPIs.",
   "about_avail": "Available for new projects",
-
   "geo_eyebrow": "New discipline",
   "geo_headline": "Get cited — by ChatGPT,<br/>Perplexity & Gemini.",
   "geo_sub": "GEO (Generative Engine Optimization) is the SEO successor for the AI era. I optimise content so AI assistants use it as a source — not just found, but cited.",
@@ -99,7 +91,6 @@
   "geo_p3": "AI-optimised content architecture",
   "geo_cited": "● Cited",
   "geo_indexed": "○ Indexed",
-
   "ct_eyebrow": "Let's talk",
   "ct_headline": "Planning a project?",
   "ct_sub": "Whether Google Ads scaling, Shopify development or GEO strategy — I help DACH brands achieve measurable results. Remote, flexible.",
@@ -107,6 +98,5 @@
   "ct_m2": "DACH focus",
   "ct_cta_calendly": "Book a 15-min call",
   "ct_cta_email": "Write to jose@tubebridge.de",
-
   "footer": "© 2026 Jose L. Treff — JLT Marketing Services"
 }

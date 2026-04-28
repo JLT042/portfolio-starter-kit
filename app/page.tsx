@@ -306,13 +306,12 @@ export default function PortfolioPage() {
         .ct-dot { width:4px;height:4px;border-radius:50%;background:var(--success); }
  
         /* ── LOGO STRIP ── */
-        .jlt-logos { padding:3rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1; }
-        .jlt-logos-inner { max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:2rem; }
-        .logos-eyebrow { font-family:var(--fm);font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray4);text-align:center; }
-        .logos-row { display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem 3.5rem; }
-        .logo-client { display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:.55;transition:opacity 200ms; }
-        .logo-client:hover { opacity:1; }
-        .logo-client-name { font-family:var(--fh);font-size:.875rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gray3); }
+        .jlt-logos { padding:4rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1; }
+        .jlt-logos-inner { max-width:960px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:3.5rem; }
+        .logos-eyebrow { font-family:var(--fb);font-size:1rem;font-weight:500;color:var(--gray3);text-align:center;line-height:1.5; }
+        .logos-row { display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2.5rem 4rem; }
+        .logo-img { width:auto;filter:brightness(0) invert(1);opacity:.55;transition:opacity 220ms; }
+        .logo-img:hover { opacity:1; }
 
         /* ── TESTIMONIALS ── */
         .jlt-testi { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);position:relative;z-index:1; }
@@ -535,22 +534,16 @@ export default function PortfolioPage() {
         </div>
       </section>
  
-      {/* ── CLIENT LOGO STRIP ────────────────────────── */}
+      {/* ── PLATFORM LOGO STRIP ──────────────────────── */}
       <section className="jlt-logos">
         <div className="jlt-logos-inner">
-          <span className="logos-eyebrow">{t('logos_eyebrow')}</span>
+          <p className="logos-eyebrow">{t('logos_eyebrow')}</p>
           <div className="logos-row">
-            {[
-              { name: 'Statement Clothing', icon: '👗' },
-              { name: 'Die Barista', icon: '☕' },
-              { name: 'Meet Your Master', icon: '🎓' },
-              { name: 'DOQ', icon: '🐾' },
-            ].map(({ name, icon }) => (
-              <div key={name} className="logo-client">
-                <span style={{ fontSize: '1.75rem' }}>{icon}</span>
-                <span className="logo-client-name">{name}</span>
-              </div>
-            ))}
+            <img className="logo-img" src="/images/logos/shopify.png"    alt="Shopify"              style={{ height: 28 }} />
+            <img className="logo-img" src="/images/logos/google-ads.png" alt="Google Ads"           style={{ height: 24 }} />
+            <img className="logo-img" src="/images/logos/meta.png"       alt="Meta"                 style={{ height: 20 }} />
+            <img className="logo-img" src="/images/logos/tiktok.png"     alt="TikTok"               style={{ height: 20 }} />
+            <img className="logo-img" src="/images/logos/gtm.png"        alt="Google Tag Manager"   style={{ height: 24 }} />
           </div>
         </div>
       </section>
