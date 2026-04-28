@@ -582,6 +582,8 @@ export default function PortfolioPage() {
             <motion.div
               style={{ position: 'absolute', left: '50%', top: 0, width: 200, height: 200, marginLeft: -100, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 20, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0 }}
             >
               <img src="/images/logos/shopify.png" alt="Shopify" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
@@ -590,6 +592,8 @@ export default function PortfolioPage() {
             <motion.div
               style={{ position: 'absolute', right: 0, top: '26%', width: 160, height: 160, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 18, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
             >
               <img src="/images/logos/google-ads.png" alt="Google Ads" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
@@ -598,6 +602,8 @@ export default function PortfolioPage() {
             <motion.div
               style={{ position: 'absolute', left: 0, top: '42%', width: 148, height: 148, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 1.4 }}
             >
               <img src="/images/logos/meta.png" alt="Meta" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
@@ -606,14 +612,18 @@ export default function PortfolioPage() {
             <motion.div
               style={{ position: 'absolute', right: 24, bottom: 0, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 14, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+              animate={{ y: [0, -11, 0] }}
+              transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
             >
-              <img src="/images/logos/tiktok.png" alt="TikTok" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              <img src="/images/logos/tiktok.png" alt="TikTok" style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
             </motion.div>
 
             {/* GTM / GA4 — small, bottom-center */}
             <motion.div
               style={{ position: 'absolute', left: '36%', bottom: 12, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 14, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
+              animate={{ y: [0, -13, 0] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2.1 }}
             >
               <img src="/images/logos/gtm.png" alt="GTM / GA4" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
