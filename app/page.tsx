@@ -552,28 +552,6 @@ export default function PortfolioPage() {
             <p className="jlt-sub">{t('hero_sub')}</p>
           </div>
  
-          // ─────────────────────────────────────────────────────────────
-// ERSETZE NUR DIESEN BLOCK in deiner page.tsx
-// Von: {/* RIGHT: Dashboard preview */} <div className="jlt-video-col">
-// Bis: </div>  (das schließende Tag nach vc-meta, Zeile ~596)
-// ─────────────────────────────────────────────────────────────
-
-// SCHRITT 1: Diese CSS-Keyframe-Regel in deinen bestehenden <style> Block einfügen
-// (irgendwo am Ende, vor dem letzten `)}} />` )
-/*
-  @keyframes jltFloat {
-    0%   { transform: translateY(0px) scale(1); }
-    50%  { transform: translateY(-10px) scale(1.04); }
-    100% { transform: translateY(0px) scale(1); }
-  }
-  .platform-badge:hover {
-    transform: translateY(-4px) scale(1.08) !important;
-    transition: transform 0.2s ease !important;
-  }
-*/
-
-// SCHRITT 2: Ersetze den gesamten {/* RIGHT: Dashboard preview */} Block damit:
-
           {/* RIGHT: Floating Platform Icons */}
           <div className="jlt-video-col" style={{ position: 'relative', minHeight: '380px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
@@ -586,20 +564,15 @@ export default function PortfolioPage() {
               pointerEvents: 'none',
             }} />
 
-            {/* Platform Badges — absolut positioniert */}
             {[
-              { label: 'Shopify',    abbr: 'SH', color: '#96BF48', bg: 'oklch(10% 0.04 140)', x: '50%',  y: '10%',  delay: '0s',    size: 64 },
-              { label: 'Google Ads', abbr: 'GA', color: '#4285F4', bg: 'oklch(9%  0.04 260)', x: '82%',  y: '28%',  delay: '0.8s',  size: 56 },
-              { label: 'Meta',       abbr: 'M',  color: '#0081FB', bg: 'oklch(9%  0.04 240)', x: '88%',  y: '62%',  delay: '1.6s',  size: 52 },
-              { label: 'TikTok',     abbr: 'TT', color: '#00F2EA', bg: 'oklch(9%  0.06 195)', x: '55%',  y: '82%',  delay: '2.2s',  size: 52 },
-              { label: 'GA4',        abbr: 'G4', color: '#E37400', bg: 'oklch(9%  0.05 50)',  x: '18%',  y: '65%',  delay: '1.2s',  size: 52 },
-              { label: 'LinkedIn',   abbr: 'LI', color: '#0A66C2', bg: 'oklch(9%  0.04 240)', x: '14%',  y: '30%',  delay: '0.4s',  size: 52 },
-              { label: 'HubSpot',    abbr: 'HS', color: '#FF7A59', bg: 'oklch(10% 0.04 25)',  x: '30%',  y: '12%',  delay: '3.0s',  size: 44 },
-              { label: 'Sistrix',    abbr: 'SI', color: '#F4D03F', bg: 'oklch(10% 0.04 80)',  x: '70%',  y: '14%',  delay: '2.6s',  size: 44 },
+              { label: 'Shopify',    img: '/images/logos/shopify.png',    color: '#96BF48', bg: 'oklch(10% 0.04 140)', x: '50%', y: '10%', delay: '0s',   size: 64 },
+              { label: 'Google Ads', img: '/images/logos/google-ads.png', color: '#4285F4', bg: 'oklch(9% 0.04 260)',  x: '82%', y: '28%', delay: '0.8s', size: 56 },
+              { label: 'Meta',       img: '/images/logos/meta.png',       color: '#0081FB', bg: 'oklch(9% 0.04 240)',  x: '85%', y: '65%', delay: '1.6s', size: 52 },
+              { label: 'TikTok',     img: '/images/logos/tiktok.png',     color: '#00F2EA', bg: 'oklch(9% 0.06 195)',  x: '50%', y: '85%', delay: '2.2s', size: 52 },
+              { label: 'GTM / GA4',  img: '/images/logos/gtm.png',        color: '#E37400', bg: 'oklch(9% 0.05 50)',   x: '18%', y: '50%', delay: '1.2s', size: 52 },
             ].map((p) => (
               <div
                 key={p.label}
-                className="platform-badge"
                 title={p.label}
                 style={{
                   position: 'absolute',
@@ -617,16 +590,13 @@ export default function PortfolioPage() {
                   border: `1.5px solid ${p.color}35`,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   boxShadow: `0 0 20px ${p.color}20, 0 6px 20px rgba(0,0,0,0.6)`,
+                  padding: '10px',
                 }}>
-                  <span style={{
-                    fontFamily: 'var(--font-mono, monospace)',
-                    fontWeight: 700,
-                    fontSize: `${p.size * 0.22}px`,
-                    color: p.color,
-                    letterSpacing: '-0.02em',
-                  }}>
-                    {p.abbr}
-                  </span>
+                  <img
+                    src={p.img}
+                    alt={p.label}
+                    style={{ objectFit: 'contain', width: `${p.size * 0.65}px`, height: `${p.size * 0.65}px` }}
+                  />
                 </div>
                 <span style={{
                   fontSize: '8px', color: 'rgba(255,255,255,0.3)',
