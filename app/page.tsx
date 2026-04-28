@@ -723,7 +723,7 @@ export default function PortfolioPage() {
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">{t('c2_k3v')}</span><span className="res-label">{t('c2_k3')}</span></div>
               </div>
-              <a href="mailto:jtl.marketingservices@gmail.come" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <a href="mailto:jtl.marketingservices@gmail.com" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div style={{display:'flex',flexDirection:'column',height:'100%'}}>
