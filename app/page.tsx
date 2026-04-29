@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import de from '@/content/de.json';
 import en from '@/content/en.json';
 import es from '@/content/es.json';
+import { ScrollingFeatureShowcase } from '@/components/ui/interactive-scrolling-story-component';
  
 // ─────────────────────────────────────────────────────────────
 // JOSE L. TREFF — Portfolio Page
@@ -150,26 +151,6 @@ export default function PortfolioPage() {
         .vc-caption { font-family:var(--fb);font-size:.8125rem;color:var(--gray3);display:flex;align-items:center;gap:.5rem; }
         .vc-duration { font-family:var(--fm);font-size:.75rem;color:var(--gray4);padding:3px 8px;border-radius:3px;background:var(--navy);border:1px solid var(--border); }
  
-        /* ── SERVICES FUNNEL ── */
-        .jlt-svf { padding:6rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);position:relative;z-index:1; }
-        .jlt-svf-inner { max-width:1280px;margin:0 auto; }
-        .svf-hdr { margin-bottom:3rem;display:flex;flex-direction:column;gap:1rem; }
-        .svf-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden; }
-        .svf-card { padding:2.5rem 2rem;display:flex;flex-direction:column;gap:1.25rem;background:var(--graphite);transition:background 180ms var(--eq); }
-        .svf-card:hover { background:var(--slate); }
-        .svf-card.geo { background:radial-gradient(ellipse 140% 160% at 90% 10%,oklch(68% 0.165 265/.14) 0%,var(--graphite) 55%); }
-        .svf-card.geo:hover { background:radial-gradient(ellipse 140% 160% at 90% 10%,oklch(68% 0.165 265/.22) 0%,var(--slate) 55%); }
-        .svf-num { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand); }
-        .svf-card.geo .svf-num { color:var(--indigo); }
-        .svf-title { font-family:var(--fh);font-size:1.25rem;font-weight:700;letter-spacing:-.015em;line-height:1.15;color:var(--white); }
-        .svf-desc { font-family:var(--fb);font-size:.875rem;line-height:1.7;color:var(--gray3);flex:1; }
-        .svf-tools { display:flex;flex-wrap:wrap;gap:.375rem;margin-top:auto; }
-        .svf-tool { padding:3px 9px;border-radius:3px;border:1px solid var(--border);background:oklch(95% 0.006 260/.04);font-family:var(--fm);font-size:.625rem;letter-spacing:.03em;color:var(--gray4); }
-        .svf-card.geo .svf-tool { border-color:oklch(68% 0.165 265/.28);color:var(--indigo);background:oklch(68% 0.165 265/.07); }
-        .svf-badge { display:inline-flex;align-items:center;gap:.375rem;padding:3px 9px;border-radius:9999px;border:1px solid oklch(68% 0.165 265/.35);background:oklch(68% 0.165 265/.10);font-family:var(--fm);font-size:.5625rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);width:fit-content; }
-        @media(max-width:900px) { .svf-grid { grid-template-columns:repeat(2,1fr); } }
-        @media(max-width:580px) { .svf-grid { grid-template-columns:1fr; } }
-
         /* ── CASES ── */
         .jlt-cases { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);position:relative;z-index:1; }
         .jlt-cases-inner { max-width:1280px;margin:0 auto; }
@@ -284,15 +265,6 @@ export default function PortfolioPage() {
         .mock-doq-r-lbl { font-family:var(--fm);font-size:.4375rem;letter-spacing:.06em;text-transform:uppercase;color:oklch(72% 0.180 148); }
         .mock-doq-r-item { font-family:var(--fb);font-size:.4375rem;color:oklch(52% 0.018 155);display:flex;align-items:center;gap:3px; }
         .mock-doq-r-item::before { content:'✓';color:oklch(72% 0.180 148);font-size:.4rem;flex-shrink:0; }
- 
-        /* ── SERVICES ── */
-        .jlt-services { border-top:1px solid var(--border-s);padding:4rem clamp(1rem,6vw,4rem);background:var(--navy);position:relative;z-index:1; }
-        .jlt-services-inner { max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem; }
-        .svc-card { padding:2rem;border-radius:10px;border:1px solid var(--border);background:var(--graphite);transition:border-color 200ms var(--eq),box-shadow 200ms var(--eq),transform 200ms var(--eq); }
-        .svc-card:hover { border-color:var(--brand-bd);box-shadow:0 0 20px oklch(75% 0.165 140/.12);transform:translateY(-2px); }
-        .svc-num { font-family:var(--fm);font-size:.6875rem;font-weight:600;letter-spacing:.10em;color:var(--brand);text-transform:uppercase;margin-bottom:1.5rem;display:block; }
-        .svc-title { font-family:var(--fh);font-size:1.375rem;font-weight:700;letter-spacing:-.01em;color:var(--white);margin-bottom:.5rem;line-height:1.15; }
-        .svc-desc { font-family:var(--fb);font-size:.875rem;line-height:1.65;color:var(--gray3);max-width:38ch; }
  
         /* ── CONTACT ── */
         .jlt-contact { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);border-top:1px solid var(--border-s);position:relative;z-index:1; }
@@ -566,76 +538,56 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* ── LEISTUNGEN / SERVICES FUNNEL ────────────── */}
-      <section className="jlt-svf" id="leistungen">
-        <div className="jlt-svf-inner">
-          <header className="svf-hdr">
-            <span className="eyebrow">{t('svc_eyebrow')}</span>
-            <h2 className="sec-h">{t('svc_headline')}</h2>
-            <p className="sec-sub">{t('svc_sub')}</p>
-          </header>
-          <div className="svf-grid">
-
-            <div className="svf-card">
-              <span className="svf-num">01 — Foundation</span>
-              <h3 className="svf-title">{t('p1_title')}</h3>
-              <p className="svf-desc">{t('p1_desc')}</p>
-              <div className="svf-tools">
-                {['Shopify', 'WordPress', 'Custom Dev', 'UX Design'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
-              </div>
-            </div>
-
-            <div className="svf-card">
-              <span className="svf-num">02 — Measure</span>
-              <h3 className="svf-title">{t('p2_title')}</h3>
-              <p className="svf-desc">{t('p2_desc')}</p>
-              <div className="svf-tools">
-                {['GA4', 'Google Tag Manager', 'Microsoft Clarity', 'Reporting'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
-              </div>
-            </div>
-
-            <div className="svf-card">
-              <span className="svf-num">03 — Visibility</span>
-              <h3 className="svf-title">{t('p3_title')}</h3>
-              <p className="svf-desc">{t('p3_desc')}</p>
-              <div className="svf-tools">
-                {['On-Page SEO', 'Backlinks', 'Keyword Research', 'Technical SEO'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
-              </div>
-            </div>
-
-            <div className="svf-card">
-              <span className="svf-num">04 — Traffic</span>
-              <h3 className="svf-title">{t('p4_title')}</h3>
-              <p className="svf-desc">{t('p4_desc')}</p>
-              <div className="svf-tools">
-                {['Google Ads', 'Meta Ads', 'TikTok Ads', 'LinkedIn Ads'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
-              </div>
-            </div>
-
-            <div className="svf-card">
-              <span className="svf-num">05 — Optimise</span>
-              <h3 className="svf-title">{t('p5_title')}</h3>
-              <p className="svf-desc">{t('p5_desc')}</p>
-              <div className="svf-tools">
-                {['Heatmaps', 'A/B Testing', 'Funnel Analysis', 'UX Research'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
-              </div>
-            </div>
-
-            <div className="svf-card geo">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '.625rem' }}>
-                <span className="svf-num">06 — Next Level</span>
-                <span className="svf-badge">✦ Neu</span>
-              </div>
-              <h3 className="svf-title">{t('p6_title')}</h3>
-              <p className="svf-desc">{t('p6_desc')}</p>
-              <div className="svf-tools">
-                {['ChatGPT', 'Perplexity', 'JSON-LD', 'E-E-A-T', 'KI-Workflows'].map(tool => <span key={tool} className="svf-tool">{tool}</span>)}
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* ── LEISTUNGEN / SERVICES ────────────────────── */}
+      <ScrollingFeatureShowcase
+        id="leistungen"
+        ctaLabel={t('nav_contact')}
+        ctaHref="#kontakt"
+        slides={[
+          {
+            title: t('p1_title'),
+            description: t('p1_desc'),
+            image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop',
+            bgColor: '#0f1218',
+            textColor: '#e8edf3',
+          },
+          {
+            title: t('p2_title'),
+            description: t('p2_desc'),
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+            bgColor: '#111827',
+            textColor: '#e8edf3',
+          },
+          {
+            title: t('p3_title'),
+            description: t('p3_desc'),
+            image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop',
+            bgColor: '#0f1218',
+            textColor: '#e8edf3',
+          },
+          {
+            title: t('p4_title'),
+            description: t('p4_desc'),
+            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop',
+            bgColor: '#111827',
+            textColor: '#e8edf3',
+          },
+          {
+            title: t('p5_title'),
+            description: t('p5_desc'),
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+            bgColor: '#0f1218',
+            textColor: '#e8edf3',
+          },
+          {
+            title: t('p6_title'),
+            description: t('p6_desc'),
+            image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=2032&auto=format&fit=crop',
+            bgColor: '#0d1521',
+            textColor: '#e8edf3',
+          },
+        ]}
+      />
 
       {/* ── CASE STUDIES ─────────────────────────────── */}
       <section className="jlt-cases" id="projekte">
