@@ -403,13 +403,27 @@ export default function PortfolioPage() {
           </div>
  
           {/* RIGHT: Image Collage */}
-          <motion.div
-            className="jlt-video-col"
-            style={{ position: 'relative', height: '440px' }}
-            initial="hidden"
-            animate="visible"
-            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } }}
-          >
+          <div className="jlt-video-col">
+            {/* Mobile: clean logo row */}
+            <div className="md:hidden" style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center', alignItems: 'center', padding: '1.5rem 0' }}>
+              {[
+                { src: '/images/logos/shopify.png',    alt: 'Shopify',    h: 36, f: '' },
+                { src: '/images/logos/google-ads.png', alt: 'Google Ads', h: 32, f: '' },
+                { src: '/images/logos/meta.png',       alt: 'Meta',       h: 28, f: '' },
+                { src: '/images/logos/tiktok.png',     alt: 'TikTok',     h: 28, f: 'brightness(0) invert(1)' },
+                { src: '/images/logos/gtm.png',        alt: 'GTM / GA4',  h: 32, f: '' },
+              ].map(({ src, alt, h, f }) => (
+                <img key={src} src={src} alt={alt} style={{ height: h, objectFit: 'contain' as const, opacity: 0.65, ...(f ? { filter: f } : {}) }} />
+              ))}
+            </div>
+            {/* Desktop: floating collage */}
+            <motion.div
+              className="hidden md:block"
+              style={{ position: 'relative', height: '440px' }}
+              initial="hidden"
+              animate="visible"
+              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } }}
+            >
             {/* Decorative orbs */}
             <motion.div
               style={{ position: 'absolute', top: -16, left: '25%', width: 48, height: 48, borderRadius: '50%', background: 'oklch(75% 0.165 140 / 0.18)', pointerEvents: 'none' }}
@@ -477,9 +491,10 @@ export default function PortfolioPage() {
               <img src="/images/logos/gtm.png" alt="GTM / GA4" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
 
-          </motion.div>
+            </motion.div>
+          </div>
 
- 
+
           {/* EVIDENCE STRIP */}
           <div className="jlt-hero-evidence" role="list">
             <div className="ev-item" role="listitem"><span className="ev-val">{t('hero_ev1_val')}</span><span className="ev-label">{t('hero_ev1')}</span></div>
