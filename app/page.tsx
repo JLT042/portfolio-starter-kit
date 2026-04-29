@@ -5,6 +5,7 @@ import de from '@/content/de.json';
 import en from '@/content/en.json';
 import es from '@/content/es.json';
 import { ScrollingFeatureShowcase } from '@/components/ui/interactive-scrolling-story-component';
+import { GlowCard } from '@/components/ui/spotlight-card';
  
 // ─────────────────────────────────────────────────────────────
 // JOSE L. TREFF — Portfolio Page
@@ -293,8 +294,7 @@ export default function PortfolioPage() {
         .jlt-testi-inner { max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:3rem; }
         .testi-hdr { display:flex;flex-direction:column;gap:.75rem; }
         .testi-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem; }
-        .testi-card { padding:2rem;border-radius:12px;border:1px solid var(--border);background:var(--graphite);display:flex;flex-direction:column;gap:1.5rem;transition:border-color 200ms var(--eq),box-shadow 200ms var(--eq); }
-        .testi-card:hover { border-color:var(--brand-bd);box-shadow:0 0 24px oklch(75% 0.165 140/.10); }
+        .testi-card { padding:2rem;border-radius:12px;display:flex;flex-direction:column;gap:1.5rem; }
         .testi-quote { font-family:var(--fb);font-size:.9375rem;line-height:1.7;color:var(--gray3);flex:1; }
         .testi-quote::before { content:'"';color:var(--brand);font-family:var(--fh);font-size:2rem;line-height:0;vertical-align:-.5rem;margin-right:.25rem; }
         .testi-author { display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--border-s);padding-top:1rem; }
@@ -799,13 +799,13 @@ export default function PortfolioPage() {
               { quote: t('t2_quote'), name: t('t2_name'), role: t('t2_role') },
               { quote: t('t3_quote'), name: t('t3_name'), role: t('t3_role') },
             ].map(({ quote, name, role }) => (
-              <article key={name} className="testi-card">
+              <GlowCard key={name} customSize glowColor="green" className="testi-card" role="article">
                 <p className="testi-quote">{quote}</p>
                 <div className="testi-author">
                   <span className="testi-name">{name}</span>
                   <span className="testi-role">{role}</span>
                 </div>
-              </article>
+              </GlowCard>
             ))}
           </div>
         </div>
