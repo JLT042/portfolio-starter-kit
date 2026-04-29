@@ -544,18 +544,24 @@ export default function PortfolioPage() {
         </div>
         <div className="logos-marquee">
           <div className="logos-track">
-            {/* Set 1 — visible to screen readers */}
-            <img className="logo-img" src="/images/logos/shopify.png"    alt="Shopify"            style={{ height: 28 }} />
-            <img className="logo-img" src="/images/logos/google-ads.png" alt="Google Ads"         style={{ height: 24 }} />
-            <img className="logo-img" src="/images/logos/meta.png"       alt="Meta"               style={{ height: 20 }} />
-            <img className="logo-img" src="/images/logos/tiktok.png"     alt="TikTok"             style={{ height: 20 }} />
-            <img className="logo-img" src="/images/logos/gtm.png"        alt="Google Tag Manager" style={{ height: 24 }} />
-            {/* Set 2 — duplicate for seamless loop, hidden from screen readers */}
-            <img className="logo-img" src="/images/logos/shopify.png"    alt="" aria-hidden="true" style={{ height: 28 }} />
-            <img className="logo-img" src="/images/logos/google-ads.png" alt="" aria-hidden="true" style={{ height: 24 }} />
-            <img className="logo-img" src="/images/logos/meta.png"       alt="" aria-hidden="true" style={{ height: 20 }} />
-            <img className="logo-img" src="/images/logos/tiktok.png"     alt="" aria-hidden="true" style={{ height: 20 }} />
-            <img className="logo-img" src="/images/logos/gtm.png"        alt="" aria-hidden="true" style={{ height: 24 }} />
+            {Array.from({ length: 4 }, (_, set) =>
+              [
+                { src: '/images/logos/shopify.png',    alt: 'Shopify',            h: 30 },
+                { src: '/images/logos/google-ads.png', alt: 'Google Ads',         h: 26 },
+                { src: '/images/logos/meta.png',       alt: 'Meta',               h: 22 },
+                { src: '/images/logos/tiktok.png',     alt: 'TikTok',             h: 22 },
+                { src: '/images/logos/gtm.png',        alt: 'Google Tag Manager', h: 26 },
+              ].map(l => (
+                <img
+                  key={`${set}-${l.src}`}
+                  className="logo-img"
+                  src={l.src}
+                  alt={set === 0 ? l.alt : ''}
+                  aria-hidden={set > 0 ? 'true' : undefined}
+                  style={{ height: l.h }}
+                />
+              ))
+            )}
           </div>
         </div>
       </section>
