@@ -507,8 +507,8 @@ export default function PortfolioPage() {
  
           {/* CTAs */}
           <div className="jlt-hero-ctas">
-            <a href="#projekte" className="btn-primary">{t('hero_cta1')} <ArrowRight /></a>
-            <a href="https://calendly.com/jose-treff/15min" target="_blank" rel="noopener" className="btn-ghost">{t('hero_cta2')} <ArrowRight /></a>
+            <a href="https://calendly.com/jose-treff/15min" target="_blank" rel="noopener" className="btn-primary">{t('hero_cta1')} <ArrowRight /></a>
+            <a href="#projekte" className="btn-ghost">{t('hero_cta2')} <ArrowRight /></a>
           </div>
  
           {/* SKILL TAGS */}
