@@ -182,9 +182,14 @@ export default function PortfolioPage() {
         .res-div { width:1px;height:32px;background:var(--border);flex-shrink:0; }
         .case-link { display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.875rem;font-weight:500;color:var(--brand);text-decoration:none;transition:gap 180ms var(--eq); }
         .case-link:hover { color:var(--brand-hi);gap:.75rem; }
- 
-        .case-visual { border-radius:20px;border:1px solid var(--border);background:var(--graphite);overflow:hidden;aspect-ratio:4/3;position:relative;transition:border-color 220ms var(--eq),box-shadow 220ms var(--eq); }
-        .case-card:hover .case-visual { border-color:var(--brand-bd);box-shadow:0 0 40px oklch(75% 0.165 140/.10),0 16px 48px oklch(9% 0.008 260/.50); }
+        .case-period { font-family:var(--fm);font-size:.5625rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray4);margin-top:-.5rem; }
+        .case-lever { display:flex;flex-direction:column;gap:.375rem;padding:.875rem 1.125rem;border-radius:8px;border-left:2px solid oklch(75% 0.165 140 / 0.45);background:oklch(75% 0.165 140 / 0.04); }
+        .case-lever-label { font-family:var(--fm);font-size:.5625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand); }
+        .case-lever-text { font-family:var(--fb);font-size:.875rem;line-height:1.65;color:var(--gray3); }
+
+        .case-visual { border-radius:20px;border:1px solid var(--border);background:var(--graphite);overflow:hidden;aspect-ratio:4/3;position:relative;transition:border-color 220ms var(--eq),box-shadow 220ms var(--eq),transform 300ms ease-out;box-shadow:0 24px 56px oklch(0 0 0 / .45),0 0 32px oklch(75% 0.165 140 / .03); }
+        .case-visual::after { content:'';position:absolute;inset:0;background:linear-gradient(to top,oklch(75% 0.165 140 / 0.05) 0%,transparent 30%);pointer-events:none;z-index:2; }
+        .case-card:hover .case-visual { border-color:var(--brand-bd);box-shadow:0 0 40px oklch(75% 0.165 140/.10),0 24px 56px oklch(0 0 0 / .55);transform:translateY(-3px); }
         .mock-chrome { height:32px;background:var(--slate);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 1rem;gap:.5rem;flex-shrink:0; }
         .mock-dots { display:flex;gap:5px; }
         .mock-dots span { width:8px;height:8px;border-radius:50%; }
@@ -753,6 +758,7 @@ export default function PortfolioPage() {
           <article className="case-card">
             <div className="case-text">
               <span className="case-num">{t('c1_num')}</span>
+              <span className="case-period">{t('c1_period')}</span>
               <h3 className="case-title">Statement Clothing GmbH</h3>
               <div className="case-tags-row">
                 <span className="ctag hi">Google Ads</span>
@@ -768,6 +774,10 @@ export default function PortfolioPage() {
                 <div className="res-kpi"><span className="res-val">€9</span><span className="res-label">CPA</span></div>
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">€30K</span><span className="res-label">{t('c1_k3')}</span></div>
+              </div>
+              <div className="case-lever">
+                <span className="case-lever-label">{t('lever_label')}</span>
+                <p className="case-lever-text">{t('c1_lever')}</p>
               </div>
               <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
@@ -806,6 +816,7 @@ export default function PortfolioPage() {
           <article className="case-card">
             <div className="case-text">
               <span className="case-num">{t('c2_num')}</span>
+              <span className="case-period">{t('c2_period')}</span>
               <h3 className="case-title">Die Barista Kaffee Hameln</h3>
               <div className="case-tags-row">
                 <span className="ctag hi">Shopify Liquid</span>
@@ -821,6 +832,10 @@ export default function PortfolioPage() {
                 <div className="res-kpi"><span className="res-val">CRO</span><span className="res-label">{t('c2_k2')}</span></div>
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">{t('c2_k3v')}</span><span className="res-label">{t('c2_k3')}</span></div>
+              </div>
+              <div className="case-lever">
+                <span className="case-lever-label">{t('lever_label')}</span>
+                <p className="case-lever-text">{t('c2_lever')}</p>
               </div>
               <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
@@ -849,6 +864,7 @@ export default function PortfolioPage() {
           <article className="case-card">
             <div className="case-text">
               <span className="case-num">{t('c3_num')}</span>
+              <span className="case-period">{t('c3_period')}</span>
               <h3 className="case-title">Meet Your Master</h3>
               <div className="case-tags-row">
                 <span className="ctag hi">UX Research</span>
@@ -862,6 +878,10 @@ export default function PortfolioPage() {
                 <div className="res-kpi"><span className="res-val">{t('c3_k1v')}</span><span className="res-label">{t('c3_k1')}</span></div>
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">{t('c3_k2v')}</span><span className="res-label">{t('c3_k2')}</span></div>
+              </div>
+              <div className="case-lever">
+                <span className="case-lever-label">{t('lever_label')}</span>
+                <p className="case-lever-text">{t('c3_lever')}</p>
               </div>
               <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
@@ -898,6 +918,7 @@ export default function PortfolioPage() {
           <article className="case-card">
             <div className="case-text">
               <span className="case-num">{t('c4_num')}</span>
+              <span className="case-period">{t('c4_period')}</span>
               <h3 className="case-title">DOQ Hundefutter</h3>
               <div className="case-tags-row">
                 <span className="ctag hi">{t('c4_tag')}</span>
@@ -911,6 +932,10 @@ export default function PortfolioPage() {
                 <div className="res-kpi"><span className="res-val">{t('c4_k1v')}</span><span className="res-label">{t('c4_k1')}</span></div>
                 <div className="res-div" aria-hidden="true" />
                 <div className="res-kpi"><span className="res-val">App MVP</span><span className="res-label">{t('c4_k2')}</span></div>
+              </div>
+              <div className="case-lever">
+                <span className="case-lever-label">{t('lever_label')}</span>
+                <p className="case-lever-text">{t('c4_lever')}</p>
               </div>
               <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
             </div>
