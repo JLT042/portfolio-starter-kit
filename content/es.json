@@ -82,7 +82,7 @@
   "s3_title": "SEO, GEO e IA",
   "s3_desc": "SEO técnico, Generative Engine Optimization para citas en LLMs (ChatGPT, Perplexity), schema JSON-LD, automatización de flujos de IA para escalado de contenido.",
   "about_eyebrow": "Sobre mí",
-  "about_text": "Soy Jose — Senior Performance Marketer y desarrollador Shopify afincado en Hamburgo. Desde hace más de 5 años ayudo a marcas D2C y B2B en el mercado DACH a conseguir resultados medibles: desde la estrategia de ads hasta el checkout, desde el primer clic hasta el cliente recurrente.\n\nMi enfoque es basado en datos, pragmático y escalable — sin overhead de agencia, comunicación directa, KPIs claros.",
+  "about_text": "Llevo más de 5 años activo en DACH, con resultados medibles para marcas D2C y B2B en cada segmento de presupuesto — desde €800 hasta €30.000 de gasto mensual.\n\nMi forma de trabajar es diferente a la de una agencia: hablo contigo, no sobre ti. Construyo lo que necesitas — sin venta de stack de herramientas, sin informes de junior con apariencia de senior.\n\nMi estándar: el marketing es inversión, no gasto. Si los números no funcionan, la estrategia no funciona. Punto.",
   "about_avail": "Disponible para nuevos proyectos",
   "geo_eyebrow": "Nueva disciplina",
   "geo_headline": "GEO. El canal orgánico que tus competidores aún no entienden.",
@@ -133,5 +133,18 @@
   "geo_proof_label": "Prueba en vivo: Así se ve GEO en acción.",
   "geo_audit_q": "¿Quieres saber dónde estás actualmente en las respuestas de IA?",
   "geo_audit_cta": "Solicitar auditoría GEO gratuita",
-  "case_link_deep": "Leer caso completo"
+  "case_link_deep": "Leer caso completo",
+  "pricing_eyebrow": "Colaboración",
+  "pricing_heading": "Cómo trabajo — y cuánto cuesta",
+  "pricing_r1_name": "Retainer de Performance",
+  "pricing_r1_term": "desde 15h / mes",
+  "pricing_r1_desc": "Gestión continua de ads, tracking y CRO. Ideal desde €5K/mes de presupuesto.",
+  "pricing_r2_name": "Sprint de Proyecto",
+  "pricing_r2_term": "2–6 semanas · alcance definido",
+  "pricing_r2_desc": "Relanzamiento Shopify, migración de tracking, auditoría GEO. Precio fijo tras llamada de scoping.",
+  "pricing_r3_name": "Subcontratista / White-Label",
+  "pricing_r3_term": "flexible · con NDA",
+  "pricing_r3_desc": "Output senior bajo tu marca para agencias. Entrega transparente, sin caja negra.",
+  "pricing_foot": "Tarifa horaria bajo solicitud. La primera conversación es siempre gratuita y sin compromiso.",
+  "pricing_cta": "Reservar llamada inicial"
 }

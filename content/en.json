@@ -82,7 +82,7 @@
   "s3_title": "SEO, GEO & AI",
   "s3_desc": "Technical SEO, Generative Engine Optimization for LLM citations (ChatGPT, Perplexity), JSON-LD schema markup, AI workflow automation for content scaling.",
   "about_eyebrow": "About me",
-  "about_text": "I'm Jose — Senior Performance Marketer and Shopify Developer based in Hamburg. For over 5 years I've helped D2C and B2B brands in the DACH market achieve measurable results: from ad strategy to checkout, from first click to returning customer.\n\nMy approach is data-driven, pragmatic and scalable — no agency overhead, direct communication, clear KPIs.",
+  "about_text": "I've been active in DACH for over 5 years, with measurable results for D2C and B2B brands across every budget tier — from €800 to €30,000 monthly spend.\n\nMy setup is different from an agency's: I talk to you, not about you. I build what you need — no tool-stack upselling, no junior reports in senior disguise.\n\nMy standard: marketing is investment, not expense. If the numbers don't work, the strategy doesn't work. Full stop.",
   "about_avail": "Available for new projects",
   "geo_eyebrow": "New discipline",
   "geo_headline": "GEO. The organic channel your competitors don't understand yet.",
@@ -133,5 +133,18 @@
   "geo_proof_label": "Live proof: This is what GEO looks like in action.",
   "geo_audit_q": "Want to see where you currently stand in AI answers?",
   "geo_audit_cta": "Request a free GEO quick audit",
-  "case_link_deep": "Read full case study"
+  "case_link_deep": "Read full case study",
+  "pricing_eyebrow": "Engagement",
+  "pricing_heading": "How I work — and what it costs",
+  "pricing_r1_name": "Performance Retainer",
+  "pricing_r1_term": "from 15h / month",
+  "pricing_r1_desc": "Ongoing management of ads, tracking and CRO. Ideal from €5K/month media budget.",
+  "pricing_r2_name": "Project Sprint",
+  "pricing_r2_term": "2–6 weeks · fixed scope",
+  "pricing_r2_desc": "Shopify relaunch, tracking migration, GEO audit. Fixed price after scoping call.",
+  "pricing_r3_name": "Subcontractor / White-Label",
+  "pricing_r3_term": "flexible · NDA-proof",
+  "pricing_r3_desc": "Senior output under your branding for agencies. Transparent handover, no black box.",
+  "pricing_foot": "Hourly rate on request. The first call is always free and non-binding.",
+  "pricing_cta": "Book intro call"
 }

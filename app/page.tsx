@@ -399,7 +399,22 @@ export default function PortfolioPage() {
         .about-avail-text { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.06em;color:var(--brand-hi);text-transform:uppercase; }
         .about-right { display:flex;flex-direction:column;gap:1.5rem; }
         .about-body { font-family:var(--fb);font-size:1rem;line-height:1.75;color:var(--gray3);white-space:pre-line; }
+        .about-skills { display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.25rem; }
         @media(max-width:640px) { .jlt-about-inner { grid-template-columns:1fr; } .about-left { position:static; } }
+
+        /* ── PRICING ── */
+        .jlt-pricing { padding:6rem clamp(1rem,6vw,4rem);background:oklch(10.5% 0.009 260);border-top:1px solid var(--border-s);position:relative;z-index:1; }
+        .jlt-pricing-inner { max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:3rem; }
+        .pricing-hdr { display:flex;flex-direction:column;gap:.75rem; }
+        .pricing-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem; }
+        .pricing-card { background:var(--navy);border:1px solid var(--border);border-radius:16px;padding:1.75rem;display:flex;flex-direction:column;gap:.75rem;transition:border-color 250ms,transform 250ms; }
+        .pricing-card:hover { border-color:oklch(75% 0.165 140 / 0.35);transform:translateY(-4px); }
+        .pricing-term { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:.1rem; }
+        .pricing-name { font-family:var(--fh);font-size:clamp(1.1rem,2vw + .2rem,1.35rem);font-weight:700;letter-spacing:-.02em;color:var(--white);line-height:1.1; }
+        .pricing-desc { font-family:var(--fb);font-size:.9375rem;line-height:1.65;color:var(--gray3);flex:1; }
+        .pricing-foot { display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;padding-top:1.5rem;border-top:1px solid var(--border-s); }
+        .pricing-note { font-family:var(--fm);font-size:.6875rem;font-weight:400;color:var(--gray4);letter-spacing:.04em;font-style:italic; }
+        @media(max-width:768px) { .pricing-grid { grid-template-columns:1fr; } }
 
         /* ── FOOTER ── */
         .jlt-footer { padding:2rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);position:relative;z-index:1; }
@@ -1147,14 +1162,56 @@ export default function PortfolioPage() {
           <div className="about-right">
             <span className="eyebrow">{t('about_eyebrow')}</span>
             <p className="about-body">{t('about_text')}</p>
-            <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
-              {['DE', 'EN', 'ES'].map(lang => (
-                <span key={lang} className="skill-tag tech">{lang}</span>
+            <div className="about-skills">
+              {['SEA', 'CRO', 'Shopify', 'GEO'].map(s => (
+                <span key={s} className="skill-tag">{s}</span>
               ))}
-              <span className="skill-tag">Hamburg</span>
-              <span className="skill-tag">Remote</span>
-              <span className="skill-tag">DACH</span>
+              <span className="skill-tag tech">GTM / GA4</span>
+              <span className="skill-tag tech">Liquid</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PRICING & ENGAGEMENT ─────────────────────── */}
+      <section className="jlt-pricing" id="engagement">
+        <div className="jlt-pricing-inner">
+          <header className="pricing-hdr">
+            <span className="eyebrow">{t('pricing_eyebrow')}</span>
+            <h2 className="sec-h">{t('pricing_heading')}</h2>
+          </header>
+
+          <div className="pricing-grid">
+            {/* Retainer */}
+            <div className="pricing-card">
+              <p className="pricing-term">{t('pricing_r1_term')}</p>
+              <h3 className="pricing-name">{t('pricing_r1_name')}</h3>
+              <p className="pricing-desc">{t('pricing_r1_desc')}</p>
+            </div>
+            {/* Sprint */}
+            <div className="pricing-card">
+              <p className="pricing-term">{t('pricing_r2_term')}</p>
+              <h3 className="pricing-name">{t('pricing_r2_name')}</h3>
+              <p className="pricing-desc">{t('pricing_r2_desc')}</p>
+            </div>
+            {/* White-Label */}
+            <div className="pricing-card">
+              <p className="pricing-term">{t('pricing_r3_term')}</p>
+              <h3 className="pricing-name">{t('pricing_r3_name')}</h3>
+              <p className="pricing-desc">{t('pricing_r3_desc')}</p>
+            </div>
+          </div>
+
+          <div className="pricing-foot">
+            <p className="pricing-note">{t('pricing_foot')}</p>
+            <a
+              href="https://calendly.com/jose-treff/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {t('pricing_cta')} <ArrowRight />
+            </a>
           </div>
         </div>
       </section>
