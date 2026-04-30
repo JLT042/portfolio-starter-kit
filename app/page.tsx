@@ -56,6 +56,8 @@ export default function PortfolioPage() {
           --brand-dk:oklch(65% 0.175 140);
           --brand-bd:oklch(75% 0.165 140 / 0.30);
           --brand-bg:oklch(75% 0.165 140 / 0.06);
+          --warning: oklch(78% 0.170 65);
+          --error:   oklch(58% 0.220 25);
           --indigo:  oklch(68% 0.165 265);
           --indigo2: oklch(58% 0.200 265);
           --success: oklch(65% 0.190 145);
@@ -180,7 +182,7 @@ export default function PortfolioPage() {
         .case-link { display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.875rem;font-weight:500;color:var(--brand);text-decoration:none;transition:gap 180ms var(--eq); }
         .case-link:hover { color:var(--brand-hi);gap:.75rem; }
  
-        .case-visual { border-radius:16px;border:1px solid var(--border);background:var(--graphite);overflow:hidden;aspect-ratio:4/3;position:relative;transition:border-color 220ms var(--eq),box-shadow 220ms var(--eq); }
+        .case-visual { border-radius:20px;border:1px solid var(--border);background:var(--graphite);overflow:hidden;aspect-ratio:4/3;position:relative;transition:border-color 220ms var(--eq),box-shadow 220ms var(--eq); }
         .case-card:hover .case-visual { border-color:var(--brand-bd);box-shadow:0 0 40px oklch(75% 0.165 140/.10),0 16px 48px oklch(9% 0.008 260/.50); }
         .mock-chrome { height:32px;background:var(--slate);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 1rem;gap:.5rem;flex-shrink:0; }
         .mock-dots { display:flex;gap:5px; }
@@ -294,7 +296,7 @@ export default function PortfolioPage() {
         .jlt-testi-inner { max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:3rem; }
         .testi-hdr { display:flex;flex-direction:column;gap:.75rem; }
         .testi-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem; }
-        .testi-card { padding:2rem;border-radius:12px;display:flex;flex-direction:column;gap:1.5rem; }
+        .testi-card { padding:2rem;border-radius:20px;display:flex;flex-direction:column;gap:1.5rem; }
         .testi-quote { font-family:var(--fb);font-size:.9375rem;line-height:1.7;color:var(--gray3);flex:1; }
         .testi-quote::before { content:'"';color:var(--brand);font-family:var(--fh);font-size:2rem;line-height:0;vertical-align:-.5rem;margin-right:.25rem; }
         .testi-author { display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--border-s);padding-top:1rem; }
@@ -443,20 +445,20 @@ export default function PortfolioPage() {
 
             {/* Shopify — large, top-center */}
             <motion.div
-              style={{ position: 'absolute', left: '50%', top: 0, width: 200, height: 200, marginLeft: -100, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 20, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              style={{ position: 'absolute', left: '50%', top: 0, width: 200, height: 200, marginLeft: -100, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
-              animate={{ y: [0, -14, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0 }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0 }}
             >
               <img src="/images/logos/shopify.png" alt="Shopify" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
 
             {/* Google Ads — medium, right */}
             <motion.div
-              style={{ position: 'absolute', right: 0, top: '26%', width: 160, height: 160, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 18, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              style={{ position: 'absolute', right: 0, top: '26%', width: 160, height: 160, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
             >
               <img src="/images/logos/google-ads.png" alt="Google Ads" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
@@ -465,28 +467,28 @@ export default function PortfolioPage() {
             <motion.div
               style={{ position: 'absolute', left: 0, top: '42%', width: 148, height: 148, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 1.4 }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.4 }}
             >
               <img src="/images/logos/meta.png" alt="Meta" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
 
             {/* TikTok — small, bottom-right */}
             <motion.div
-              style={{ position: 'absolute', right: 24, bottom: 0, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 14, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              style={{ position: 'absolute', right: 24, bottom: 0, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
-              animate={{ y: [0, -11, 0] }}
-              transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
             >
               <img src="/images/logos/tiktok.png" alt="TikTok" style={{ width: '100%', height: '100%', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
             </motion.div>
 
             {/* GTM / GA4 — small, bottom-center */}
             <motion.div
-              style={{ position: 'absolute', left: '36%', bottom: 12, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 14, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
+              style={{ position: 'absolute', left: '36%', bottom: 12, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
-              animate={{ y: [0, -13, 0] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2.1 }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 2.1 }}
             >
               <img src="/images/logos/gtm.png" alt="GTM / GA4" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
@@ -814,7 +816,7 @@ export default function PortfolioPage() {
               { quote: t('t2_quote'), name: t('t2_name'), role: t('t2_role') },
               { quote: t('t3_quote'), name: t('t3_name'), role: t('t3_role') },
             ].map(({ quote, name, role }) => (
-              <GlowCard key={name} customSize glowColor="green" className="testi-card" role="article">
+              <GlowCard key={name} customSize glowColor="green" backdropColor="oklch(12% 0.010 260)" className="testi-card" role="article">
                 <p className="testi-quote">{quote}</p>
                 <div className="testi-author">
                   <span className="testi-name">{name}</span>
@@ -871,7 +873,9 @@ export default function PortfolioPage() {
       <section className="jlt-about">
         <div className="jlt-about-inner">
           <div className="about-left">
-            <div className="about-avatar">🧑‍💻</div>
+            <div className="about-avatar">
+              <span style={{ fontFamily: 'var(--fh)', fontSize: '1.125rem', fontWeight: 700, color: 'var(--brand)', letterSpacing: '0.06em' }}>JLT</span>
+            </div>
             <div>
               <h2 className="sec-h" style={{ fontSize: 'clamp(1.5rem,2.5vw,2rem)' }}>Jose L. Treff</h2>
               <p style={{ fontFamily: 'var(--fb)', fontSize: '.875rem', color: 'var(--gray4)', marginTop: '.25rem' }}>Hamburg · DACH · Remote</p>

@@ -115,7 +115,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
   const inlineStyle = {
     '--base':            base,
     '--spread':          spread,
-    '--radius':          '12',
+    '--radius':          '20',
     '--border':          '2',
     '--backdrop':        backdropColor,
     '--backup-border':   'oklch(95% 0.006 260 / 0.10)',
@@ -151,7 +151,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         className={[
           customSize ? '' : sizeMap[size],
           customSize ? '' : 'aspect-[3/4]',
-          'rounded-xl relative shadow-[0_1rem_2rem_-1rem_black]',
+          'rounded-[20px] relative shadow-[0_1rem_2rem_-1rem_black]',
           className,
         ].filter(Boolean).join(' ')}
         {...rest}

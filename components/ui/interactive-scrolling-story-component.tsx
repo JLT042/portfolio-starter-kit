@@ -142,9 +142,9 @@ export function ScrollingFeatureShowcase({ slides, id, ctaLabel = 'Kontakt', cta
                     >
                       <h2 style={{
                         fontFamily: FH,
-                        fontSize: 'clamp(2rem, 3.5vw + .5rem, 3.75rem)',
+                        fontSize: 'clamp(2.5rem, 4vw, 3.75rem)',
                         fontWeight: 700,
-                        letterSpacing: '-.02em',
+                        letterSpacing: '-.025em',
                         lineHeight: 1.1,
                         color: TEXT_PRI,
                       }}>
@@ -170,14 +170,13 @@ export function ScrollingFeatureShowcase({ slides, id, ctaLabel = 'Kontakt', cta
                     href={ctaHref}
                     style={{
                       display: 'inline-block',
-                      padding: '11px 24px',
+                      padding: '13px 2rem',
                       backgroundColor: BRAND,
                       color: BRAND_DARK,
                       fontFamily: FB,
-                      fontSize: '.875rem',
-                      fontWeight: 600,
-                      letterSpacing: '.04em',
-                      textTransform: 'uppercase' as const,
+                      fontSize: '.9375rem',
+                      fontWeight: 500,
+                      letterSpacing: '.02em',
                       textDecoration: 'none',
                       borderRadius: '8px',
                       transition: 'background-color 180ms ease, transform 100ms ease',
