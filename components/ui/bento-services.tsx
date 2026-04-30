@@ -8,6 +8,7 @@ export interface BentoService {
   title: string;
   description: string;
   image: string;
+  stack?: string;
   className?: string;
 }
 
@@ -152,7 +153,7 @@ export function BentoServices({ id, eyebrow, heading, services }: Props) {
 }
 
 function BentoCard({
-  eyebrow, title, description, image, className = '', visible, index,
+  eyebrow, title, description, image, stack, className = '', visible, index,
 }: BentoService & { visible: boolean; index: number }) {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -220,10 +221,22 @@ function BentoCard({
         <p style={{
           fontFamily: FB, fontSize: '.9375rem',
           lineHeight: 1.65, color: TEXT_MUT,
-          marginTop: '.25rem',
+          marginTop: '.25rem', flex: 1,
         }}>
           {description}
         </p>
+        {stack && (
+          <p style={{
+            fontFamily: FM, fontSize: '.5625rem', fontWeight: 600,
+            letterSpacing: '.1em', textTransform: 'uppercase' as const,
+            color: 'oklch(50% 0.010 260)',
+            borderTop: `1px solid oklch(95% 0.006 260 / 0.06)`,
+            paddingTop: '.75rem', marginTop: '.25rem',
+            lineHeight: 1.6,
+          }}>
+            {stack}
+          </p>
+        )}
       </div>
 
       {/* Surface spotlight — last in DOM, floats above everything */}
