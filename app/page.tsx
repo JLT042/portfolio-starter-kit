@@ -271,11 +271,16 @@ export default function PortfolioPage() {
         .mock-doq-r-item::before { content:'✓';color:oklch(72% 0.180 148);font-size:.4rem;flex-shrink:0; }
  
         /* ── CONTACT ── */
-        .svc-cta { padding:3rem clamp(1rem,6vw,4rem);background:oklch(9% 0.008 260);position:relative;z-index:1; }
-        .svc-cta-inner { max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding:2rem 2.5rem;background:var(--navy);border:1px solid var(--border);border-radius:20px;box-shadow:0 0 80px oklch(75% 0.165 140 / 0.06); }
+        .svc-cta { padding:2rem clamp(1rem,6vw,4rem) 3rem;background:oklch(9% 0.008 260);position:relative;z-index:1; }
+        .svc-cta-inner { max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:2rem 2.5rem;background:var(--navy);border:1px solid var(--border);border-radius:20px;box-shadow:0 0 80px oklch(75% 0.165 140 / 0.06); }
         .svc-cta-text { display:flex;flex-direction:column;gap:.375rem; }
         .svc-cta-headline { font-family:var(--fh);font-size:clamp(1.25rem,2vw + .25rem,1.75rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--white); }
         .svc-cta-actions { display:flex;flex-wrap:wrap;gap:.75rem;flex-shrink:0; }
+        @media (max-width:640px) {
+          .svc-cta-inner { flex-direction:column;align-items:stretch;padding:1.5rem 1.25rem; }
+          .svc-cta-actions { flex-direction:column; }
+          .svc-cta-actions .btn-primary,.svc-cta-actions .btn-ghost { justify-content:center; }
+        }
         .jlt-contact { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);border-top:1px solid var(--border-s);position:relative;z-index:1; }
         .jlt-contact-inner { max-width:640px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2rem; }
         .ct-eyebrow { font-family:var(--fm);font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand); }
@@ -619,21 +624,7 @@ export default function PortfolioPage() {
             <span className="eyebrow">{t('cases_eyebrow')}</span>
             <h2 className="sec-h">Case Studies</h2>
             <p className="sec-sub">{t('cases_sub')}</p>
-            <Link
-              href="/projekte"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: '.4rem',
-                alignSelf: 'flex-start',
-                padding: '10px 1.25rem', borderRadius: '8px',
-                border: '1px solid oklch(75% 0.165 140 / 0.35)',
-                color: 'oklch(75% 0.165 140)',
-                fontFamily: "'Epilogue', system-ui, sans-serif",
-                fontSize: '.875rem', fontWeight: 500, textDecoration: 'none',
-                transition: 'border-color 150ms ease, background 150ms ease',
-              }}
-              onMouseEnter={e => { e.currentTarget.style.background = 'oklch(75% 0.165 140 / 0.06)'; e.currentTarget.style.borderColor = 'oklch(75% 0.165 140 / 0.6)'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'oklch(75% 0.165 140 / 0.35)'; }}
-            >
+            <Link href="/projekte" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
               {lang === 'de' ? 'Alle Projekte & Details' : lang === 'en' ? 'All projects & details' : 'Todos los proyectos'} <ArrowRight />
             </Link>
           </header>
@@ -836,7 +827,7 @@ export default function PortfolioPage() {
       <section className="jlt-testi">
         <div className="jlt-testi-inner">
           <header className="testi-hdr">
-            <span className="eyebrow">{t('testi_eyebrow')}</span>
+            <h2 className="sec-h">{t('testi_eyebrow')}</h2>
             <p className="sec-sub">{t('testi_sub')}</p>
           </header>
           <div className="testi-grid">
