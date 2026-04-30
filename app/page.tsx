@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import de from '@/content/de.json';
 import en from '@/content/en.json';
 import es from '@/content/es.json';
@@ -545,21 +546,14 @@ export default function PortfolioPage() {
       <BentoServices
         id="leistungen"
         eyebrow={t('nav_services')}
-        heading="Was ich anbiete"
+        heading={t('svc_heading')}
         services={[
-          {
-            eyebrow: 'Paid Media',
-            title: t('p4_title'),
-            description: t('p4_desc'),
-            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop',
-            className: 'lg:col-span-4',
-          },
           {
             eyebrow: 'Web & Shopify',
             title: t('p1_title'),
             description: t('p1_desc'),
             image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop',
-            className: 'lg:col-span-2',
+            className: 'lg:col-span-4',
           },
           {
             eyebrow: 'Tracking',
@@ -573,6 +567,13 @@ export default function PortfolioPage() {
             title: t('p3_title'),
             description: t('p3_desc'),
             image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop',
+            className: 'lg:col-span-2',
+          },
+          {
+            eyebrow: 'Paid Media / SEA',
+            title: t('p4_title'),
+            description: t('p4_desc'),
+            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop',
             className: 'lg:col-span-4',
           },
           {
@@ -599,6 +600,23 @@ export default function PortfolioPage() {
             <span className="eyebrow">{t('cases_eyebrow')}</span>
             <h2 className="sec-h">Case Studies</h2>
             <p className="sec-sub">{t('cases_sub')}</p>
+            <Link
+              href="/projekte"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '.4rem',
+                alignSelf: 'flex-start',
+                padding: '10px 1.25rem', borderRadius: '8px',
+                border: '1px solid oklch(75% 0.165 140 / 0.35)',
+                color: 'oklch(75% 0.165 140)',
+                fontFamily: "'Epilogue', system-ui, sans-serif",
+                fontSize: '.875rem', fontWeight: 500, textDecoration: 'none',
+                transition: 'border-color 150ms ease, background 150ms ease',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'oklch(75% 0.165 140 / 0.06)'; e.currentTarget.style.borderColor = 'oklch(75% 0.165 140 / 0.6)'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'oklch(75% 0.165 140 / 0.35)'; }}
+            >
+              {lang === 'de' ? 'Alle Projekte & Details' : lang === 'en' ? 'All projects & details' : 'Todos los proyectos'} <ArrowRight />
+            </Link>
           </header>
  
           {/* 01 — Statement Clothing */}
