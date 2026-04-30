@@ -85,8 +85,8 @@
   "about_text": "Ich bin Jose — Senior Performance Marketer und Shopify-Entwickler aus Hamburg. Seit über 5 Jahren helfe ich D2C- und B2B-Marken im DACH-Raum dabei, messbare Ergebnisse zu erzielen: von der Ads-Strategie bis zum Checkout, vom ersten Klick bis zum Stammkunden.\n\nMein Ansatz ist datengetrieben, pragmatisch und skalierbar — kein Agentur-Overhead, direkte Kommunikation, klare KPIs.",
   "about_avail": "Verfügbar für neue Projekte",
   "geo_eyebrow": "Neue Disziplin",
-  "geo_headline": "Werde zitiert — von ChatGPT,<br/>Perplexity & Gemini.",
-  "geo_sub": "GEO (Generative Engine Optimization) ist der SEO-Nachfolger für das KI-Zeitalter. Ich optimiere Inhalte so, dass sie von KI-Assistenten als Quelle verwendet werden — nicht nur gefunden, sondern zitiert.",
+  "geo_headline": "GEO. Der organische Kanal, den Ihre Wettbewerber noch nicht verstehen.",
+  "geo_sub": "SEO bringt Sie in die Google-Top-10. GEO bringt Sie in die Antwort.",
   "geo_p1": "JSON-LD Schema & strukturierte Daten",
   "geo_p2": "Autorität & E-E-A-T für LLMs",
   "geo_p3": "KI-optimierter Content-Aufbau",
@@ -122,5 +122,15 @@
   "c3_lever": "Onboarding-Sequenz neu strukturiert — der Drop-off lag nicht im Preis, sondern in der ersten Session.",
   "c4_period": "08/2021 – 08/2023",
   "c4_lever": "Branding und App-Logik parallel entwickelt — visuelle Identität und Funnel-Struktur waren von Tag 1 konsistent.",
-  "lever_label": "Der Hebel"
+  "lever_label": "Der Hebel",
+  "geo_stat": "70 % der Recherchen starten 2026 in einem KI-Assistenten.",
+  "geo_p1_title": "JSON-LD-Strukturierung",
+  "geo_p1_desc": "Inhalte werden für KI-Assistenten maschinenlesbar gemacht — strukturierte Daten, semantische Hierarchie, Schema.org.",
+  "geo_p2_title": "Antwort-Architektur",
+  "geo_p2_desc": "Texte, die LLMs als Source bevorzugen — klare Definitionen, zitierfähige Aussagen, E-E-A-T-Signale.",
+  "geo_p3_title": "Tracking & Audit",
+  "geo_p3_desc": "Monitoring, wo und wie oft Sie in KI-Antworten auftauchen — mit konkreten Handlungsempfehlungen.",
+  "geo_proof_label": "Live-Beweis: So sieht GEO in Aktion aus.",
+  "geo_audit_q": "Wollen Sie sehen, wo Sie aktuell in KI-Antworten stehen?",
+  "geo_audit_cta": "Kostenfreier GEO-Quick-Audit anfordern"
 }

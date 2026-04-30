@@ -85,8 +85,8 @@
   "about_text": "Soy Jose — Senior Performance Marketer y desarrollador Shopify afincado en Hamburgo. Desde hace más de 5 años ayudo a marcas D2C y B2B en el mercado DACH a conseguir resultados medibles: desde la estrategia de ads hasta el checkout, desde el primer clic hasta el cliente recurrente.\n\nMi enfoque es basado en datos, pragmático y escalable — sin overhead de agencia, comunicación directa, KPIs claros.",
   "about_avail": "Disponible para nuevos proyectos",
   "geo_eyebrow": "Nueva disciplina",
-  "geo_headline": "Sé citado — por ChatGPT,<br/>Perplexity y Gemini.",
-  "geo_sub": "GEO (Generative Engine Optimization) es el sucesor del SEO para la era de la IA. Optimizo contenidos para que los asistentes de IA los usen como fuente — no solo encontrado, sino citado.",
+  "geo_headline": "GEO. El canal orgánico que tus competidores aún no entienden.",
+  "geo_sub": "SEO te lleva al top 10 de Google. GEO te lleva a la respuesta.",
   "geo_p1": "Schema JSON-LD y datos estructurados",
   "geo_p2": "Autoridad y E-E-A-T para LLMs",
   "geo_p3": "Arquitectura de contenido optimizada para IA",
@@ -122,5 +122,15 @@
   "c3_lever": "Secuencia de onboarding reestructurada — el abandono no era por el precio, sino por la primera sesión.",
   "c4_period": "08/2021 – 08/2023",
   "c4_lever": "Marca y lógica de app desarrolladas en paralelo — la identidad visual y la estructura del embudo fueron consistentes desde el primer día.",
-  "lever_label": "La palanca"
+  "lever_label": "La palanca",
+  "geo_stat": "El 70 % de las búsquedas en 2026 empiezan en un asistente de IA.",
+  "geo_p1_title": "Estructuración JSON-LD",
+  "geo_p1_desc": "Contenido legible por máquinas para asistentes de IA — datos estructurados, jerarquía semántica, Schema.org.",
+  "geo_p2_title": "Arquitectura de Respuesta",
+  "geo_p2_desc": "Textos que los LLMs prefieren como fuente — definiciones claras, afirmaciones citables, señales E-E-A-T.",
+  "geo_p3_title": "Tracking y Auditoría",
+  "geo_p3_desc": "Monitorización de dónde y con qué frecuencia apareces en respuestas de IA — con recomendaciones de acción concretas.",
+  "geo_proof_label": "Prueba en vivo: Así se ve GEO en acción.",
+  "geo_audit_q": "¿Quieres saber dónde estás actualmente en las respuestas de IA?",
+  "geo_audit_cta": "Solicitar auditoría GEO gratuita"
 }

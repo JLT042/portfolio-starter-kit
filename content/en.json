@@ -85,8 +85,8 @@
   "about_text": "I'm Jose — Senior Performance Marketer and Shopify Developer based in Hamburg. For over 5 years I've helped D2C and B2B brands in the DACH market achieve measurable results: from ad strategy to checkout, from first click to returning customer.\n\nMy approach is data-driven, pragmatic and scalable — no agency overhead, direct communication, clear KPIs.",
   "about_avail": "Available for new projects",
   "geo_eyebrow": "New discipline",
-  "geo_headline": "Get cited — by ChatGPT,<br/>Perplexity & Gemini.",
-  "geo_sub": "GEO (Generative Engine Optimization) is the SEO successor for the AI era. I optimise content so AI assistants use it as a source — not just found, but cited.",
+  "geo_headline": "GEO. The organic channel your competitors don't understand yet.",
+  "geo_sub": "SEO gets you into Google's top 10. GEO gets you into the answer.",
   "geo_p1": "JSON-LD schema & structured data",
   "geo_p2": "Authority & E-E-A-T for LLMs",
   "geo_p3": "AI-optimised content architecture",
@@ -122,5 +122,15 @@
   "c3_lever": "Onboarding sequence restructured — the drop-off was not about price, but about the first session.",
   "c4_period": "08/2021 – 08/2023",
   "c4_lever": "Branding and app logic developed in parallel — visual identity and funnel structure were consistent from day one.",
-  "lever_label": "The lever"
+  "lever_label": "The lever",
+  "geo_stat": "70% of research starts in an AI assistant in 2026.",
+  "geo_p1_title": "JSON-LD Structuring",
+  "geo_p1_desc": "Content made machine-readable for AI assistants — structured data, semantic hierarchy, Schema.org.",
+  "geo_p2_title": "Answer Architecture",
+  "geo_p2_desc": "Texts that LLMs prefer as sources — clear definitions, citable statements, E-E-A-T signals.",
+  "geo_p3_title": "Tracking & Audit",
+  "geo_p3_desc": "Monitoring where and how often you appear in AI answers — with concrete action recommendations.",
+  "geo_proof_label": "Live proof: This is what GEO looks like in action.",
+  "geo_audit_q": "Want to see where you currently stand in AI answers?",
+  "geo_audit_cta": "Request a free GEO quick audit"
 }

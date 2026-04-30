@@ -349,24 +349,45 @@ export default function PortfolioPage() {
         .testi-role { font-family:var(--fm);font-size:.6875rem;color:var(--gray4);letter-spacing:.04em; }
 
         /* ── GEO SPOTLIGHT ── */
-        .jlt-geo { padding:6rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);position:relative;z-index:1;overflow:hidden; }
-        .jlt-geo::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,oklch(68% 0.165 265/.10) 0%,transparent 60%);pointer-events:none; }
-        .jlt-geo-inner { max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative; }
-        .geo-text { display:flex;flex-direction:column;gap:1.5rem; }
-        .geo-pills { display:flex;flex-direction:column;gap:.75rem; }
-        .geo-pill { display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-radius:8px;border:1px solid var(--border);background:oklch(95% 0.006 260/.03);font-family:var(--fb);font-size:.875rem;color:var(--gray3); }
-        .geo-pill-icon { width:28px;height:28px;border-radius:6px;background:oklch(68% 0.165 265/.15);border:1px solid oklch(68% 0.165 265/.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.75rem; }
-        .geo-visual { border-radius:16px;border:1px solid var(--border);background:var(--graphite);padding:1.5rem;display:flex;flex-direction:column;gap:1rem; }
-        .geo-vis-hdr { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.10em;text-transform:uppercase;color:var(--gray4);padding-bottom:.75rem;border-bottom:1px solid var(--border-s); }
-        .geo-entry { display:flex;flex-direction:column;gap:.25rem;padding:.75rem 0;border-bottom:1px solid var(--border-s); }
-        .geo-entry:last-child { border-bottom:none; }
-        .geo-entry-top { display:flex;align-items:center;gap:.5rem; }
-        .geo-badge { font-family:var(--fm);font-size:.5rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:9999px; }
-        .geo-badge.cited { background:oklch(65% 0.190 145/.20);color:var(--success);border:1px solid oklch(65% 0.190 145/.30); }
-        .geo-badge.indexed { background:oklch(68% 0.010 260/.15);color:var(--gray4);border:1px solid var(--border); }
-        .geo-entry-query { font-family:var(--fb);font-size:.8125rem;color:var(--white);flex:1; }
-        .geo-entry-src { font-family:var(--fm);font-size:.625rem;color:var(--gray4); }
-        @media(max-width:900px) { .jlt-geo-inner { grid-template-columns:1fr; } }
+        .jlt-geo { padding:7rem clamp(1rem,6vw,4rem);background:var(--navy);border-top:1px solid var(--border-s);position:relative;z-index:1;overflow:hidden; }
+        .jlt-geo::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 100% 50%,oklch(75% 0.165 140/.07),transparent 60%),radial-gradient(ellipse 40% 50% at 0% 80%,oklch(68% 0.165 265/.06),transparent 50%);pointer-events:none; }
+        .jlt-geo-inner { max-width:1280px;margin:0 auto;position:relative;display:flex;flex-direction:column;gap:5rem; }
+        /* top: heading block */
+        .geo-hdr { display:flex;flex-direction:column;gap:1.25rem;max-width:820px; }
+        .geo-stat-bar { display:inline-flex;align-items:center;gap:.625rem;padding:.5rem 1rem;border-radius:999px;border:1px solid oklch(75% 0.165 140 / 0.25);background:oklch(75% 0.165 140 / 0.06);width:fit-content; }
+        .geo-stat-dot { width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0; }
+        .geo-stat-text { font-family:var(--fm);font-size:.6875rem;font-weight:600;letter-spacing:.08em;color:var(--brand); }
+        .geo-sub2 { font-family:var(--fh);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:600;letter-spacing:-.01em;color:var(--gray3);line-height:1.3; }
+        .geo-sub2 strong { color:var(--white); }
+        /* middle: pillars + proof */
+        .geo-mid { display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start; }
+        @media(max-width:900px) { .geo-mid { grid-template-columns:1fr; } }
+        .geo-pillars { display:flex;flex-direction:column;gap:.875rem; }
+        .geo-pillar { display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;border-radius:12px;border:1px solid var(--border);background:oklch(95% 0.006 260/.02);transition:border-color 200ms ease; }
+        .geo-pillar:hover { border-color:oklch(75% 0.165 140 / 0.25); }
+        .geo-pillar-icon { width:36px;height:36px;border-radius:8px;background:oklch(75% 0.165 140 / 0.10);border:1px solid oklch(75% 0.165 140 / 0.20);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand); }
+        .geo-pillar-text { display:flex;flex-direction:column;gap:.25rem; }
+        .geo-pillar-title { font-family:var(--fb);font-size:.9375rem;font-weight:600;color:var(--white);line-height:1.2; }
+        .geo-pillar-desc { font-family:var(--fb);font-size:.8125rem;line-height:1.6;color:var(--gray3); }
+        /* proof mockup */
+        .geo-proof-wrap { display:flex;flex-direction:column;gap:.875rem; }
+        .geo-proof-label { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand); }
+        .geo-chat { border-radius:16px;border:1px solid var(--border);background:var(--graphite);overflow:hidden;box-shadow:0 24px 64px oklch(0 0 0 / .45),0 0 0 1px oklch(95% 0.006 260/.05); }
+        .geo-chat-bar { background:oklch(14% 0.010 260);border-bottom:1px solid var(--border);padding:.6rem 1rem;display:flex;align-items:center;gap:.75rem; }
+        .geo-chat-logo { font-family:var(--fh);font-size:.75rem;font-weight:700;letter-spacing:.06em;color:var(--white);opacity:.9; }
+        .geo-chat-search { flex:1;background:oklch(19% 0.014 260);border:1px solid var(--border);border-radius:6px;padding:.3rem .75rem;font-family:var(--fm);font-size:.5625rem;color:var(--gray3);display:flex;align-items:center;gap:.4rem; }
+        .geo-chat-body { padding:1.25rem; }
+        .geo-chat-query { font-family:var(--fm);font-size:.5625rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);margin-bottom:.875rem; }
+        .geo-chat-answer { font-family:var(--fb);font-size:.8125rem;line-height:1.7;color:oklch(82% 0.006 260); }
+        .geo-chat-cite { background:oklch(75% 0.165 140 / 0.12);border:1px solid oklch(75% 0.165 140 / 0.25);border-radius:4px;padding:1px 5px;font-weight:600;color:oklch(82% 0.150 140);text-decoration:none;font-family:var(--fm);font-size:.6875rem; }
+        .geo-chat-sources { display:flex;flex-wrap:wrap;gap:.375rem;margin-top:1rem;padding-top:.875rem;border-top:1px solid var(--border-s); }
+        .geo-src-chip { display:flex;align-items:center;gap:.35rem;padding:4px 9px;border-radius:6px;background:oklch(19% 0.014 260);border:1px solid var(--border);font-family:var(--fm);font-size:.5rem;color:var(--gray4); }
+        .geo-src-chip.primary { border-color:oklch(75% 0.165 140 / 0.30);color:oklch(75% 0.165 140);background:oklch(75% 0.165 140 / 0.06); }
+        .geo-src-num { width:14px;height:14px;border-radius:3px;background:oklch(75% 0.165 140 / 0.15);display:flex;align-items:center;justify-content:center;font-size:.4375rem;font-weight:700;color:var(--brand); }
+        /* audit CTA */
+        .geo-audit { display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding:2rem 2.5rem;border-radius:20px;border:1px solid oklch(75% 0.165 140 / 0.25);background:oklch(75% 0.165 140 / 0.05);box-shadow:0 0 60px oklch(75% 0.165 140 / 0.06); }
+        .geo-audit-q { font-family:var(--fh);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:700;letter-spacing:-.01em;color:var(--white);max-width:48ch; }
+        @media(max-width:640px) { .geo-audit { flex-direction:column;align-items:stretch;padding:1.5rem 1.25rem; } }
 
         /* ── ABOUT ── */
         .jlt-about { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);border-top:1px solid var(--border-s);position:relative;z-index:1; }
@@ -995,42 +1016,115 @@ export default function PortfolioPage() {
 
  
       {/* ── GEO SPOTLIGHT ────────────────────────────── */}
-      <section className="jlt-geo">
+      <section className="jlt-geo" id="geo">
         <div className="jlt-geo-inner">
-          <div className="geo-text">
+
+          {/* Header */}
+          <header className="geo-hdr">
             <span className="eyebrow">{t('geo_eyebrow')}</span>
-            <h2 className="sec-h" dangerouslySetInnerHTML={{ __html: t('geo_headline') }} />
-            <p className="sec-sub">{t('geo_sub')}</p>
-            <div className="geo-pills">
+            <h2 className="sec-h">{t('geo_headline')}</h2>
+            <div className="geo-stat-bar">
+              <span className="geo-stat-dot" aria-hidden="true" />
+              <span className="geo-stat-text">{t('geo_stat')}</span>
+            </div>
+            <p className="geo-sub2">
+              <strong>SEO</strong>{lang === 'de' ? ' bringt Sie in die Google-Top-10. ' : lang === 'en' ? ' gets you into Google\'s top 10. ' : ' te lleva al top 10. '}
+              <strong>GEO</strong>{lang === 'de' ? ' bringt Sie in die Antwort.' : lang === 'en' ? ' gets you into the answer.' : ' te lleva a la respuesta.'}
+            </p>
+          </header>
+
+          {/* Mid: pillars + proof */}
+          <div className="geo-mid">
+
+            {/* Three pillars */}
+            <div className="geo-pillars">
               {[
-                { icon: '{}', label: t('geo_p1') },
-                { icon: '★', label: t('geo_p2') },
-                { icon: '✦', label: t('geo_p3') },
-              ].map(({ icon, label }) => (
-                <div key={label} className="geo-pill">
-                  <div className="geo-pill-icon">{icon}</div>
-                  {label}
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/>
+                      <path d="M9 12h6M12 9v6"/>
+                    </svg>
+                  ),
+                  title: t('geo_p1_title'), desc: t('geo_p1_desc'),
+                },
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                      <path d="M8 10h8M8 14h5"/>
+                    </svg>
+                  ),
+                  title: t('geo_p2_title'), desc: t('geo_p2_desc'),
+                },
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                  ),
+                  title: t('geo_p3_title'), desc: t('geo_p3_desc'),
+                },
+              ].map(({ icon, title, desc }) => (
+                <div key={title} className="geo-pillar">
+                  <div className="geo-pillar-icon">{icon}</div>
+                  <div className="geo-pillar-text">
+                    <span className="geo-pillar-title">{title}</span>
+                    <p className="geo-pillar-desc">{desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
-          <div className="geo-visual">
-            <div className="geo-vis-hdr">LLM Citation Monitor</div>
-            {[
-              { badge: 'cited', badgeLabel: t('geo_cited'), query: 'Performance Marketing Agentur Hamburg', src: 'jose-treff.de' },
-              { badge: 'cited', badgeLabel: t('geo_cited'), query: 'Shopify Entwickler DACH D2C', src: 'jose-treff.de' },
-              { badge: 'indexed', badgeLabel: t('geo_indexed'), query: 'GEO Optimierung für Marken', src: 'jose-treff.de' },
-              { badge: 'cited', badgeLabel: t('geo_cited'), query: 'Google Ads Skalierung Fashion', src: 'jose-treff.de' },
-            ].map(({ badge, badgeLabel, query, src }) => (
-              <div key={query} className="geo-entry">
-                <div className="geo-entry-top">
-                  <span className={`geo-badge ${badge}`}>{badgeLabel}</span>
-                  <span className="geo-entry-query">{query}</span>
+
+            {/* Proof mockup */}
+            <div className="geo-proof-wrap">
+              <span className="geo-proof-label">{t('geo_proof_label')}</span>
+              <div className="geo-chat">
+                {/* Chrome bar */}
+                <div className="geo-chat-bar">
+                  <span className="geo-chat-logo">Perplexity</span>
+                  <div className="geo-chat-search">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    Performance Marketer D2C Hamburg Shopify
+                  </div>
                 </div>
-                <span className="geo-entry-src">{src}</span>
+                {/* Body */}
+                <div className="geo-chat-body">
+                  <p className="geo-chat-query">Frage: Wer sind spezialisierte Performance-Marketer für D2C-Shopify-Shops im DACH-Raum?</p>
+                  <p className="geo-chat-answer">
+                    Für D2C-Marken im DACH-Raum, die ihr Shopify-Wachstum skalieren wollen, empfiehlt sich ein integrierter Ansatz aus Performance Ads, technischem Setup und Conversion-Optimierung.{' '}
+                    <span className="geo-chat-cite">Jose L. Treff</span>
+                    {' '}(jose-treff.de) ist auf dieses Profil spezialisiert — bekannt für ROAS-Ergebnisse über 13× bei sechsstelligen Monatsbudgets und Full-Stack-Setups aus einer Hand.
+                  </p>
+                  {/* Sources */}
+                  <div className="geo-chat-sources">
+                    {[
+                      { label: 'jose-treff.de', primary: true, num: '1' },
+                      { label: 'shopify.dev/blog', primary: false, num: '2' },
+                      { label: 'performance-marketing.de', primary: false, num: '3' },
+                      { label: 'sistrix.de', primary: false, num: '4' },
+                    ].map(({ label, primary, num }) => (
+                      <span key={label} className={`geo-src-chip${primary ? ' primary' : ''}`}>
+                        <span className="geo-src-num">{num}</span>
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
           </div>
+
+          {/* Audit CTA */}
+          <div className="geo-audit">
+            <p className="geo-audit-q">{t('geo_audit_q')}</p>
+            <a href="mailto:jose@tubebridge.de?subject=GEO%20Quick-Audit" className="btn-primary">
+              {t('geo_audit_cta')} <ArrowRight />
+            </a>
+          </div>
+
         </div>
       </section>
 
