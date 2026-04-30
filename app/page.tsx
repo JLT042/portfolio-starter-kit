@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import de from '@/content/de.json';
 import en from '@/content/en.json';
 import es from '@/content/es.json';
-import { ScrollingFeatureShowcase } from '@/components/ui/interactive-scrolling-story-component';
+import { BentoServices } from '@/components/ui/bento-services';
 import { GlowCard } from '@/components/ui/spotlight-card';
  
 // ─────────────────────────────────────────────────────────────
@@ -405,27 +405,13 @@ export default function PortfolioPage() {
           </div>
  
           {/* RIGHT: Image Collage */}
-          <div className="jlt-video-col">
-            {/* Mobile: clean logo row */}
-            <div className="md:hidden" style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center', alignItems: 'center', padding: '1.5rem 0' }}>
-              {[
-                { src: '/images/logos/shopify.png',    alt: 'Shopify',    h: 36, f: '' },
-                { src: '/images/logos/google-ads.png', alt: 'Google Ads', h: 32, f: '' },
-                { src: '/images/logos/meta.png',       alt: 'Meta',       h: 28, f: '' },
-                { src: '/images/logos/tiktok.png',     alt: 'TikTok',     h: 28, f: 'brightness(0) invert(1)' },
-                { src: '/images/logos/gtm.png',        alt: 'GTM / GA4',  h: 32, f: '' },
-              ].map(({ src, alt, h, f }) => (
-                <img key={src} src={src} alt={alt} style={{ height: h, objectFit: 'contain' as const, opacity: 0.65, ...(f ? { filter: f } : {}) }} />
-              ))}
-            </div>
-            {/* Desktop: floating collage */}
-            <motion.div
-              className="hidden md:block"
-              style={{ position: 'relative', height: '440px' }}
-              initial="hidden"
-              animate="visible"
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } }}
-            >
+          <motion.div
+            className="jlt-video-col"
+            style={{ position: 'relative', height: '440px' }}
+            initial="hidden"
+            animate="visible"
+            variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } }}
+          >
             {/* Decorative orbs */}
             <motion.div
               style={{ position: 'absolute', top: -16, left: '25%', width: 48, height: 48, borderRadius: '50%', background: 'oklch(75% 0.165 140 / 0.18)', pointerEvents: 'none' }}
@@ -473,8 +459,9 @@ export default function PortfolioPage() {
               <img src="/images/logos/meta.png" alt="Meta" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
 
-            {/* TikTok — small, bottom-right */}
+            {/* TikTok — small, bottom-right (hidden on mobile to avoid overlap) */}
             <motion.div
+              className="hidden md:block"
               style={{ position: 'absolute', right: 24, bottom: 0, width: 124, height: 124, borderRadius: 20, background: 'var(--navy)', border: '1px solid var(--border)', padding: 16, boxShadow: '0 12px 48px oklch(0 0 0 / 0.5), 0 0 0 1px oklch(95% 0.006 260 / 0.06)' }}
               variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } } }}
               animate={{ y: [0, -8, 0] }}
@@ -493,8 +480,7 @@ export default function PortfolioPage() {
               <img src="/images/logos/gtm.png" alt="GTM / GA4" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
 
-            </motion.div>
-          </div>
+          </motion.div>
 
 
           {/* EVIDENCE STRIP */}
@@ -556,46 +542,52 @@ export default function PortfolioPage() {
       </section>
 
       {/* ── LEISTUNGEN / SERVICES ────────────────────── */}
-      <ScrollingFeatureShowcase
+      <BentoServices
         id="leistungen"
-        ctaLabel={t('nav_contact')}
-        ctaHref="#kontakt"
-        slides={[
+        eyebrow={t('nav_services')}
+        heading="Was ich anbiete"
+        services={[
           {
-            title: t('p1_title'),
-            description: t('p1_desc'),
-            image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop',
-            bgColor: 'oklch(12% 0.010 260)',
-          },
-          {
-            title: t('p2_title'),
-            description: t('p2_desc'),
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-            bgColor: 'oklch(9% 0.008 260)',
-          },
-          {
-            title: t('p3_title'),
-            description: t('p3_desc'),
-            image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop',
-            bgColor: 'oklch(12% 0.010 260)',
-          },
-          {
+            eyebrow: 'Paid Media',
             title: t('p4_title'),
             description: t('p4_desc'),
             image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop',
-            bgColor: 'oklch(9% 0.008 260)',
+            className: 'lg:col-span-4',
           },
           {
+            eyebrow: 'Web & Shopify',
+            title: t('p1_title'),
+            description: t('p1_desc'),
+            image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop',
+            className: 'lg:col-span-2',
+          },
+          {
+            eyebrow: 'Tracking',
+            title: t('p2_title'),
+            description: t('p2_desc'),
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+            className: 'lg:col-span-2',
+          },
+          {
+            eyebrow: 'SEO',
+            title: t('p3_title'),
+            description: t('p3_desc'),
+            image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop',
+            className: 'lg:col-span-4',
+          },
+          {
+            eyebrow: 'CRO',
             title: t('p5_title'),
             description: t('p5_desc'),
             image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-            bgColor: 'oklch(12% 0.010 260)',
+            className: 'lg:col-span-3',
           },
           {
+            eyebrow: 'GEO & KI',
             title: t('p6_title'),
             description: t('p6_desc'),
             image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=2032&auto=format&fit=crop',
-            bgColor: 'oklch(9% 0.008 260)',
+            className: 'lg:col-span-3',
           },
         ]}
       />
