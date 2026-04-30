@@ -132,5 +132,6 @@
   "geo_p3_desc": "Monitorización de dónde y con qué frecuencia apareces en respuestas de IA — con recomendaciones de acción concretas.",
   "geo_proof_label": "Prueba en vivo: Así se ve GEO en acción.",
   "geo_audit_q": "¿Quieres saber dónde estás actualmente en las respuestas de IA?",
-  "geo_audit_cta": "Solicitar auditoría GEO gratuita"
+  "geo_audit_cta": "Solicitar auditoría GEO gratuita",
+  "case_link_deep": "Leer caso completo"
 }

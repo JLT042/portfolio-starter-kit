@@ -36,6 +36,7 @@ const UI = {
     contact:    'Projekt besprechen',
     close:      'Schließen',
     details:    'Details',
+    deep_dive:  'Deep Dive lesen →',
   },
   en: {
     back:       '← Back',
@@ -55,6 +56,7 @@ const UI = {
     contact:    'Discuss project',
     close:      'Close',
     details:    'Details',
+    deep_dive:  'Read deep dive →',
   },
   es: {
     back:       '← Volver',
@@ -74,8 +76,17 @@ const UI = {
     contact:    'Hablar del proyecto',
     close:      'Cerrar',
     details:    'Detalles',
+    deep_dive:  'Leer deep dive →',
   },
 } as const;
+
+// Maps cases-data slugs → deep-dive page slugs
+const DEEP_DIVE_SLUGS: Record<string, string> = {
+  'fashion-d2c-google-ads':  'statement-clothing-roas-13',
+  'shopify-dev-cro':         'die-barista-shopify-relaunch',
+  'elearning-ux-cro':        'meet-your-master-churn-reduktion',
+  'dogfood-brand-ux':        'doq-hundefutter-app-mvp',
+};
 
 type UILang = typeof UI['de'];
 type Category = CaseStudy['category'] | 'all';
@@ -459,22 +470,39 @@ export default function ProjektePage() {
                 </div>
               ))}
 
-              {/* CTA */}
-              <a
-                href="mailto:jose@tubebridge.de"
-                style={{
-                  display: 'inline-block', marginTop: '.5rem',
-                  padding: '13px 2rem', borderRadius: '8px',
-                  background: BRAND, color: BRAND_DK,
-                  fontFamily: FB, fontSize: '.9375rem', fontWeight: 500,
-                  letterSpacing: '.02em', textDecoration: 'none',
-                  transition: 'background 150ms ease',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'oklch(65% 0.175 140)')}
-                onMouseLeave={e => (e.currentTarget.style.background = BRAND)}
-              >
-                {ui.contact}
-              </a>
+              {/* CTA row */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '.75rem', marginTop: '.5rem', alignItems: 'center' }}>
+                <a
+                  href="mailto:jose@tubebridge.de"
+                  style={{
+                    display: 'inline-block',
+                    padding: '13px 2rem', borderRadius: '8px',
+                    background: BRAND, color: BRAND_DK,
+                    fontFamily: FB, fontSize: '.9375rem', fontWeight: 500,
+                    letterSpacing: '.02em', textDecoration: 'none',
+                    transition: 'background 150ms ease',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'oklch(65% 0.175 140)')}
+                  onMouseLeave={e => (e.currentTarget.style.background = BRAND)}
+                >
+                  {ui.contact}
+                </a>
+                {DEEP_DIVE_SLUGS[active.slug] && (
+                  <Link
+                    href={`/case-studies/${DEEP_DIVE_SLUGS[active.slug]}`}
+                    style={{
+                      fontFamily: FM, fontSize: '.6875rem', fontWeight: 600,
+                      letterSpacing: '.1em', textTransform: 'uppercase',
+                      color: BRAND, textDecoration: 'none',
+                      transition: 'opacity 150ms',
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.opacity = '.7')}
+                    onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                  >
+                    {ui.deep_dive}
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         </div>

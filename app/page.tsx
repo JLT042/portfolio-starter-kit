@@ -800,7 +800,7 @@ export default function PortfolioPage() {
                 <span className="case-lever-label">{t('lever_label')}</span>
                 <p className="case-lever-text">{t('c1_lever')}</p>
               </div>
-              <a href="mailto:jose@tubebridge.de" className="case-link">{t('case_link')} <ArrowRight /></a>
+              <Link href="/case-studies/statement-clothing-roas-13" className="case-link">{t('case_link_deep')} <ArrowRight /></Link>
             </div>
             <div className="case-visual" aria-hidden="true">
               <div className="mock-stmt">

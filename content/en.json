@@ -132,5 +132,6 @@
   "geo_p3_desc": "Monitoring where and how often you appear in AI answers — with concrete action recommendations.",
   "geo_proof_label": "Live proof: This is what GEO looks like in action.",
   "geo_audit_q": "Want to see where you currently stand in AI answers?",
-  "geo_audit_cta": "Request a free GEO quick audit"
+  "geo_audit_cta": "Request a free GEO quick audit",
+  "case_link_deep": "Read full case study"
 }
