@@ -1220,14 +1220,6 @@ export default function PortfolioPage() {
 
           <div className="pricing-foot">
             <p className="pricing-note">{t('pricing_foot')}</p>
-            <a
-              href="https://calendly.com/jose-treff/15min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              {t('pricing_cta')} <ArrowRight />
-            </a>
           </div>
         </div>
       </section>
