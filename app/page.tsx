@@ -271,6 +271,11 @@ export default function PortfolioPage() {
         .mock-doq-r-item::before { content:'✓';color:oklch(72% 0.180 148);font-size:.4rem;flex-shrink:0; }
  
         /* ── CONTACT ── */
+        .svc-cta { padding:3rem clamp(1rem,6vw,4rem);background:oklch(9% 0.008 260);position:relative;z-index:1; }
+        .svc-cta-inner { max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding:2rem 2.5rem;background:var(--navy);border:1px solid var(--border);border-radius:20px;box-shadow:0 0 80px oklch(75% 0.165 140 / 0.06); }
+        .svc-cta-text { display:flex;flex-direction:column;gap:.375rem; }
+        .svc-cta-headline { font-family:var(--fh);font-size:clamp(1.25rem,2vw + .25rem,1.75rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--white); }
+        .svc-cta-actions { display:flex;flex-wrap:wrap;gap:.75rem;flex-shrink:0; }
         .jlt-contact { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);border-top:1px solid var(--border-s);position:relative;z-index:1; }
         .jlt-contact-inner { max-width:640px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2rem; }
         .ct-eyebrow { font-family:var(--fm);font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand); }
@@ -592,6 +597,20 @@ export default function PortfolioPage() {
           },
         ]}
       />
+
+      {/* ── POST-LEISTUNGEN CTA ──────────────────────── */}
+      <div className="svc-cta">
+        <div className="svc-cta-inner">
+          <div className="svc-cta-text">
+            <span className="ct-eyebrow">{t('ct_eyebrow')}</span>
+            <p className="svc-cta-headline">{t('ct_headline')}</p>
+          </div>
+          <div className="svc-cta-actions">
+            <a href="https://calendly.com/jose-treff/15min" target="_blank" rel="noopener" className="btn-primary">{t('ct_cta_calendly')} <ArrowRight /></a>
+            <a href="mailto:jose@tubebridge.de" className="btn-ghost">{t('ct_cta_email')}</a>
+          </div>
+        </div>
+      </div>
 
       {/* ── CASE STUDIES ─────────────────────────────── */}
       <section className="jlt-cases" id="projekte">
