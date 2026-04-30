@@ -99,5 +99,19 @@
   "ct_m2": "Enfoque DACH",
   "ct_cta_calendly": "Reservar llamada de 15 min",
   "ct_cta_email": "Escribir a jose@tubebridge.de",
-  "footer": "© 2026 Jose L. Treff — JLT Marketing Services"
+  "footer": "© 2026 Jose L. Treff — JLT Marketing Services",
+  "aud_eyebrow": "Para quién trabajo",
+  "aud_heading": "Para quién trabajo",
+  "aud1_title": "D2C & E-Commerce",
+  "aud1_desc": "Estás escalando una tienda Shopify y necesitas performance que crezca contigo. Me encargo de la gestión de ads, CRO y configuración técnica como un paquete — output senior sin margen de agencia.",
+  "aud1_stack": "Google Ads · Meta Ads · TikTok Ads · Shopify Liquid · GA4",
+  "aud1_cta": "Ver casos D2C",
+  "aud2_title": "Agencias y proveedores",
+  "aud2_desc": "Tienes una necesidad de nivel senior y no tienes hueco en la plantilla fija. Trabajo como lead externo de performance o dev de Shopify bajo tu marca — white-label, transparente, con scope claro.",
+  "aud2_model": "Retainer (15–30h/mes) · Sprint de proyecto",
+  "aud2_cta": "Ver modelo de subcontratación",
+  "aud3_title": "B2B & Mid-Market",
+  "aud3_desc": "Quieres ser visible — también en el mundo post-Google. Visibilidad GEO/IA, performance en LinkedIn y arquitectura de tracking para ciclos de venta más largos. Estrategia, no cambio de herramientas.",
+  "aud3_usecases": "SaaS · Consultoría · B2B E-Commerce",
+  "aud3_cta": "Entender la estrategia GEO"
 }

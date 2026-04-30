@@ -302,6 +302,35 @@ export default function PortfolioPage() {
         .logo-img { width:auto;filter:brightness(0) invert(1);opacity:.5;transition:opacity 220ms;flex-shrink:0; }
         .logo-img:hover { opacity:1; }
 
+        /* ── AUDIENCE ── */
+        .jlt-audience { padding:5rem clamp(1rem,6vw,4rem);background:var(--space);position:relative;z-index:1; }
+        .jlt-audience-inner { max-width:1280px;margin:0 auto; }
+        .aud-hdr { margin-bottom:3rem;display:flex;flex-direction:column;gap:.75rem; }
+        .aud-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem; }
+        @media (max-width:900px) { .aud-grid { grid-template-columns:1fr; } }
+        @media (min-width:640px) and (max-width:900px) { .aud-grid { grid-template-columns:repeat(2,1fr); } }
+        .aud-card {
+          position:relative;display:flex;flex-direction:column;gap:1.25rem;
+          padding:2rem;border-radius:20px;
+          background:var(--navy);border:1px solid var(--border);
+          cursor:default;
+          transition:transform 300ms ease-out,box-shadow 300ms ease-out,border-color 300ms ease;
+        }
+        .aud-card:hover { transform:translateY(-6px);box-shadow:0 24px 64px oklch(0 0 0 / .55);border-color:oklch(75% 0.165 140 / 0.3); }
+        .aud-card:hover .aud-border { opacity:1; }
+        .aud-border {
+          position:absolute;inset:0;border-radius:20px;
+          border:1px solid oklch(75% 0.165 140 / 0.55);
+          opacity:0;transition:opacity 300ms ease;pointer-events:none;z-index:2;
+          mask-image:radial-gradient(220px 220px at var(--mx,50%) var(--my,50%),black,transparent);
+          -webkit-mask-image:radial-gradient(220px 220px at var(--mx,50%) var(--my,50%),black,transparent);
+        }
+        .aud-icon { width:44px;height:44px;color:var(--brand);flex-shrink:0; }
+        .aud-title { font-family:var(--fh);font-size:1.375rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--white); }
+        .aud-desc { font-family:var(--fb);font-size:.9375rem;line-height:1.65;color:var(--gray3);flex:1; }
+        .aud-meta { font-family:var(--fm);font-size:.625rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray4);line-height:1.6;border-top:1px solid var(--border-s);padding-top:1rem; }
+        .aud-cta { display:inline-flex;align-items:center;gap:.35rem;font-family:var(--fb);font-size:.875rem;font-weight:500;color:var(--brand);text-decoration:none;transition:gap 150ms ease; }
+        .aud-cta:hover { gap:.6rem; }
         /* ── TESTIMONIALS ── */
         .jlt-testi { padding:6rem clamp(1rem,6vw,4rem);background:var(--space);position:relative;z-index:1; }
         .jlt-testi-inner { max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:3rem; }
@@ -548,6 +577,91 @@ export default function PortfolioPage() {
                 />
               ))
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FÜR WEN ICH ARBEITE ─────────────────────── */}
+      <section className="jlt-audience">
+        <div className="jlt-audience-inner">
+          <header className="aud-hdr">
+            <span className="eyebrow">{t('aud_eyebrow')}</span>
+            <h2 className="sec-h">{t('aud_heading')}</h2>
+          </header>
+          <div className="aud-grid">
+            {[
+              {
+                icon: (
+                  <svg className="aud-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M6 8h32l-12 14v12l-8-4V22Z" />
+                    <circle cx="34" cy="34" r="5" strokeWidth="1.5" />
+                    <path d="M34 31v3l2 2" />
+                  </svg>
+                ),
+                title: t('aud1_title'),
+                desc: t('aud1_desc'),
+                meta: t('aud1_stack'),
+                cta: t('aud1_cta'),
+                href: '#projekte',
+              },
+              {
+                icon: (
+                  <svg className="aud-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="6" y="6" width="13" height="13" rx="3" />
+                    <rect x="25" y="6" width="13" height="13" rx="3" />
+                    <rect x="6" y="25" width="13" height="13" rx="3" />
+                    <rect x="25" y="25" width="13" height="13" rx="3" />
+                    <path d="M19 12.5h6M12.5 19v6M31.5 19v6M19 31.5h6" />
+                  </svg>
+                ),
+                title: t('aud2_title'),
+                desc: t('aud2_desc'),
+                meta: t('aud2_model'),
+                cta: t('aud2_cta'),
+                href: '#kontakt',
+              },
+              {
+                icon: (
+                  <svg className="aud-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="22" cy="22" r="5" />
+                    <circle cx="8"  cy="14" r="3" />
+                    <circle cx="36" cy="14" r="3" />
+                    <circle cx="8"  cy="30" r="3" />
+                    <circle cx="36" cy="30" r="3" />
+                    <circle cx="22" cy="7"  r="3" />
+                    <circle cx="22" cy="37" r="3" />
+                    <path d="M11 14h8M25 14h8M17 22H11M27 22h6M11 30h8M25 30h8M22 10v7M22 27v7" />
+                  </svg>
+                ),
+                title: t('aud3_title'),
+                desc: t('aud3_desc'),
+                meta: t('aud3_usecases'),
+                cta: t('aud3_cta'),
+                href: '#leistungen',
+              },
+            ].map(({ icon, title, desc, meta, cta, href }) => (
+              <div
+                key={title}
+                className="aud-card"
+                onMouseMove={e => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  e.currentTarget.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+                  e.currentTarget.style.setProperty('--my', `${e.clientY - rect.top}px`);
+                }}
+              >
+                <div className="aud-border" aria-hidden="true" />
+                {icon}
+                <div>
+                  <h3 className="aud-title">{title}</h3>
+                </div>
+                <p className="aud-desc">{desc}</p>
+                <p className="aud-meta">{meta}</p>
+                <a href={href} className="aud-cta">
+                  {cta}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>

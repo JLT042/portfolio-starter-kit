@@ -99,5 +99,19 @@
   "ct_m2": "DACH-Fokus",
   "ct_cta_calendly": "15-Min Gespräch buchen",
   "ct_cta_email": "jose@tubebridge.de schreiben",
-  "footer": "© 2026 Jose L. Treff — JLT Marketing Services"
+  "footer": "© 2026 Jose L. Treff — JLT Marketing Services",
+  "aud_eyebrow": "Für wen ich arbeite",
+  "aud_heading": "Für wen ich arbeite",
+  "aud1_title": "D2C & E-Commerce",
+  "aud1_desc": "Sie skalieren einen Shopify-Shop und brauchen Performance, die mitwächst. Ich übernehme Ads-Steuerung, CRO und technisches Setup als ein Paket — Senior-Output ohne Agentur-Markup.",
+  "aud1_stack": "Google Ads · Meta Ads · TikTok Ads · Shopify Liquid · GA4",
+  "aud1_cta": "Zu den D2C-Cases",
+  "aud2_title": "Agenturen & Dienstleister",
+  "aud2_desc": "Sie haben einen Senior-Need und keinen Slot in der Festanstellung. Ich arbeite als externer Performance-Lead oder Shopify-Dev unter Ihrem Branding — White-Label, transparent, mit klarem Scope.",
+  "aud2_model": "Retainer (15–30h/Monat) · Projekt-Sprint",
+  "aud2_cta": "Subunternehmer-Setup ansehen",
+  "aud3_title": "B2B & Mid-Market",
+  "aud3_desc": "Sie wollen sichtbar werden — auch in der Welt nach Google. GEO/KI-Sichtbarkeit, LinkedIn-Performance und Tracking-Architektur für längere Sales-Cycles. Strategie statt Tool-Wechsel.",
+  "aud3_usecases": "SaaS · Beratung · B2B-E-Commerce",
+  "aud3_cta": "GEO-Strategie verstehen"
 }
