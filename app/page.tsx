@@ -301,12 +301,14 @@ export default function PortfolioPage() {
         .logos-eyebrow-wrap { padding:0 clamp(1rem,6vw,4rem);margin-bottom:2.5rem;text-align:center; }
         .logos-eyebrow { font-family:var(--fb);font-size:1rem;font-weight:500;color:var(--gray3); }
         .logos-marquee { overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent);mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent); }
-        .logos-track { display:flex;align-items:center;gap:5rem;width:max-content;animation:logoScroll 55s linear infinite; }
+        .logos-track { display:flex;align-items:center;gap:5rem;width:max-content;animation:logoScroll 45s linear infinite; }
         .logos-track:hover { animation-play-state:paused; }
-        .logo-img { width:auto;filter:brightness(0) invert(1);opacity:.5;transition:opacity 220ms;flex-shrink:0; }
+        .logo-img { width:auto;filter:brightness(0) invert(1);opacity:.55;transition:opacity 220ms;flex-shrink:0; }
         .logo-img:hover { opacity:1; }
-        .logo-img-screen { width:auto;mix-blend-mode:screen;opacity:.6;transition:opacity 220ms;flex-shrink:0; }
+        .logo-img-screen { width:auto;mix-blend-mode:screen;opacity:.65;transition:opacity 220ms;flex-shrink:0; }
         .logo-img-screen:hover { opacity:1; }
+        .logo-img-invert { width:auto;filter:invert(1);opacity:.55;transition:opacity 220ms;flex-shrink:0; }
+        .logo-img-invert:hover { opacity:1; }
 
         /* ── AUDIENCE ── */
         .jlt-audience { padding:5rem clamp(1rem,6vw,4rem);background:var(--space);position:relative;z-index:1; }
@@ -608,22 +610,17 @@ export default function PortfolioPage() {
           <div className="logos-track">
             {Array.from({ length: 4 }, (_, set) =>
               [
-                { src: '/images/logos/shopify.png',            alt: 'Shopify – E-Commerce Plattform',                   h: 30, cls: 'logo-img' },
-                { src: '/images/logos/google-ads.png',         alt: 'Google Ads – Performance Marketing',               h: 26, cls: 'logo-img' },
-                { src: '/images/logos/meta.png',               alt: 'Meta Ads – Social Media Advertising',              h: 22, cls: 'logo-img' },
-                { src: '/images/logos/tiktok.png',             alt: 'TikTok Ads – Social Media Marketing',              h: 22, cls: 'logo-img' },
-                { src: '/images/logos/gtm.png',                alt: 'Google Tag Manager – Tracking & Analytics',        h: 26, cls: 'logo-img' },
-                { src: '/images/logos/doq.png',                alt: 'DOQ Hundefutter – Performance Marketing Kunde',    h: 32, cls: 'logo-img' },
-                { src: '/images/logos/die-barista.png',        alt: 'Die Barista Kaffee Hameln – Shopify & Marketing',  h: 34, cls: 'logo-img-screen' },
-                { src: '/images/logos/cats-empire.png',        alt: "Cat's Empire – Performance Marketing Kunde",       h: 36, cls: 'logo-img' },
-                { src: '/images/logos/harbor-x.png',           alt: 'Harbor X – Performance Marketing Kunde',           h: 26, cls: 'logo-img' },
-                { src: '/images/logos/lemon-easy.png',         alt: 'Lemon Easy – Performance Marketing Kunde',         h: 36, cls: 'logo-img' },
-                { src: '/images/logos/raw-elements.png',       alt: 'raw elements – Performance Marketing Kunde',       h: 32, cls: 'logo-img-screen' },
-                { src: '/images/logos/radio-tape.png',         alt: 'Radio Tape – Performance Marketing Kunde',         h: 28, cls: 'logo-img' },
-                { src: '/images/logos/meet-your-master.png',   alt: 'Meet Your Master – Performance Marketing Kunde',   h: 28, cls: 'logo-img' },
-                { src: '/images/logos/statement-clothing.png', alt: 'Statement Clothing – Performance Marketing Kunde', h: 28, cls: 'logo-img' },
-                { src: '/images/logos/protomind.png',          alt: 'Protomind – Performance Marketing Kunde',          h: 28, cls: 'logo-img' },
-                { src: '/images/logos/lin-riehl.png',          alt: 'Lin Riehl – Performance Marketing Kunde',          h: 28, cls: 'logo-img' },
+                { src: '/images/logos/doq.png',                alt: 'DOQ Hundefutter – Performance Marketing Kunde',    h: 40, cls: 'logo-img' },
+                { src: '/images/logos/die-barista.png',        alt: 'Die Barista Kaffee Hameln – Shopify & Marketing',  h: 42, cls: 'logo-img-screen' },
+                { src: '/images/logos/cats-empire.png',        alt: "Cat's Empire – Performance Marketing Kunde",       h: 48, cls: 'logo-img' },
+                { src: '/images/logos/harbor-x.png',           alt: 'Harbor X – Performance Marketing Kunde',           h: 36, cls: 'logo-img' },
+                { src: '/images/logos/lemon-easy.png',         alt: 'Lemon Easy – Performance Marketing Kunde',         h: 52, cls: 'logo-img-invert' },
+                { src: '/images/logos/raw-elements.png',       alt: 'raw elements – Performance Marketing Kunde',       h: 40, cls: 'logo-img-screen' },
+                { src: '/images/logos/radio-tape.png',         alt: 'Radio Tape – Performance Marketing Kunde',         h: 38, cls: 'logo-img' },
+                { src: '/images/logos/meet-your-master.png',   alt: 'Meet Your Master – Performance Marketing Kunde',   h: 38, cls: 'logo-img' },
+                { src: '/images/logos/statement-clothing.png', alt: 'Statement Clothing – Performance Marketing Kunde', h: 38, cls: 'logo-img' },
+                { src: '/images/logos/protomind.png',          alt: 'Protomind – Performance Marketing Kunde',          h: 38, cls: 'logo-img' },
+                { src: '/images/logos/lin-riehl.png',          alt: 'Lin Riehl – Performance Marketing Kunde',          h: 38, cls: 'logo-img' },
               ].map(l => (
                 <img
                   key={`${set}-${l.src}`}
