@@ -610,17 +610,18 @@ export default function PortfolioPage() {
           <div className="logos-track">
             {Array.from({ length: 4 }, (_, set) =>
               [
-                { src: '/images/logos/doq.png',                alt: 'DOQ Hundefutter – Performance Marketing Kunde',    h: 40, cls: 'logo-img' },
-                { src: '/images/logos/die-barista.png',        alt: 'Die Barista Kaffee Hameln – Shopify & Marketing',  h: 42, cls: 'logo-img-screen' },
-                { src: '/images/logos/cats-empire.png',        alt: "Cat's Empire – Performance Marketing Kunde",       h: 48, cls: 'logo-img' },
-                { src: '/images/logos/harbor-x.png',           alt: 'Harbor X – Performance Marketing Kunde',           h: 52, cls: 'logo-img' },
-                { src: '/images/logos/lemon-easy.png',         alt: 'Lemon Easy – Performance Marketing Kunde',         h: 52, cls: 'logo-img-invert' },
-                { src: '/images/logos/raw-elements.png',       alt: 'raw elements – Performance Marketing Kunde',       h: 42, cls: 'logo-img-screen' },
-                { src: '/images/logos/radio-tape.png',         alt: 'Radio Tape – Performance Marketing Kunde',         h: 52, cls: 'logo-img' },
-                { src: '/images/logos/meet-your-master.png',   alt: 'Meet Your Master – Performance Marketing Kunde',   h: 52, cls: 'logo-img' },
-                { src: '/images/logos/statement-clothing.png', alt: 'Statement Clothing – Performance Marketing Kunde', h: 52, cls: 'logo-img' },
-                { src: '/images/logos/protomind.png',          alt: 'Protomind – Performance Marketing Kunde',          h: 52, cls: 'logo-img' },
-                { src: '/images/logos/lin-riehl.png',          alt: 'Lin Riehl – Performance Marketing Kunde',          h: 52, cls: 'logo-img' },
+                { src: '/images/logos/Statement-Clo.png',          alt: 'Statement Clothing – Performance Marketing Kunde', h: 44, cls: 'logo-img' },
+                { src: '/images/logos/doq.png',                    alt: 'DOQ Hundefutter – Performance Marketing Kunde',    h: 40, cls: 'logo-img' },
+                { src: '/images/logos/die-barista.png',            alt: 'Die Barista Kaffee Hameln – Shopify & Marketing',  h: 42, cls: 'logo-img-screen' },
+                { src: '/images/logos/cats-empire.png',            alt: "Cat's Empire – Performance Marketing Kunde",       h: 48, cls: 'logo-img' },
+                { src: '/images/logos/harbor-x.png',               alt: 'Harbor X – Performance Marketing Kunde',           h: 52, cls: 'logo-img' },
+                { src: '/images/logos/lemon-easy.png',             alt: 'Lemon Easy – Performance Marketing Kunde',         h: 52, cls: 'logo-img-invert' },
+                { src: '/images/logos/raw-elements.png',           alt: 'raw elements – Performance Marketing Kunde',       h: 42, cls: 'logo-img-screen' },
+                { src: '/images/logos/Daily-You-Catering.png',     alt: 'Daily You Catering – Performance Marketing Kunde', h: 52, cls: 'logo-img' },
+                { src: '/images/logos/meet-your-master.png',       alt: 'Meet Your Master – Performance Marketing Kunde',   h: 52, cls: 'logo-img' },
+                { src: '/images/logos/RADIOTAPE.png',              alt: 'Radio Tape – Performance Marketing Kunde',         h: 52, cls: 'logo-img' },
+                { src: '/images/logos/protomind.png',              alt: 'Protomind – Performance Marketing Kunde',          h: 52, cls: 'logo-img' },
+                { src: '/images/logos/lin-riehl.png',              alt: 'Lin Riehl – Performance Marketing Kunde',          h: 52, cls: 'logo-img' },
               ].map(l => (
                 <img
                   key={`${set}-${l.src}`}
