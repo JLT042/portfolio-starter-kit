@@ -301,13 +301,14 @@ export default function PortfolioPage() {
         .logos-eyebrow-wrap { padding:0 clamp(1rem,6vw,4rem);margin-bottom:2.5rem;text-align:center; }
         .logos-eyebrow { font-family:var(--fb);font-size:1rem;font-weight:500;color:var(--gray3); }
         .logos-marquee { overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent);mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent); }
-        .logos-track { display:flex;align-items:center;gap:5rem;width:max-content;animation:logoScroll 45s linear infinite; }
+        .logos-track { display:flex;align-items:center;gap:4rem;width:max-content;animation:logoScroll 45s linear infinite; }
         .logos-track:hover { animation-play-state:paused; }
-        .logo-img { width:auto;filter:brightness(0) invert(1);opacity:.65;transition:opacity 220ms;flex-shrink:0; }
-        .logo-img:hover { opacity:1; }
-        .logo-img-screen { width:auto;mix-blend-mode:screen;opacity:.65;transition:opacity 220ms;flex-shrink:0; }
+        .logo-img,.logo-img-screen,.logo-img-invert { height:44px;width:auto;max-width:180px;object-fit:contain;flex-shrink:0;transition:opacity 220ms; }
+        .logo-img        { filter:brightness(0) invert(1);opacity:.65; }
+        .logo-img:hover  { opacity:1; }
+        .logo-img-screen { mix-blend-mode:screen;opacity:.65; }
         .logo-img-screen:hover { opacity:1; }
-        .logo-img-invert { width:auto;filter:invert(1);opacity:.55;transition:opacity 220ms;flex-shrink:0; }
+        .logo-img-invert { filter:invert(1);opacity:.60; }
         .logo-img-invert:hover { opacity:1; }
 
         /* ── AUDIENCE ── */
@@ -610,18 +611,18 @@ export default function PortfolioPage() {
           <div className="logos-track">
             {Array.from({ length: 4 }, (_, set) =>
               [
-                { src: '/images/logos/Statement-Clo.png',          alt: 'Statement Clothing – Performance Marketing Kunde', h: 44, cls: 'logo-img' },
-                { src: '/images/logos/doq.png',                    alt: 'DOQ Hundefutter – Performance Marketing Kunde',    h: 40, cls: 'logo-img' },
-                { src: '/images/logos/die-barista.png',            alt: 'Die Barista Kaffee Hameln – Shopify & Marketing',  h: 42, cls: 'logo-img-screen' },
-                { src: '/images/logos/cats-empire.png',            alt: "Cat's Empire – Performance Marketing Kunde",       h: 48, cls: 'logo-img' },
-                { src: '/images/logos/harbor-x.png',               alt: 'Harbor X – Performance Marketing Kunde',           h: 52, cls: 'logo-img' },
-                { src: '/images/logos/lemon-easy.png',             alt: 'Lemon Easy – Performance Marketing Kunde',         h: 52, cls: 'logo-img-invert' },
-                { src: '/images/logos/raw-elements.png',           alt: 'raw elements – Performance Marketing Kunde',       h: 42, cls: 'logo-img-screen' },
-                { src: '/images/logos/Daily-You-Catering.png',     alt: 'Daily You Catering – Performance Marketing Kunde', h: 52, cls: 'logo-img' },
-                { src: '/images/logos/meet-your-master.png',       alt: 'Meet Your Master – Performance Marketing Kunde',   h: 52, cls: 'logo-img' },
-                { src: '/images/logos/RADIOTAPE.png',              alt: 'Radio Tape – Performance Marketing Kunde',         h: 52, cls: 'logo-img' },
-                { src: '/images/logos/protomind.png',              alt: 'Protomind – Performance Marketing Kunde',          h: 52, cls: 'logo-img' },
-                { src: '/images/logos/lin-riehl.png',              alt: 'Lin Riehl – Performance Marketing Kunde',          h: 52, cls: 'logo-img' },
+                { src: '/images/logos/Statement-Clo.png',          alt: 'Statement Clothing – Performance Marketing Kunde', cls: 'logo-img' },
+                { src: '/images/logos/doq.png',                    alt: 'DOQ Hundefutter – Performance Marketing Kunde',    cls: 'logo-img' },
+                { src: '/images/logos/die-barista.png',            alt: 'Die Barista Kaffee Hameln – Shopify & Marketing',  cls: 'logo-img-screen' },
+                { src: '/images/logos/cats-empire.png',            alt: "Cat's Empire – Performance Marketing Kunde",       cls: 'logo-img-invert' },
+                { src: '/images/logos/harbor-x.png',               alt: 'Harbor X – Performance Marketing Kunde',           cls: 'logo-img' },
+                { src: '/images/logos/lemon-easy.png',             alt: 'Lemon Easy – Performance Marketing Kunde',         cls: 'logo-img-invert' },
+                { src: '/images/logos/raw-elements.png',           alt: 'raw elements – Performance Marketing Kunde',       cls: 'logo-img-screen' },
+                { src: '/images/logos/Daily-You-Catering.png',     alt: 'Daily You Catering – Performance Marketing Kunde', cls: 'logo-img' },
+                { src: '/images/logos/meet-your-master.png',       alt: 'Meet Your Master – Performance Marketing Kunde',   cls: 'logo-img' },
+                { src: '/images/logos/RADIOTAPE.png',              alt: 'Radio Tape – Performance Marketing Kunde',         cls: 'logo-img' },
+                { src: '/images/logos/protomind.png',              alt: 'Protomind – Performance Marketing Kunde',          cls: 'logo-img' },
+                { src: '/images/logos/lin-riehl.png',              alt: 'Lin Riehl – Performance Marketing Kunde',          cls: 'logo-img' },
               ].map(l => (
                 <img
                   key={`${set}-${l.src}`}
@@ -629,7 +630,7 @@ export default function PortfolioPage() {
                   src={l.src}
                   alt={set === 0 ? l.alt : ''}
                   aria-hidden={set > 0 ? 'true' : undefined}
-                  style={{ height: l.h }}
+                  style={{}}
                 />
               ))
             )}
