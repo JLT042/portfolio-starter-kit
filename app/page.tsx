@@ -303,7 +303,7 @@ export default function PortfolioPage() {
         .logos-marquee { overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent);mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent); }
         .logos-track { display:flex;align-items:center;gap:4rem;width:max-content;animation:logoScroll 45s linear infinite; }
         .logos-track:hover { animation-play-state:paused; }
-        .logo-img,.logo-img-screen,.logo-img-invert { height:44px;width:auto;max-width:180px;object-fit:contain;flex-shrink:0;transition:opacity 220ms; }
+        .logo-img,.logo-img-screen,.logo-img-invert { height:55px;width:auto;max-width:220px;object-fit:contain;flex-shrink:0;transition:opacity 220ms; }
         .logo-img        { filter:brightness(0) invert(1);opacity:.65; }
         .logo-img:hover  { opacity:1; }
         .logo-img-screen { mix-blend-mode:screen;opacity:.65; }
